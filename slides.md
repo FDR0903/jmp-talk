@@ -2,7 +2,7 @@
 layout: cover
 # background: ./images/bone-wall.png
 class: text-center
-title: STANFORD
+title: JMP
 mdc: true
 ---
 
