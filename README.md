@@ -1,4 +1,4 @@
-# Memory Pools
+# On the design of decentralized markets
 
 ## Run locally
 To start the slide show:
