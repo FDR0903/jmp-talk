@@ -180,7 +180,7 @@ AMMs<a name="AMMs"></a></h1>
 
 ---
 
-# Gas fees
+# Blockchains and gas fees
 
 * Price to add a transaction to the blockchain: **gas fee**
 * "gas" refers to the required computational power
@@ -341,32 +341,6 @@ $$
 ---
 
 # Automated Market Makers
-### Liquidity takers
-
-
-* Price impact following a buy order of volume $\Delta y$
-$$
-Z_1 - Z_0 =  -\Phi'(y-\Delta y) + \Phi'(y) \approx \Phi''(y)\,\Delta y
-$$
-
-<br>
-<br>
-
-### Liquidity providers
-
-* Change in wealth of liquidity providers[^fn4]
-$$  
-\Phi(y-\Delta y)-\Phi(y)- \Phi'\left(y+\Delta y\right) \Delta y  \approx - \frac12 \Phi''(y)\,\Delta y^2
-$$
-
-
-<br><br>
-
-[^fn4]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
-
----
-
-# Automated Market Makers
 ### Liquidity providers
 
 * Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
@@ -376,44 +350,24 @@ $$
 \Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
 $$
 
----
-
-# Automated Market Makers
-### Liquidity providers
-
-* Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
-
-* The trading function is parameterised. In Uniswap
-$$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
-$$
-
-* Liquidity providers earn *transaction fees*
+<!--* Liquidity providers earn *transaction fees*-->
 
 ---
 
 # Automated Market Makers
 ### Liquidity providers
 
-* Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
-
-* The trading function is parameterised. In Uniswap
-$$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
-$$
-
-* Liquidity providers earn *transaction fees*
-
-* They incur predictable losses[^fn3]
+* LPs incur predictable losses[^fn3]
 
 $$
-\text{PL}_{t}= -\frac{1}{2}\int_{0}^{t}\,\varphi''\left(y_{s}\right)\,d<y,y>_{s}
+\text{PL}_{t}= -\frac{1}{2}\int_{0}^{t}\,\Phi''\left(y_{s}\right)\,d<y,y>_{s}
 $$
 
-* They incur opportunity costs
+* They also incur opportunity costs
+
+<br><br><br><br><br><br>
 
 [^fn3]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
-
 
 ---
 
@@ -495,12 +449,27 @@ layout: fact
 
 # AMM design
 
-### Assumptions 
-* Minimum trading volume $\zeta$. Orders have volume $n\times \zeta$
+### Liquidity takers 
+* Minimum trading volume $\zeta$ (Orders have volume $n\times \zeta$)
 
-<br>
+* Slippage for a volume $\zeta$
+$$
+Z - \delta^b(y, I) \le Z \le Z + \delta^a(y, I)
+$$
+* Price impact following a buy order of volume $\zeta$ or a sell order of volume $\zeta$
+$$
+Z \longrightarrow Z + \eta^a(y)
+$$
+$$
+Z \longrightarrow Z - \eta^b(y)
+$$
 
-### Liquidity takers
+---
+
+# AMM design
+
+### Liquidity takers 
+* Minimum trading volume $\zeta$ (Orders have volume $n\times \zeta$)
 
 * Slippage for a volume $\zeta$
 $$
@@ -524,7 +493,7 @@ $$
 
 ### Price and liquidity dynamics
 
-* $\left(N_t^b\right)_{t\in[0,T]}$ and $\left(N_t^a\right)_{t\in[0,T]}$: counting processes for the number of sell and buy orders filled by the pool 
+* $\left(N_t^b\right)_{t\in[0,T]}$ and $\left(N_t^a\right)_{t\in[0,T]}$: counting processes for the number of sell and buy orders
 
 * The dynamics of the DLP reserves
 $$
@@ -546,45 +515,55 @@ $$
 
 # AMM design
 
-### Theorem: AMM $\subset$ DLP
+### AMM $\subset$ DLP
 
-* Let $\varphi(\,\cdot\,)$ be the trading function of an AMM. 
+* Let $\Phi$ be the trading function of an AMM
 * Let the impact functions of the DLP be
 $$
-\eta^a(y) = \varphi'(y)  - \varphi'(y-\zeta)\,,\qquad  \eta^b(y) = -\varphi'(y) + \varphi'(y +\zeta)
+\eta^a(y) = \Phi'(y)  - \Phi'(y-\zeta)\,\quad\text{and}\quad  \eta^b(y) = -\Phi'(y) + \Phi'(y +\zeta)
 $$
 * Let the quote functions of the DLP be
-$$\delta^a_t = \frac{\varphi(y_{t^-} - \zeta) - \varphi(y_{t^-})}{\zeta} + \varphi'(y_{t^-}) + \underbrace{\pi \, \zeta}_{\text{If fees } \neq 0}
+$$\delta^a_t = \frac{\Phi(y_{t^-} - \zeta) - \Phi(y_{t^-})}{\zeta} + \Phi'(y_{t^-}) + \underbrace{\pi \, \zeta}_{\text{If fees } \neq 0}
 $$
 
 $$
-\delta^b_t = \frac{\varphi(y_{t^-} + \zeta) - \varphi(y_{t^-})}{\zeta} - \varphi'(y_{t^-}) + \underbrace{\pi \, \zeta }_{\text{If fees }\neq 0}
+\delta^b_t = \frac{\Phi(y_{t^-} + \zeta) - \Phi(y_{t^-})}{\zeta} - \Phi'(y_{t^-}) + \underbrace{\pi \, \zeta }_{\text{If fees }\neq 0}
 $$
 
 * Then DLP $\equiv$ CFM !
 
 --- 
 
-# Optimal bonding curve
-* Optimal quote functions for fixed impact functions
-    * Restrictions: implementable in a smart contract $\implies$ employs information on the blockchain
+# AMM design
 
-<br />
+### Optimal bonding curve
+* The bonding curve of a DLP: $\{\delta^b, \delta^a, \eta^b, \eta^a\}$
+
+* Optimal bonding curve:
+    * Optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
+
+* Restrictions: implementable in a smart contract $\implies$ employs information on the blockchain
+
+--- 
+
+# AMM design
 
 ### The model
 * Let $P$ be the unobserved fundamental price
+
 * We discretise $Z - P$ into $M$ values, or regimes.
-* $g \notin \mathbb F$ is a CTMC with finite state space $\mathcal S = \{1, \dots, M\}$ that describes the regimes. The transition rate matrix is $\Pi$.
+* $g \notin \mathbb F$ is a CTMC with finite state space $\mathcal S = \{1, \dots, M\}$ that describes the regimes. The transition rate matrix is $\Pi$
     * Regime $1$ corresponds to $P<<Z$
     * Regime $M$ corresponds to $Z<<P$
 * Liquidity takers are sensitive to the price of liquidity (slippage) 
 $$Z^a - P = \delta^a + Z - P  \quad \text{and} \quad P - Z^b = \delta^b + P - Z$$
 
---- 
 
-# Optimal bonding curve
+---
+
+# AMM design
 ### The model
-* The vectors $\boldsymbol{c}^b = \{c^{b,1},\dots,c^{b,M}\}$ and $\boldsymbol{c}^a = \{c^{a,1},\dots,c^{a,M}\}$ describe the  intensity of the trading flow at the bid/ask in each regime $j\in\{1,\dots,M\}.$
+* The vectors $\boldsymbol{c}^b = \{c^{b,1},\dots,c^{b,M}\}$ and $\boldsymbol{c}^a = \{c^{a,1},\dots,c^{a,M}\}$ describe the **baseline  intensity** of the trading flow at the bid/ask in each regime $j\in\{1,\dots,M\}.$
 
 * The intensity of order arrival at the bid and the ask is
 $$
@@ -604,17 +583,21 @@ $$
  \Psi^{j}_{t} = \mathbb{E}\left[ \mathrm{1}_{g_t = j} \,\mid\,\mathcal{F}_t\right]
 $$
 
-### Filtered regime probability
+--- 
+
+# Optimal bonding curve
+### Regime probability
 * The  filter $\Psi^{j}_{t}$ satisfies 
+
 $$
 \Psi^{j}_{t} = \frac{\Gamma^j_t}{\sum_{i=1}^M\Gamma^i_t} \,,
 $$
-where the process $\Score^j$, for $j\in\{1,\dots,M\}$, follows the dynamics
+where the process $\Gamma^j$, for $j\in\{1,\dots,M\}$, follows the dynamics
 $$
 \frac{d \Gamma^j_t }{\Gamma^j_t} = \left( \lambda^{a,j}_{t^-}\left(\delta_t^a\right) - 1\right)\left(d N^{a}_t -d t\right) +  \left( \lambda^{b,j}_{t^-}\left(\delta_t^b\right) - 1\right)\left(d N^{b}_t -d t\right) + \frac{\sum_{i=1}^{M}\Gamma_{t^{-}}^{i}}{\Gamma_{t^{-}}^{j}} \,\pi_{ji}\,d t
 $$
 
---- 
+---
 
 # Optimal bonding curve
 ### The dynamic optimisation problem
@@ -633,7 +616,7 @@ $$
 
 * The performance criterion (well-posed)
 $$
-w^\delta (t,x,y,z,\mathrm{\Psi})=\mathbb{E}_{t,x,y,z,\mathrm{\Psi}}\left[x_{T}+y_T\,Z_T - \alpha\,(y_T-\hat y)^2 -\phi\,\int_{t}^{T} (y_s-\hat y)^{2}\,d s\right]
+\mathbb{E}_{t,x,y,z,\mathrm{\Psi}}\left[x_{T}+y_T\,Z_T - \alpha\,(y_T-\hat y)^2 -\phi\,\int_{t}^{T} (y_s-\hat y)^{2}\,d s\right]
 $$
 
 ---
@@ -682,8 +665,8 @@ layout: two-cols-header
 | Buy and Hold |  $0.01\%$   | $0.741\%$        |
 | Uniswap$^2$ |   $-1.485\%$    |  $7.812\%$ |
 
-*$1.$ $30$-minutes performance of LPs 
-$2.$ Using $42,022$ LP operations between 5 May 2021 and 30 April 2022*
+1. $30$-minutes performance of LPs 
+2. Using $42,022$ LP operations between 5 May 2021 and 30 April 2022*
 
 ::right::
 
@@ -1094,7 +1077,7 @@ backgroundSize: 180%
 * Losses to informed traders
 
 $$
-\text{L} = - \frac{1}{\kappa}\, \mathbb E[(\delta^\star(v_i) + \delta^\star(v_j))^2]
+\text{L} \approx - \frac{1}{\kappa}\, \mathbb E[(\delta^\star(v_i) + \delta^\star(v_j))^2]
 = - \kappa\, \mathbb E[(\tilde \delta^\star(v_i) + \tilde \delta^\star(v_j))^2]
 $$
 
