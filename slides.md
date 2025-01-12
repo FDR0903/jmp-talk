@@ -3,6 +3,7 @@ layout: cover
 # background: ./images/bone-wall.png
 class: text-center
 title: JMP
+theme: academic
 mdc: true
 ---
 
@@ -11,12 +12,6 @@ mdc: true
 **Fayçal Drissi**
 
 **16 January 2025**
-
----
-layout: intro
----
-
-Author: Fayçal Drissi
 
 ---
 layout: section
@@ -76,19 +71,16 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ![blockchain1](./images/blockchain1.png){style="transform: translate(50%, 0%); width: 480px"}
 
-* Everyone with an internet connection has access to the blockchain
 
-<br /><br /><br /><br /><br /><br /><br />
+* Distributed Ledger without central authority
+    * A record of consensus with cryptographic audit trail
 
-* Distributed Ledger: trust built around blockchain protocol (validation of transactions by cryptographical signatures)
 
-* Price to validate a transaction in a block:  **gas fees**
-    * Gas fees scale with transaction complexity.
-    * Extremely expensive to run LOBs (order matching)
+* Everyone with an internet connection has access
 
 ---
 
-# Blockchains: protocol
+# Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
 * At each Epoch, with length block time, a validator creates a new block
@@ -97,7 +89,7 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ---
 
-# Blockchains: protocol
+# Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
 * At each Epoch, with length block time, a validator creates a new block
@@ -113,7 +105,7 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ---
 
-# Blockchains: protocol
+# Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
 * At each Epoch, with length block time, a validator creates a new block
@@ -122,10 +114,10 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ---
 
-# Blockchains: protocol
+# Blockchain protocol
 
-* Price to validate a transaction in a block: **gas fees**
-* "gas" refers to the computational power required for these actions
+* Price to validate a transaction in a block: **gas fee**
+* "gas" refers to the required computational power. Gas fees scale with transaction complexity
 
 ![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
 
@@ -135,9 +127,9 @@ layout: two-cols-header
 
 # Decentralised exchanges
 
-* Traditional electronnic exchanges run  limit order books (LOBs) or OTC (over-the counter) markets 
+* Traditional electronnic exchanges run  limit order books (LOBs)
 
-::left:: 
+::left::
 
 ![LOB1](./images/LOB1.png){style="transform: translate(40%, 10%); width: 230px"}
 
@@ -152,7 +144,6 @@ layout: two-cols-header
 # Decentralised exchanges
 
 * Extremely expensive to run these markets on a blockchain
-
 * Constraints: computational simplicity
 
 ::left:: 
@@ -168,7 +159,6 @@ layout: two-cols-header
 # Decentralised exchanges
 
 * **Solution**: automated market makers (AMMs)
-
 * A liquidity pool for pairs of securities ($X$ and $Y$) with liquidity *reserves*.
 
 ![pool1](./images/pool1.png){style="transform: translate(160%, 50%); width: 200px"}
@@ -183,40 +173,42 @@ Why It Matters <a name="wim"></a></h1>
 
 ---
 
-# Applications: tokenisation
-    Bank of International Settlements: 
-    "Tokenisation may be on the horizon, with the potential to change the financial system."
-<br />
+# Tokenisation
+The tokenization of financial assets on the blockchain is gaining momentum at an institutional and governmental level.
 
-* Central Bank Digital Currencies (CBDC)
-* ETFs
-* Bonds
-* Equities
-* Derivatives
-* Real Estate
-* ....
-* A common standard for fungible wCBDC tokens with design features based on central bank requirements. 
-* Governance mechanisms at the token level without controlling the platform.
-    * Goal: reduce transaction processing time, reduce transaction costs, intermediaries and monopoly, automate transfer of value ...
+* Asset tokenization[^fncbdc]
+    * Currencies and monetary policy: Central Bank Digital Currencies (CBDC)
+    * Financials: bonds, loans, stocks, ETFs, mortages
+    * Non-financials: commodities, real estate, art, music
+* **Objective**: reduce transaction processing time, reduce transaction costs, reduce intermediaries and monopoly, simplify transfer of value ...
+
+<br> <br> <br> <br> 
+
+[^fncbdc]: A common standard for fungible  tokens with design features based on central bank (or regulator) requirements
+
 ---
 
-# Initiatives by central banks and traditional stakeholders
+# Adoption by institutions and infrastructures
 
-### Inter-bank FX Settlement --- [source](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
-* BIS, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
-* Cross-border trading and settlement of CBDCs between financial institutions, using AMMs on a public blockchain
-
-<br />
-
-### Settlement in CBDCs --- [*source*](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
-* BIS and Bank of England
-* Cross-border payments is an explicit international policy goal and a priority of the G20
+### Inter-bank FX Settlement[^source1]
+###### BIS, Bank of France, Monetary Authority of Singapore and Swiss National Bank 
+* Cross-border trading between financial institutions using **automated market makers**
 
 <br />
 
-### Stablecoins and risks --- [source](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
-* G20, BIS, Bank of France, Bank of Italy, Central Bank of Malaysia, and the Monetary Authority of Singapore
+### Settlement in CBDCs[^source2]
+###### BIS and Bank of England
+* **Cross-border payments** is an explicit international policy goal and a priority of the G20
+
+<br />
+
+### Stablecoins and risks[^source3]
+###### G20, Bank of France, Bank of Italy, Central Bank of Malaysia, and the M.A. of Singapore
 *  Supervision of issuers of asset-backed stablecoins
+
+[^source1]: [source](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
+[^source2]: [source](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
+[^source3]: [source](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
 
 <!---
 
@@ -233,19 +225,17 @@ Source: BIS innovation Hub
 
 # Other reasons
 
-* Helps underbanked populations
-* Competition for intermediaries.~\\~\\
-* Incentives for technological 
-* innovations
-* Significant volumes 
-* Entrepreneurship
-* Research is exciting (ethics, etc ..)
-    * multi-disciplinary: mathematics, finance, econ, computer science, OR, Law
+* Help underbanked populations
+* Competition for intermediaries to drive costs down
+* Incentives for technological innovations
+* Research is multi-disciplinary: mathematics, finance, economics, computer science, Law, ...
 
-<br /><br /><br />
+---
+layout:fact
+---
 
 <p style="text-align: center;"><h2>
-It is <b>key</b> to study these new markets to influence policy and practice at early stages. <a name="defi1"></a></h2>
+It is <b>key</b> to study these new markets to influence policy and practice at early stages <a name="defi1"></a></h2>
 </p>
 
 
@@ -324,31 +314,6 @@ $$
 
 ---
 layout: image-right 
-image: ./images/bc2.png
-class: my-cool-content-on-the-left
-backgroundSize: 170%
----
-
-# Automated Market Makers
-### Liquidity takers
-
-* The reserves of the AMM are $x$ and $y$
-$$
-x = \Phi(y) 
-$$
-
-* To buy a quantity $\Delta y$, one pays
-$$
-\Delta x = \Phi(y-\Delta y) - \Phi(y)
-$$
-
-* The new reserves are 
-$$
-x+\Delta x \quad  \text{and} \quad y - \Delta y
-$$
-
----
-layout: image-right 
 image: ./images/bc3.png
 class: my-cool-content-on-the-left
 backgroundSize: 170%
@@ -362,7 +327,7 @@ $$
 x = \Phi(y) 
 $$
 
-* To buy a quantity $\Delta y$, one pays
+* To sell a quantity $\Delta y$, one receives
 $$
 \Delta x = \Phi(y) - \Phi(y+\Delta y)
 $$
@@ -383,10 +348,10 @@ $$
     \xrightarrow{\Delta y \longrightarrow 0}  \underbrace{-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_\text{ask price} 
 $$
 
-![LOB1](./images/LOB1.png){style="transform: translate(130%, 30%); width: 230px"}
-
-<br /><br /><br /><br /><br /><br />
 * No-arbitrage $\implies$ $\Phi$ is convex.
+
+![mp](./images/mp.png){style="transform: translate(20%, -5%); width: 630px"}
+
 
 ---
 layout: two-cols-header
@@ -419,21 +384,21 @@ Scatter plot of transaction costs  and the approximation for all transactions in
 # Automated Market Makers
 ### Liquidity takers
 
-* Slippage
-
-$$
-Z - \frac12 \Phi''(\Delta y)\, \Delta y \approx\underbrace{ \frac{\Phi(y) - \Phi(y+\Delta y)}{\Delta y}}_{\text{Bid price for } \Delta y} \leq Z \leq  \underbrace{\frac{\Phi(y) - \Phi(y-\Delta y)}{\Delta y}}_{\text{Ask price for } \Delta y} \approx Z + \frac12 \Phi''(\Delta y)\, \Delta y 
-$$
 
 * Price impact following a buy order of volume $\Delta y$
 $$
 Z_1 - Z_0 =  -\Phi'(y-\Delta y) + \Phi'(y) \approx \Phi''(y)\,\Delta y
 $$
 
+### Liquidity providers
+
 * Change in wealth of liquidity providers[^fn4]
-$$
+$$  
 \Phi(y-\Delta y)-\Phi(y)- \Phi'\left(y+\Delta y\right) \Delta y  \approx - \frac12 \Phi''(y)\,\Delta y^2
 $$
+
+
+<br><br><br><br>
 
 [^fn4]: Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.
 
@@ -488,7 +453,7 @@ $$
 <br />
 <br />
 
-[^fn2]: [Cartea, Álvaro, Fayçal Drissi, and Marcello Monga. "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
+[^fn2]: [Cartea, Á., Drissi F., & Monga M. (2024) "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
 [^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
 
 ---
@@ -497,52 +462,67 @@ layout: section
 
 <p style="text-align: center;"><h1>
 AMM Design <a name="design"></a></h1>
-</p>
 
 [Cartea, Á., Drissi, F., Sánchez-Betancourt, L., Siska, D., & Szpruch, L. (2024). <br /> Strategic bonding curves in automated market makers](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5018420)
+</p>
 
 ---
+layout: fact
+--- 
 
-# Contributions
+# Our contributions
+<br><br><br>
 
-* ..
+1. Identify the axioms that DEXs operate under
+
+<br>
+
+2. Introduce a novel design with more strategic flexibity for liquidity providers
+
+<br>
+
+3. Develop models that build on the design
+    * Can be implemented as smart contracts on blockchains
+    * Mitigates the costs of liquidity provision in current AMMs
 
 ---
 
 # AMM design
+
+
+### Generalising bonding curves
+* Defines the price of liquidity and the price dynamics **seperately**
+* The price of liquidity is determined by the reserves and **other relevant information**  
+
+<br />
 
 ### Constraints
 * Use  **available information** on the blockchain
 * **Simple mechanics** to update prices and reserves
 
-<br />
+---
 
-### Generalising bonding curves
-* The price of liquidity and the price dynamics are **defined seperately**
-* Reserves and **other relevant information** determine the price of liquidity
-
-<br />
+# AMM design
 
 ### Decentralised Liquidity Pool (DLP)
-* Reserves $\{x, y\}$ 
-* Marginal Price $Z$
-* LTs impact the price according to deterministic impact functions $\{\eta^b, \eta^a\}$
-* The slippage is determined by $\{\delta^b, \delta^a\}$
 
----
-layout: two-cols-header
+* Reserves $\{x, y\}$
+
+* Marginal Price $Z$
+
+* LTs impact the price according to deterministic impact functions $\{\eta^b, \eta^a\}$
+
+* The slippage is determined by quote functions $\{\delta^b, \delta^a\}$
+
+
 ---
 
 # AMM design
 
 ### Assumptions 
-* Minimum trading volume $\zeta$
-* Orders with volumes $n\times \zeta$
+* Minimum trading volume $\zeta$. Orders have volume $n\times \zeta$
 
-<br />
-<br />
-
-::left::
+<br>
 
 ### Liquidity takers
 
@@ -550,21 +530,15 @@ layout: two-cols-header
 $$
 Z - \delta^b(y, I) \le Z \le Z + \delta^a(y, I)
 $$
-
-* Price impact following a buy order of volume $\zeta$
+* Price impact following a buy order of volume $\zeta$ or a sell order of volume $\zeta$
 $$
 Z \longrightarrow Z + \eta^a(y)
 $$
-
-* Price impact following a sell order of volume $\zeta$
 $$
 Z \longrightarrow Z - \eta^b(y)
 $$
 
-::right::
-
 ### Liquidity providers
-
 * They set the functions $\{\eta^b,\eta^a,\delta^b,\delta^a\}$ periodically
 
 
@@ -576,7 +550,7 @@ $$
 
 * $\left(N_t^b\right)_{t\in[0,T]}$ and $\left(N_t^a\right)_{t\in[0,T]}$: counting processes for the number of sell and buy orders filled by the pool 
 
-* The dynamics of the DLP reserves:
+* The dynamics of the DLP reserves
 $$
 d y_{t}=\,\zeta\, d N_{t}^{b}-\zeta\, d N_{t}^{a}
 $$
@@ -747,9 +721,10 @@ layout: section
 
 <p style="text-align: center;"><h1>
 Blockchain design <a name="bd"></a></h1>
-</p>
+
 
 [Capponi, A., Cartea, Á., Drissi, F. <br /> Price Formation in Memory Pools](https://www.faycaldrissi.com/mempools-talk/1)
+</p>
 
 --- 
 
@@ -923,8 +898,8 @@ layout: two-cols-header
 ::right::
 
 ![PF1](./images/number_transactions.jpg){style="transform: translate(40%, -10%); width: 280px"}
-$\qquad\qquad$ Ethereum memory pool transaction data <br>
-$\qquad\qquad$ $10-16$ December $2022$
+$\qquad\quad$ Ethereum memory pool transaction data <br>
+$\qquad\qquad\qquad$ $10-16$ December $2022$
 
 ---
 layout: two-cols-header
@@ -950,8 +925,8 @@ $$
 ::right::
 
 ![PF1](./images/number_transactions.jpg){style="transform: translate(40%, -10%); width: 280px"}
-$\qquad\qquad$ Ethereum memory pool transaction data <br>
-$\qquad\qquad$ $10-16$ December $2022$
+$\qquad\quad$ Ethereum memory pool transaction data <br>
+$\qquad\qquad\qquad$ $10-16$ December $2022$
 
 <br>
 
