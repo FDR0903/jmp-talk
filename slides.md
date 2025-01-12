@@ -76,7 +76,6 @@ Decentralised Finance <a name="defi"></a></h1>
 <br />
 <br />
 
-
 <p style="text-align: center;">
 <h2> Decentralised exchanges </h2>
 <br>
@@ -92,99 +91,11 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ![blockchain1](./images/blockchain1.png){style="transform: translate(50%, 0%); width: 480px"}
 
-
-* Distributed Ledger without central authority
+* Distributed ledger without central authority
     * A record of consensus with cryptographic audit trail
-
-
-* Everyone with an internet connection has access
+    * Benefits: transparency and fractionalization
 
 ---
-
-# Blockchain protocol
-
-* Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
-
-![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 680px"}
-
----
-
-# Blockchain protocol
-
-* Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
-
-![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, 3%); width: 680px"}
-
-<!---
-
-#  Decentralised Exchanges
-
-* Liquidity supply and price of liquidity
-* Price dynamics-->
-
----
-
-# Blockchain protocol
-
-* Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
-
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
-
----
-
-# Blockchain protocol
-
-* Price to validate a transaction in a block: **gas fee**
-* "gas" refers to the required computational power. Gas fees scale with transaction complexity
-
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
-
----
-layout: two-cols-header
----
-
-# Why decentralised exchanges ?
-
-* Traditional electronnic exchanges run  limit order books (LOBs)
-
-::left::
-
-![LOB1](./images/LOB1.png){style="transform: translate(40%, 10%); width: 230px"}
-
-::right:: 
-
-![LOB1](./images/LOB2.png){style="transform: translate(10%, -10%); width: 230px"}
-
----
-layout: two-cols-header
----
-
-# Why decentralised exchanges ?
-
-* Extremely expensive to run these markets on a blockchain
-* Constraints: computational simplicity
-
-::left:: 
-
-![LOB1](./images/LOB1.png){style="transform: translate(40%, 10%); width: 230px"}
-
-::right:: 
-
-![LOB1](./images/LOB2.png){style="transform: translate(10%, -10%); width: 230px"}
-
----
-
-# Decentralised exchanges
-
-* **Solution**: automated market makers (AMMs)
-* A common liquidity pool with liquidity *reserves*
-
-![pool1](./images/pool1.png){style="transform: translate(160%, 50%); width: 200px"}
-
---- 
 layout: center
 ---
 
@@ -202,34 +113,26 @@ The tokenisation of assets on blockchains is gaining momentum at an institutiona
 * Non-financials: commodities, real estate, art, music
 * **Objectives**: 
     * Better monetary policy oversight
-    * Reduce transaction processing time
-    * Reduce transaction costs
-    * Reduce intermediaries and monopoly
+    * Reduce transaction costs and processing time
+    * Reduce intermediaries and monopolies
     * Simplify the transfer of value
 
-<br> <br> <br> <br>
+<br />
 
 [^fncbdc]: A common standard for fungible  tokens with design features based on central bank (or regulator) requirements
 
 ---
 
 # Adoption by institutions and infrastructures
+###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank 
 
-### Inter-bank FX Settlement[^source1]
-###### BIS, Bank of France, Monetary Authority of Singapore and Swiss National Bank 
-* Cross-border trading between financial institutions using **automated market makers**
+*  Inter-bank FX Settlement[^source1]:  Cross-border trading between financial institutions using **automated market makers**
 
-<br />
+    * **Cross-border payments** and settlement in CBDCs is an explicit international policy goal and a priority of the G20[^source2]
 
-### Settlement in CBDCs[^source2]
-###### BIS and Bank of England
-* **Cross-border payments** is an explicit international policy goal and a priority of the G20
+* Stablecoins and risks[^source3]: Supervision and regulation of asset-backed stablecoins
 
-<br />
-
-### Stablecoins and risks[^source3]
-###### G20, Bank of France, Bank of Italy, Central Bank of Malaysia, and the M.A. of Singapore
-*  Supervision of issuers of asset-backed stablecoins
+<br><br>
 
 [^source1]: [source](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
 [^source2]: [source](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
@@ -253,7 +156,9 @@ Source: BIS innovation Hub
 * Help underbanked populations
 
 * Competition for intermediaries to drive costs down
+
 * Incentives for technological innovations
+
 * Research is multi-disciplinary: mathematics, finance, economics, computer science, law, ...
 
 ---
@@ -275,15 +180,30 @@ AMMs<a name="AMMs"></a></h1>
 
 ---
 
+# Gas fees
+
+* Price to add a transaction to the blockchain: **gas fee**
+* "gas" refers to the required computational power
+* Gas fees scale with transaction complexity
+* Extremely expensive to run traditional markets on a blockchain
+* Constraints: computational simplicity
+
+<br>
+
+## Solution
+
+* automated market makers (AMMs)
+
+---
+
 # Automated Market Makers
 ### Liquidity pooling
 
 * A liquidity pool for Security $X$ and $Y$.
 
-* Available liquidity of *reserves*: $x$ and $y$.
+* Available *reserves* $x$ and $y$.
 
 ![pool1](./images/pool1.png){style="transform: translate(165%, 20%); width: 200px"}
-
 
 ---
 
@@ -306,7 +226,7 @@ AMMs<a name="AMMs"></a></h1>
 ---
 
 # Automated Market Makers
-### Bonding curves
+### Economic principle: bonding curves
 
 *  Iso-liquidity curve or indifference curve (points of same level of liquidity)
 
@@ -391,7 +311,7 @@ layout: two-cols-header
 * Slippage
 
 $$
-Z - \frac12 \Phi''(\Delta y)\, \Delta y \approx\underbrace{ \frac{\Phi(y) - \Phi(y+\Delta y)}{\Delta y}}_{\text{Bid price for } \Delta y} \leq Z \leq  \underbrace{\frac{\Phi(y) - \Phi(y-\Delta y)}{\Delta y}}_{\text{Ask price for } \Delta y} \approx Z + \frac12 \Phi''(\Delta y)\, \Delta y
+Z - \frac12 \Phi''(\Delta y)\, \Delta y \approx\underbrace{ \frac{\Phi(y) - \Phi(y+\Delta y)}{\Delta y}}_{\text{bid price}} \leq Z \leq  \underbrace{\frac{\Phi(y) - \Phi(y-\Delta y)}{\Delta y}}_{\text{ask price}} \approx Z + \frac12 \Phi''(\Delta y)\, \Delta y
 $$
 
 ::left::
@@ -529,17 +449,17 @@ layout: fact
 # Our contributions
 <br><br><br>
 
-1. Identify the axioms that DEXs operate under
+1. Identify the **axioms** that **DEXs** operate under
 
 <br>
 
-2. Introduce a novel design with more strategic flexibity for liquidity providers
+2. Introduce a **novel design** with more strategic flexibity for liquidity providers
 
 <br>
 
-3. Develop models that build on the design
-    * Can be implemented as smart contracts on blockchains
-    * Mitigates the costs of liquidity provision in current AMMs
+3. Develop models that
+    * can be implemented as smart contracts on blockchains
+    * mitigate the costs of liquidity provision in current AMMs
 
 ---
 
@@ -780,25 +700,44 @@ Blockchain design <a name="bd"></a></h1>
 [Capponi, A., Cartea, Á., Drissi, F. <br /> Price Formation in Memory Pools](https://www.faycaldrissi.com/mempools-talk/1)
 </p>
 
---- 
 
-# Blockchain design
-<br />
+---
 
-### Memory pools
-* A repository for unconfirmed transactions
+# Blockchain protocol
 
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(40%, -8%); width: 520px"}
+* Transactions are sent to the network continuously, and stored in a memory pool
+* At each Epoch, with length block time, a validator creates a new block
 
---- 
+![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 680px"}
 
-# Blockchain design
-<br />
+---
 
-### Memory pools
-* A repository for unconfirmed transactions
+# Blockchain protocol
 
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(40%, -8%); width: 520px"}
+* Transactions are sent to the network continuously, and stored in a memory pool
+* At each Epoch, with length block time, a validator creates a new block
+
+![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, 3%); width: 680px"}
+
+<!---
+
+#  Decentralised Exchanges
+
+* Liquidity supply and price of liquidity
+* Price dynamics-->
+
+---
+
+# Blockchain protocol
+
+* Transactions are sent to the network continuously, and stored in a memory pool
+* At each Epoch, with length block time, a validator creates a new block
+
+![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
+
+---
+
+# Blockchain protocol
 
 ### Gas fees (EIP-1559, Ethereum London fork)
 * **Base fee**: based on congestion. prerequisite for inclusion
@@ -806,14 +745,17 @@ Blockchain design <a name="bd"></a></h1>
 
 ---
 
-# Blockchain design
-<br />
+# Blockchain protocol
+
+### Gas fees (EIP-1559, Ethereum London fork)
+* **Base fee**: based on congestion. prerequisite for inclusion
+* **Priority fee**: incentivise validators to prioritise a transaction in the block
 
 ![mempools](./images/mempools.jpeg){style="transform: translate(25%, 0%); width: 580px"}
 
 ---
 
-# Blockchain design
+# Blockchain protocol
 
 ## Consequences
 <br/>
@@ -834,7 +776,7 @@ Blockchain design <a name="bd"></a></h1>
 
 ---
 
-# Blockchain design
+# Blockchain protocol
 ### Illustration of trading mechanisms
 <br />
 
@@ -842,7 +784,7 @@ Blockchain design <a name="bd"></a></h1>
 
 ---
 
-# Blockchain design
+# Blockchain protocol
 ### Illustration of trading mechanisms
 <br />
 
@@ -850,7 +792,7 @@ Blockchain design <a name="bd"></a></h1>
 
 ---
 
-# Blockchain design
+# Blockchain protocol
 ### Illustration of trading mechanisms
 <br />
 
@@ -1275,6 +1217,18 @@ $$
 $$
 
 * In practice, signal variance at round one is lower than that of round two $\implies$ 
+
+---
+
+# Other DeFi protocols 
+
+| **Service**       | **DeFi**      | **TradFi** | 
+|  :---         | :---        |    :----   | 
+| Trading |  DEXes (Uniswap, Curve)|  Brokers & exchanges | 
+| Credit | Lenders post assets in liquidity pools, and borrowers borrow against collateral (Compound, Aave) |  Commercial banks| 
+| Payments |  Transfer of value onchain via DeFi protocols (Flexa, Sablier Finance) |  Cash, Credit/debit cards, accounts | 
+| Insurance |  Customers buy tokens in exchange for cover against digital or real-life risks (Armor, Nexus Mutual) |  Insurance firms | 
+| Investment and Derivatives | Funds are allocated to pools based on preset risk tolerance. Vehicles include crypto-indices, derivatives, options, and perpetual futures (Yearn Finance, dY dX) | Investment funds | 
 
 ---
 layout: end
