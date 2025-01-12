@@ -1,9 +1,12 @@
 ---
 layout: cover
-# background: ./images/bone-wall.png
+background: ./images/defi2.jpg
 class: text-center
 title: JMP
 theme: academic
+titleTemplate: '%s'
+favicon: ./images/defiicon.png
+author: Fayçal Drissi
 mdc: true
 ---
 
@@ -13,8 +16,11 @@ mdc: true
 
 **16 January 2025**
 
+[scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
+[website](https://www.faycaldrissi.com/), [github](https://github.com/FDR0903)
+
 ---
-layout: section
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
@@ -23,13 +29,13 @@ Decentralised Finance <a name="defi"></a></h1>
 
 ---
 
-# Decentralised Finance: two moving parts
+# Decentralised Finance: two parts
 <br />
 
 ### Blockchains
 
+* Infrastructure and decentralization
 * Lifecycle of transactions
-* Infrastructure costs
 
 <br />
 <br />
@@ -44,22 +50,37 @@ Decentralised Finance <a name="defi"></a></h1>
 
 ---
 
-# Decentralised Finance
+<p style="text-align: center;">
+<h2> Decentralised Finance </h2>
 
 <br />
 
-<p style="text-align: center;"><h3>
-An ecosystem of smart contracts that <em>mimic</em> traditional financial services without  intermediaries <a name="defi1"></a></h3>
+<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without  intermediaries <a name="defi1"></a></h3>
 </p>
 
 <br />
 <br />
+<br />
 
-# Decentralised exchanges
+---
+
+<p style="text-align: center;">
+<h2> Decentralised Finance </h2>
 
 <br />
 
-<p style="text-align: center;"><h3>
+<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without  intermediaries <a name="defi1"></a></h3>
+</p>
+
+<br />
+<br />
+<br />
+
+
+<p style="text-align: center;">
+<h2> Decentralised exchanges </h2>
+<br>
+<h3>
 Trading platforms where the rules of interaction are encoded in a smart contract operating on the blockchain   <a name="defi2"></a></h3>
 </p>
 
@@ -125,7 +146,7 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 layout: two-cols-header
 ---
 
-# Decentralised exchanges
+# Why decentralised exchanges ?
 
 * Traditional electronnic exchanges run  limit order books (LOBs)
 
@@ -141,7 +162,7 @@ layout: two-cols-header
 layout: two-cols-header
 ---
 
-# Decentralised exchanges
+# Why decentralised exchanges ?
 
 * Extremely expensive to run these markets on a blockchain
 * Constraints: computational simplicity
@@ -159,30 +180,34 @@ layout: two-cols-header
 # Decentralised exchanges
 
 * **Solution**: automated market makers (AMMs)
-* A liquidity pool for pairs of securities ($X$ and $Y$) with liquidity *reserves*.
+* A common liquidity pool with liquidity *reserves*
 
 ![pool1](./images/pool1.png){style="transform: translate(160%, 50%); width: 200px"}
 
 --- 
-layout: section
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
-Why It Matters <a name="wim"></a></h1>
+Why DeFi Matters <a name="wim"></a></h1>
 </p>
 
 ---
 
 # Tokenisation
-The tokenization of financial assets on the blockchain is gaining momentum at an institutional and governmental level.
+The tokenisation of assets on blockchains is gaining momentum at an institutional and governmental level[^fncbdc]
 
-* Asset tokenization[^fncbdc]
-    * Currencies and monetary policy: Central Bank Digital Currencies (CBDC)
-    * Financials: bonds, loans, stocks, ETFs, mortages
-    * Non-financials: commodities, real estate, art, music
-* **Objective**: reduce transaction processing time, reduce transaction costs, reduce intermediaries and monopoly, simplify transfer of value ...
+* Currencies: Central Bank Digital Currencies (CBDC)
+* Financials: bonds, loans, stocks, ETFs, mortages
+* Non-financials: commodities, real estate, art, music
+* **Objectives**: 
+    * Better monetary policy oversight
+    * Reduce transaction processing time
+    * Reduce transaction costs
+    * Reduce intermediaries and monopoly
+    * Simplify the transfer of value
 
-<br> <br> <br> <br> 
+<br> <br> <br> <br>
 
 [^fncbdc]: A common standard for fungible  tokens with design features based on central bank (or regulator) requirements
 
@@ -226,28 +251,27 @@ Source: BIS innovation Hub
 # Other reasons
 
 * Help underbanked populations
+
 * Competition for intermediaries to drive costs down
 * Incentives for technological innovations
-* Research is multi-disciplinary: mathematics, finance, economics, computer science, Law, ...
+* Research is multi-disciplinary: mathematics, finance, economics, computer science, law, ...
 
 ---
-layout:fact
+layout: center
 ---
 
 <p style="text-align: center;"><h2>
 It is <b>key</b> to study these new markets to influence policy and practice at early stages <a name="defi1"></a></h2>
 </p>
 
-
---- 
-layout: section
+---
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
 Automated Market Makers <br /><br />
 AMMs<a name="AMMs"></a></h1>
 </p>
-
 
 ---
 
@@ -258,12 +282,13 @@ AMMs<a name="AMMs"></a></h1>
 
 * Available liquidity of *reserves*: $x$ and $y$.
 
-![pool1](./images/pool1.png){style="transform: translate(150%, 0%); width: 200px"}
+![pool1](./images/pool1.png){style="transform: translate(165%, 20%); width: 200px"}
 
 
 ---
 
 # Automated Market Makers
+
 ### Two types of participants
 
 * **Liquidity takers (LTs)** trade with the pool
@@ -282,16 +307,19 @@ AMMs<a name="AMMs"></a></h1>
 
 # Automated Market Makers
 ### Bonding curves
-* A function $\Phi$ that maps changes in the reserves in security $X$ to changes in the reserves in security $Y$
 
 *  Iso-liquidity curve or indifference curve (points of same level of liquidity)
 
-![BC1](./images/BondingCurves1.png){style="transform: translate(10%, 10%); width: 630px"}
+* A function $\Phi$ that maps changes in the reserves in security $X$ to changes in the reserves in security $Y$
+
+
+![BC1](./images/BondingCurves1.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
 layout: image-right 
+image: ./images/bc2.png
 class: my-cool-content-on-the-left
-backgroundSize: 160%
+backgroundSize: 170%
 ---
 
 # Automated Market Makers
@@ -368,9 +396,9 @@ $$
 
 ::left::
 
-Scatter plot of transaction costs  and the approximation for all transactions in the ETH/USDC pool:   $6.76 \times 10^6$ transactions between *5 May 2021* and *31 December 2023*
+<br>
 
-<br />
+Scatter plot of transaction costs  and the approximation for all transactions in the ETH/USDC pool:   $6.76 \times 10^6$ transactions between *5 May 2021* and *31 December 2023*
 
 [Cartea, Á., Drissi, F., & Monga, M. (2023). Decentralised finance and automated market making: Execution and speculation](https://arxiv.org/abs/2307.03499)
 
@@ -390,6 +418,20 @@ $$
 Z_1 - Z_0 =  -\Phi'(y-\Delta y) + \Phi'(y) \approx \Phi''(y)\,\Delta y
 $$
 
+---
+
+# Automated Market Makers
+### Liquidity takers
+
+
+* Price impact following a buy order of volume $\Delta y$
+$$
+Z_1 - Z_0 =  -\Phi'(y-\Delta y) + \Phi'(y) \approx \Phi''(y)\,\Delta y
+$$
+
+<br>
+<br>
+
 ### Liquidity providers
 
 * Change in wealth of liquidity providers[^fn4]
@@ -398,22 +440,9 @@ $$
 $$
 
 
-<br><br><br><br>
+<br><br>
 
-[^fn4]: Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.
-
----
-
-# Automated Market Makers
-### Liquidity providers
-
-* Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
-
-* The trading function is parameterised. In Uniswap
-$$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
-$$
-
+[^fn4]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
 
 ---
 
@@ -427,7 +456,33 @@ $$
 \Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
 $$
 
-* Liquidity providers earn *transaction fees* from transactions
+---
+
+# Automated Market Makers
+### Liquidity providers
+
+* Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
+
+* The trading function is parameterised. In Uniswap
+$$
+\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
+$$
+
+* Liquidity providers earn *transaction fees*
+
+---
+
+# Automated Market Makers
+### Liquidity providers
+
+* Liquidity providers add liquidity without changing the marginal price $-\Phi'(y)$.
+
+* The trading function is parameterised. In Uniswap
+$$
+\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}. 
+$$
+
+* Liquidity providers earn *transaction fees*
 
 * They incur predictable losses[^fn3]
 
@@ -437,7 +492,8 @@ $$
 
 * They incur opportunity costs
 
-[^fn3]: Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.
+[^fn3]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
+
 
 ---
 
@@ -457,7 +513,7 @@ $$
 [^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
 
 ---
-layout: section
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
@@ -623,13 +679,12 @@ $$
 # Optimal bonding curve
 ### The model
 * The DLP does not  observe the regime $g$ directly.  Available information in the blockchain: the trading flow 
-
 * We can assign a probability probability $\Psi^{j}_{t}$ to be in regime $j$ at time $t$ given $\mathcal{F}_t$ 
 $$
  \Psi^{j}_{t} = \mathbb{E}\left[ \mathrm{1}_{g_t = j} \,\mid\,\mathcal{F}_t\right]
 $$
 
-### Proposition
+### Filtered regime probability
 * The  filter $\Psi^{j}_{t}$ satisfies 
 $$
 \Psi^{j}_{t} = \frac{\Gamma^j_t}{\sum_{i=1}^M\Gamma^i_t} \,,
@@ -700,15 +755,14 @@ layout: two-cols-header
 * Scenario II: $50\%$ arbitrageurs, $50\%$ noise traders
 
 ::left::
-
 | | Average$^1$      | Standard Deviation | 
 |  :---  | :---        |    :----:   | 
-| DLP (Scenario I) | $-0.04\%$ | $0.719\%$ | 
-| DLP (Scenario II)   | $0.717%$ | $2.584\%$ |
+| DLP (Sc. I) | $-0.04\%$ | $0.719\%$ | 
+| DLP (Sc. II)   | $0.717%$ | $2.584\%$ |
 | Buy and Hold |  $0.01\%$   | $0.741\%$        |
 | Uniswap$^2$ |   $-1.485\%$    |  $7.812\%$ |
 
-*$1.$ $30$-minutes performance of LPs<br/>
+*$1.$ $30$-minutes performance of LPs 
 $2.$ Using $42,022$ LP operations between 5 May 2021 and 30 April 2022*
 
 ::right::
@@ -716,7 +770,7 @@ $2.$ Using $42,022$ LP operations between 5 May 2021 and 30 April 2022*
 ![experiments1](./images/DLPexperiments.png){style="transform: translate(10%, 0%); width: 400px"}
 
 ---
-layout: section
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
@@ -725,6 +779,16 @@ Blockchain design <a name="bd"></a></h1>
 
 [Capponi, A., Cartea, Á., Drissi, F. <br /> Price Formation in Memory Pools](https://www.faycaldrissi.com/mempools-talk/1)
 </p>
+
+--- 
+
+# Blockchain design
+<br />
+
+### Memory pools
+* A repository for unconfirmed transactions
+
+![blockchain1](./images/blockchaincreation3.png){style="transform: translate(40%, -8%); width: 520px"}
 
 --- 
 
@@ -799,14 +863,14 @@ layout: fact
 ## Our contributions
 <br /><br /><br />
 
-1. Characterise the effects of **pre-trade transparency** and **priority gas auctions** on the global **microstructure of decentralised exchanges**.
+1. Characterise the effects of **pre-trade transparency** and **priority gas auctions** on the global **microstructure of decentralised exchanges**
 
 <br>
 
-2. Simple and implementable **design features** to **improve price efficiency**, information dissemination, and decrease rent extraction.
+2. Simple and implementable **design features** to **improve price efficiency**, information dissemination, and decrease rent extraction from validators
 
 ---
-layout: section
+layout: center
 ---
 
 <p style="text-align: center;"><h1>
@@ -819,6 +883,15 @@ The model <a name="design"></a></h1>
 * Trading is conducted in an AMM with trading function $\Phi$ for a pair of securities $X$ and $Y$ 
     * Initial marginal price $V_0$, initial reserves $y_0$
     * The pool size is $\kappa = 1/k$
+
+---
+
+## The AMM
+* Trading is conducted in an AMM with trading function $\Phi$ for a pair of securities $X$ and $Y$ 
+    * Initial marginal price $V_0$, initial reserves $y_0$
+    * The pool size is $\kappa = 1/k$
+
+<br>
 
 ## Competition for queue priority
 * For a buy volume $\delta$, the **slippage** is
@@ -837,20 +910,101 @@ $$
 ---
 
 ## The market
-* Two informed traders $i$ and $j$ compete to buy $Y$ during block time ($12$ seconds)
+* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
 * They submit priority fees $\varphi_i$ and $\varphi_j$
 
+
+---
+
+## The market
+* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
+* They submit priority fees $\varphi_i$ and $\varphi_j$
+
+<br>
+
 ## The information
-* They receive private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
+* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
 $$
 V_i = \mathbb E[V | v_i] = V(i)
 $$
 * The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
 
+---
+
+## The market
+* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
+* They submit priority fees $\varphi_i$ and $\varphi_j$
+
+<br>
+
+## The information
+* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
+$$
+V_i = \mathbb E[V | v_i] = V(i)
+$$
+* The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
+
+<br>
+
 ## The trading volumes
 * They wish to buy volumes $\delta_i = \delta(v_i)$ and $\delta_j = \delta(v_j)$
-* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  $g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right).$
 * The demand function $\delta$ is continuously differentiable and increasing.
+* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  
+$$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right)$$
+
+---
+
+# Competition for queue priority
+
+* If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
+$$
+W_{i}\left(\text{win}\right)=-\varphi_{i}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{initial trade}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
+=\,\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
+$$
+<br />
+
+
+---
+
+# Competition for queue priority
+
+* If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
+$$
+W_{i}\left(\text{win}\right)=-\varphi_{i}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{initial trade}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
+=\,\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
+$$
+<br />
+
+* If trader $i$ loses the auction, i.e., if $\varphi_{i}<\varphi_j$, their wealth is
+$$
+W_{i}\left(\text{lose}\right)=-\delta_{i}\,\left(V_{0}+3\,\delta_{i}/\kappa\right) +\delta_{i}\,V
+ =-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V
+$$
+
+
+---
+
+# Competition for queue priority
+
+* If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
+$$
+W_{i}\left(\text{win}\right)=-\varphi_{i}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{initial trade}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
+=\,\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
+$$
+<br />
+
+* If trader $i$ loses the auction, i.e., if $\varphi_{i}<\varphi_j$, their wealth is
+$$
+W_{i}\left(\text{lose}\right)=-\delta_{i}\,\left(V_{0}+3\,\delta_{i}/\kappa\right) +\delta_{i}\,V
+ =-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V
+$$
+
+* The expected wealth is 
+$$
+\mathbb{E}\left[W_{i}\right]= P_{i}\,\mathbb E[W_{i}\left(\text{win}\right)] + (1-P_{i})\,\mathbb E[W_{i}\left(\text{lose}\right)] = P_{i}\,\left(-\varphi_{i}+2\,\delta_{i}^2/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}
+$$
+where $P_i=\mathbb E_i\left[\varphi_i>\varphi_j\right]$
+
 
 ---
 
@@ -919,8 +1073,8 @@ layout: two-cols-header
 $$
 \varphi^\star_i=2/\kappa\,\left(\delta\left(v_{i}\right)^2-\frac{\int_{0}^{v_{i}}\delta^{'}\left(x\right)\,\delta\left(x\right)\,F\left(x\right)\,dx}{F\left(v_{i}\right)}\right)\,
 $$
-* It is increasing in the signal value and the range $\overline v$
-* It is decreasing in liquidity supply
+* It is increasing in the signal and the range $\overline v$
+* It is decreasing in the liquidity supply
 
 ::right::
 
@@ -941,10 +1095,24 @@ $\qquad\qquad\qquad$ $10-16$ December $2022$
 $$
 J_{i}=\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
 $$
+
+
+
+---
+
+# Equilibrium trading volume
+<br>
+
+* Trader $i$ solves the problem
+$$
+J_{i}=\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
+$$
+
 * In equilibrium, informed traders transact a portion of the pool, which is increasing in the signal
 $$
 \delta^\star\left(v_{i}\right)=\kappa \, \frac{V_{i}}{2\left(3-F\left(v_{i}\right)\right)}
 $$
+
 
 ---
 layout: image-right
@@ -962,6 +1130,53 @@ backgroundSize: 180%
 *  The LP does not have information about $V$ and assumes $v_i$ and $v_j$ are drawn from $[-\overline v, \overline v]$
 
 * Price-sensitive liquidity demanders submit transactions with an absolute total volume $N$ which nets to zero
+
+---
+
+# Equilbirum liquidity supply
+
+### The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand
+
+<br>
+
+
+
+---
+
+# Equilbirum liquidity supply
+
+### The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand
+
+<br>
+
+* Losses to informed traders
+
+$$
+\text{L} = - \frac{1}{\kappa}\, \mathbb E[(\delta^\star(v_i) + \delta^\star(v_j))^2]
+= - \kappa\, \mathbb E[(\tilde \delta^\star(v_i) + \tilde \delta^\star(v_j))^2]
+$$
+
+
+---
+
+# Equilbirum liquidity supply
+
+### The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand
+
+<br>
+
+* Losses to informed traders
+
+$$
+\text{L} = - \frac{1}{\kappa}\, \mathbb E[(\delta^\star(v_i) + \delta^\star(v_j))^2]
+= - \kappa\, \mathbb E[(\tilde \delta^\star(v_i) + \tilde \delta^\star(v_j))^2]
+$$
+
+* Earnings from liquidity demand
+
+$$
+\text{E}=\pi\,N\,(1-\theta/\kappa)
+$$
 
 ---
 
@@ -1000,7 +1215,7 @@ $$
 
 * Block time is $12$ seconds $\implies$ signals with high variance and higher priority fees
 
-* The rent extracted by validators increase with liquidity supply and fragmentation
+* The rent extracted by validators **increases** with **liquidity supply** and **fragmentation**
 
 $$
 \mathbb{E}\left[\text{PF}\right]\propto4\,\sqrt{\pi\,N\,\theta}\,\mathbb{E}\left[\varphi_{i}^{\star}+\varphi_{j}^{\star}\right]
