@@ -871,7 +871,7 @@ $$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}
 
 # The model
 
-## Competition for queue priority
+### Competition for queue priority
 * For a volume $\delta$, the **slippage** is
 $$
 \approx\frac12 \,\delta\, \Phi''(y_0) = \delta / \kappa
@@ -890,7 +890,7 @@ $$
 
 # The model
 
-## Competition for queue priority
+### Competition for queue priority
 
 * If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
@@ -904,7 +904,7 @@ $$
 
 # The model
 
-## Competition for queue priority
+### Competition for queue priority
 
 * If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
@@ -925,7 +925,7 @@ $$
 
 # The model
 
-## Competition for queue priority
+### Competition for queue priority
 
 
 * The expected wealth is 
@@ -940,7 +940,7 @@ where $P_i=\mathbb E_i\left[\varphi_i>\varphi_j\right]$
 
 # The model
 
-## Competition for queue priority
+### Competition for queue priority
 
 * The expected wealth is 
 $$
