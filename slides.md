@@ -176,7 +176,13 @@ layout: center
 <p style="text-align: center;"><h1>
 Automated Market Makers <br /><br />
 AMMs<a name="AMMs"></a></h1>
+
+<br>
+
+[Cartea, Á., Drissi, F., Sánchez-Betancourt, L., Siska, D., & Szpruch, L. (2024). <br /> Strategic bonding curves in automated market makers](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5018420)
+
 </p>
+
 
 ---
 
@@ -192,7 +198,7 @@ AMMs<a name="AMMs"></a></h1>
 
 ## Solution
 
-* automated market makers (AMMs)
+* Automated market makers (AMMs)
 
 ---
 
@@ -357,6 +363,12 @@ $$
 # Automated Market Makers
 ### Liquidity providers
 
+* Change in wealth of LPs against not providing liquidity
+
+$$
+\Phi(y-\Delta y)-\Phi(y)+\Delta y \, \Phi'(y-\Delta y) \le 0 \quad (\approx -\frac12 \Phi(''y)\,\Delta y^2)
+$$
+
 * LPs incur predictable losses[^fn3]
 
 $$
@@ -392,8 +404,6 @@ layout: center
 
 <p style="text-align: center;"><h1>
 AMM Design <a name="design"></a></h1>
-
-[Cartea, Á., Drissi, F., Sánchez-Betancourt, L., Siska, D., & Szpruch, L. (2024). <br /> Strategic bonding curves in automated market makers](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5018420)
 </p>
 
 ---
@@ -536,17 +546,16 @@ $$
 
 # AMM design
 
-### Optimal bonding curve
-* The bonding curve of a DLP: $\{\delta^b, \delta^a, \eta^b, \eta^a\}$
+### Strategic bonding curves
+* The bonding curve of a DLP is defined by $\{\delta^b, \delta^a, \eta^b, \eta^a\}$
 
-* Optimal bonding curve:
-    * Optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
+* LPs can set these functions according to strategic preferences
 
 * Restrictions: implementable in a smart contract $\implies$ employs information on the blockchain
 
 --- 
 
-# AMM design
+# Strategic bonding curve
 
 ### The model
 * Let $P$ be the unobserved fundamental price
@@ -555,17 +564,14 @@ $$
 * $g \notin \mathbb F$ is a CTMC with finite state space $\mathcal S = \{1, \dots, M\}$ that describes the regimes. The transition rate matrix is $\Pi$
     * Regime $1$ corresponds to $P<<Z$
     * Regime $M$ corresponds to $Z<<P$
-* Liquidity takers are sensitive to the price of liquidity (slippage) 
-$$Z^a - P = \delta^a + Z - P  \quad \text{and} \quad P - Z^b = \delta^b + P - Z$$
-
 
 ---
 
-# AMM design
+# Strategic bonding curve
 ### The model
-* The vectors $\boldsymbol{c}^b = \{c^{b,1},\dots,c^{b,M}\}$ and $\boldsymbol{c}^a = \{c^{a,1},\dots,c^{a,M}\}$ describe the **baseline  intensity** of the trading flow at the bid/ask in each regime $j\in\{1,\dots,M\}.$
-
-* The intensity of order arrival at the bid and the ask is
+* Liquidity takers are sensitive to the price of liquidity (slippage) 
+$$Z^a - P = \delta^a + Z - P  \quad \text{and} \quad P - Z^b = \delta^b + P - Z$$
+* The vectors $\boldsymbol{c}^b = \{c^{b,1},\dots,c^{b,M}\}$ and $\boldsymbol{c}^a = \{c^{a,1},\dots,c^{a,M}\}$ describe the **baseline  intensity** of the trading flow at the bid/ask in each regime $j\in\{1,\dots,M\}$
 $$
 \lambda_{t}^{b}\left(\delta_{t}^{b},g_t\right)= \sum_{j=1}^M c^{b,j}\,e^{-\kappa\,\delta_{t}^{b}} \,\mathrm{1}_{g_t = j}= \sum_{j=1}^M \lambda^{b,j}_t(\delta^b_t)\,\mathrm{1}_{g_t = j}
 $$
@@ -575,9 +581,10 @@ $$
 
 --- 
 
-# Optimal bonding curve
+# Strategic bonding curve
 ### The model
-* The DLP does not  observe the regime $g$ directly.  Available information in the blockchain: the trading flow 
+* The DLP does not  observe the regime $g$.  
+* Available information in the blockchain: the trading flow 
 * We can assign a probability probability $\Psi^{j}_{t}$ to be in regime $j$ at time $t$ given $\mathcal{F}_t$ 
 $$
  \Psi^{j}_{t} = \mathbb{E}\left[ \mathrm{1}_{g_t = j} \,\mid\,\mathcal{F}_t\right]
@@ -585,7 +592,7 @@ $$
 
 --- 
 
-# Optimal bonding curve
+# Strategic bonding curve
 ### Regime probability
 * The  filter $\Psi^{j}_{t}$ satisfies 
 
@@ -599,8 +606,18 @@ $$
 
 ---
 
-# Optimal bonding curve
+# Strategic bonding curve
+
+
 ### The dynamic optimisation problem
+* We look for optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
+
+---
+
+# Strategic bonding curve
+
+### The dynamic optimisation problem
+* We look for optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
 * We consider Poisson processes $N^b$ and $N^a$ with projected stochastic intensities $\hat{\lambda}^{b}$ and $\hat{\lambda}^{a}$
 $$
 \begin{cases}
@@ -609,26 +626,37 @@ $$
 \end{cases}
 $$
 
+---
+
+
+# Strategic bonding curve
+
+### The dynamic optimisation problem
+* We look for optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
+* We consider Poisson processes $N^b$ and $N^a$ with projected stochastic intensities $\hat{\lambda}^{b}$ and $\hat{\lambda}^{a}$
+$$
+\begin{cases}
+\hat{\lambda}_{t}^{b} =  e^{-\kappa\,\delta_{t}^{b}}\, \mathrm{c}^{b}\cdot\mathrm{\Psi}_{t} \\
+\hat{\lambda}_{t}^{a} =  e^{-\kappa\,\delta_{t}^{a}}\, \mathrm{c}^{a}\cdot\mathrm{\Psi}_{t}
+\end{cases}
+$$
+* The performance criterion (well-posed)
+$$
+\mathbb{E}_{t,x,y,z,\mathrm{\Psi}}\left[x_{T}+y_T\,Z_T - \alpha\,(y_T-\hat y)^2 -\phi\,\int_{t}^{T} (y_s-\hat y)^{2}\,d s\right]
+$$
 *  The set of admissible bonding curves
 $$
 \mathcal A_t = \bigg\{ (\delta^b_s, \delta^a_s)_{s \in [t,T]},\ \mathbb R^2\text{-valued},\ \mathbb F\text{-adapted, square-integrable, and bounded from below by $\underline{\delta}$}\bigg\}, 
 $$
 
-* The performance criterion (well-posed)
-$$
-\mathbb{E}_{t,x,y,z,\mathrm{\Psi}}\left[x_{T}+y_T\,Z_T - \alpha\,(y_T-\hat y)^2 -\phi\,\int_{t}^{T} (y_s-\hat y)^{2}\,d s\right]
-$$
-
 ---
 
-
-# Optimal bonding curve
+# Strategic bonding curve
 ### The solution
 * The optimal bonding curve (in feedback form)
 $$
 \delta_{t}^{\star,b}=\frac{1}{\kappa}-\frac{\theta\left(t,y+\zeta,\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{b}}{\psi\cdot\mathrm{c}^{b}}\right)-\theta\left(t,y,\tilde{\mathrm{\psi}}\right)}{\zeta}+\frac{1}{\zeta}\left(\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{b}}{\psi\cdot\mathrm{c}^{b}}\cdot\nabla_{\tilde{\mathrm{\psi}}}\theta-{\tilde{\mathrm{\psi}}}\cdot\nabla_{\tilde{\mathrm{\psi}}}v+\left(y+\zeta\right)\eta^{b}(y)\right)
 $$
-
 $$
 \delta_{t}^{\star,a}=\frac{1}{\kappa}-\frac{\theta\left(t,y-\zeta,\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{a}}{\psi\cdot\mathrm{c}^{a}}\right)-\theta\left(t,y,\tilde{\mathrm{\psi}}\right)}{\zeta}+\frac{1}{\zeta}\left(\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{a}}{\psi\cdot\mathrm{c}^{a}}\cdot\nabla_{\tilde{\mathrm{\psi}}}\theta-{\tilde{\mathrm{\psi}}}\cdot\nabla_{\tilde{\mathrm{\psi}}}v-\left(y-\zeta\right)\eta^{a}(y)\right)\,.
 $$
@@ -636,7 +664,7 @@ $$
 ---
 layout: two-cols-header 
 ---
-# Optimal bonding curve
+# Strategic bonding curve
 ### Experiments
 * Two regimes: $c^b = 5\times c^a$ and $c^a = 5 \times c^b$ 
 
@@ -652,7 +680,7 @@ layout: two-cols-header
 layout: two-cols-header
 ---
 
-# Optimal bonding curve
+# Strategic bonding curve
 ### Experiments
 * Scenario I : $100\%$ arbitrageurs
 * Scenario II: $50\%$ arbitrageurs, $50\%$ noise traders
@@ -689,7 +717,7 @@ Blockchain design <a name="bd"></a></h1>
 # Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
+<br><br><br>
 
 ![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 680px"}
 
@@ -698,7 +726,8 @@ Blockchain design <a name="bd"></a></h1>
 # Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
+* At each Epoch, with length block time, a validator is chosen
+<br><br>
 
 ![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, 3%); width: 680px"}
 
@@ -714,7 +743,8 @@ Blockchain design <a name="bd"></a></h1>
 # Blockchain protocol
 
 * Transactions are sent to the network continuously, and stored in a memory pool
-* At each Epoch, with length block time, a validator creates a new block
+* At each Epoch, with length block time, a validator is chosen
+* The validator creates a new block with transactions from the memory pool
 
 ![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
 
@@ -788,7 +818,8 @@ layout: fact
 ## Our contributions
 <br /><br /><br />
 
-1. Characterise the effects of **pre-trade transparency** and **priority gas auctions** on the global **microstructure of decentralised exchanges**
+
+1. Describe the **microstructure of decentralised exchanges** under **pre-trade transparency** and **priority gas auctions**.
 
 <br>
 
@@ -804,28 +835,50 @@ The model <a name="design"></a></h1>
 
 ---
 
-## The AMM
+# The model
+
+### The market
+
 * Trading is conducted in an AMM with trading function $\Phi$ for a pair of securities $X$ and $Y$ 
-    * Initial marginal price $V_0$, initial reserves $y_0$
-    * The pool size is $\kappa = 1/k$
+* Initial marginal price $V_0$, initial reserves $y_0$
+* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
+* They submit priority fees $\varphi_i$ and $\varphi_j$
 
 ---
 
-## The AMM
-* Trading is conducted in an AMM with trading function $\Phi$ for a pair of securities $X$ and $Y$ 
-    * Initial marginal price $V_0$, initial reserves $y_0$
-    * The pool size is $\kappa = 1/k$
+# The model
 
-<br>
+### The information
+* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
+$$
+V_i = \mathbb E[V | v_i] = V(i)
+$$
+* The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
+
+---
+
+# The model
+
+### The trading volumes
+* They wish to buy volumes $\delta_i = \delta(v_i)$ and $\delta_j = \delta(v_j)$
+* The demand function $\delta$ is continuously differentiable and increasing.
+<!--* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  
+$$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right)$$-->
+
+
+
+---
+
+# The model
 
 ## Competition for queue priority
-* For a buy volume $\delta$, the **slippage** is
+* For a volume $\delta$, the **slippage** is
 $$
-\tilde V(\delta)-V_0 = \frac12 \,\delta\, \Phi''(y_0) = k\,\delta = \delta / \kappa
+\approx\frac12 \,\delta\, \Phi''(y_0) = \delta / \kappa
 $$
 * Following a buy with volume $\delta$, the price impact on the marginal price is
 $$
--\Phi'(y_0-\delta) + \Phi'(y_0)  \approx 2\,\delta / \kappa 
+\approx \delta\, \Phi''(y_0) = 2\,\delta / \kappa 
 $$
 * Execution price for a **subsequent trade** with volume $\delta$
 $$
@@ -834,52 +887,10 @@ $$
 
 ---
 
-## The market
-* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
-* They submit priority fees $\varphi_i$ and $\varphi_j$
 
+# The model
 
----
-
-## The market
-* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
-* They submit priority fees $\varphi_i$ and $\varphi_j$
-
-<br>
-
-## The information
-* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
-$$
-V_i = \mathbb E[V | v_i] = V(i)
-$$
-* The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
-
----
-
-## The market
-* Two informed traders $i$ and $j$ compete to **buy** $Y$ during block time ($12$ seconds)
-* They submit priority fees $\varphi_i$ and $\varphi_j$
-
-<br>
-
-## The information
-* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
-$$
-V_i = \mathbb E[V | v_i] = V(i)
-$$
-* The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
-
-<br>
-
-## The trading volumes
-* They wish to buy volumes $\delta_i = \delta(v_i)$ and $\delta_j = \delta(v_j)$
-* The demand function $\delta$ is continuously differentiable and increasing.
-* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  
-$$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right)$$
-
----
-
-# Competition for queue priority
+## Competition for queue priority
 
 * If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
@@ -891,7 +902,9 @@ $$
 
 ---
 
-# Competition for queue priority
+# The model
+
+## Competition for queue priority
 
 * If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
@@ -909,20 +922,11 @@ $$
 
 ---
 
-# Competition for queue priority
 
-* If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
-$$
-W_{i}\left(\text{win}\right)=-\varphi_{i}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{initial trade}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
-=\,\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
-$$
-<br />
+# The model
 
-* If trader $i$ loses the auction, i.e., if $\varphi_{i}<\varphi_j$, their wealth is
-$$
-W_{i}\left(\text{lose}\right)=-\delta_{i}\,\left(V_{0}+3\,\delta_{i}/\kappa\right) +\delta_{i}\,V
- =-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V
-$$
+## Competition for queue priority
+
 
 * The expected wealth is 
 $$
@@ -933,20 +937,10 @@ where $P_i=\mathbb E_i\left[\varphi_i>\varphi_j\right]$
 
 ---
 
-# Competition for queue priority
 
-* If trader $i$ wins the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
-$$
-W_{i}\left(\text{win}\right)=-\varphi_{i}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{initial trade}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
-=\,\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
-$$
-<br />
+# The model
 
-* If trader $i$ loses the auction, i.e., if $\varphi_{i}<\varphi_j$, their wealth is
-$$
-W_{i}\left(\text{lose}\right)=-\delta_{i}\,\left(V_{0}+3\,\delta_{i}/\kappa\right) +\delta_{i}\,V
- =-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V
-$$
+## Competition for queue priority
 
 * The expected wealth is 
 $$
@@ -980,6 +974,10 @@ layout: two-cols-header
 $\qquad\quad$ Ethereum memory pool transaction data <br>
 $\qquad\qquad\qquad$ $10-16$ December $2022$
 
+<br>
+
+![PF1](./images/gas_fees_mempool.jpg){style="transform: translate(40%, -10%); width: 280px"}
+
 ---
 layout: two-cols-header
 ---
@@ -989,7 +987,7 @@ layout: two-cols-header
 ::left::
 <br >
 <br >
-
+ 
 * In equilibrium, traders submit transactions at the end of block time
 
 <br ><br ><br><br>
@@ -1140,7 +1138,7 @@ $$
 
 * Block time is $12$ seconds $\implies$ signals with high variance and higher priority fees
 
-* The rent extracted by validators **increases** with **liquidity supply** and **fragmentation**
+* The rent extracted by validators **increases** with **liquidity supply**, **fragmentation**, and **variance**
 
 $$
 \mathbb{E}\left[\text{PF}\right]\propto4\,\sqrt{\pi\,N\,\theta}\,\mathbb{E}\left[\varphi_{i}^{\star}+\varphi_{j}^{\star}\right]
@@ -1181,29 +1179,30 @@ backgroundSize: 105%
 ---
 
 # Blockchains with random block time
-
-* The proportional trading volume increases
+* The proportional volume **increases**
 $$
 \mathbb E[\tilde \delta_i^{\tau,\star}] > \mathbb E[\tilde \delta_i^{\star}] 
 $$
-
-* Liquidity providers reduce liquidity supply
+* Liquidity providers reduce supply
 $$
 \kappa^{\tau,\star}=\sqrt{\frac{\pi\,N\,\theta}{\mathbb{E}\left[\left(\tilde{\delta}_{i}\left(v_{i}\right)+\tilde{\delta}_{i}\left(v_{j}\right)\right)^{2}\right]}} < \kappa^{\star}
 $$
-
-* There is less liquidity demand, and it is more expensive for them to transact
-
-* The trading volume of informed traders decreases
+* The total volume **decreases**
 $$
 \mathbb E[\delta^{\tau,\star}] = \kappa^{\tau,\star}
 $$
+* There is less liquidity demand, and it is more expensive for them to transact
+<!--* In practice, signal variance at round one is lower than that of round two $\implies$ -->
 
-* In practice, signal variance at round one is lower than that of round two $\implies$ 
+---
+layout: center
+--- 
+
+# The future of decentralised finance
 
 ---
 
-# Other DeFi protocols 
+# DeFi protocols 
 
 | **Service**       | **DeFi**      | **TradFi** | 
 |  :---         | :---        |    :----   | 
