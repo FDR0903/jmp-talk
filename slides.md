@@ -244,7 +244,6 @@ AMMs<a name="AMMs"></a></h1>
 ---
 layout: image-right 
 image: ./images/bc2.png
-class: my-cool-content-on-the-left
 backgroundSize: 170%
 ---
 
@@ -269,7 +268,6 @@ $$
 ---
 layout: image-right 
 image: ./images/bc3.png
-class: my-cool-content-on-the-left
 backgroundSize: 170%
 ---
 
