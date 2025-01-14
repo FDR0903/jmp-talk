@@ -253,7 +253,7 @@ layout: fact
 ![BC1](./images/BondingCurves1.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
-layout: image-right 
+layout: image-right
 image: ./images/bc2.png
 backgroundSize: 170%
 ---
@@ -266,9 +266,8 @@ $$
 \frac{\Delta x}{\Delta y} = \frac{\Phi(y-\Delta y) - \Phi(y)}{\Delta y}
 $$
 
-
 ---
-layout: image-right 
+layout: image-right
 image: ./images/bc3.png
 backgroundSize: 170%
 ---
