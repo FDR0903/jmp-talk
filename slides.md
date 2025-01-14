@@ -28,22 +28,85 @@ mdc: true
 [scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
 [website](https://www.faycaldrissi.com/), [github](https://github.com/FDR0903)
 
+--- 
+
+# Decentralised Finance (DeFi)
+###  Blockchains
+* Distributed ledger without central authority
+* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value 
+
+<br>
+<br>
+
+### Tokenisation
+* Currencies: Central Bank Digital Currencies (CBDCs)
+    * **Economic benefits**: better monetary policy oversight[^mpolicy]
+* Financial (bonds, stocks, ETFs) and non-financial assets (commodities, real estate, art, music)
+    * **Economic benefits**: reduce transaxrhction costs and processing time
+
+<br><br>
+
+[^mpolicy]: [CBDC and Monetary Policy](https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/)
+---
+
+# Adoption by institutions and infrastructures
+###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+
+* Cross-border payments
+    * Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][][^source3]
+    *  BIS and central banks: **inter-bank FX Settlement** using **DeFi**[^source1]
+* Underbanked populations
+* Incentive for technological innovation
+* Research is multi-disciplinary: at the interface of engineering, business, economics, public policy, and mathematics
+<br><br><br>
+
+[^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
+[^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
+[^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
+[^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
+
+<!---
+
+# Applications: FX settlement
+**Project Mariana:** BIS Innovation Hub, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
+Source: BIS innovation Hub
+
+* **Central banks** manage access to wCBDC on domestic and transnational network. They issue/redeem coins on their domestic networks
+* **Commercial banks** use and transfer wCBDC within domestic and transnational network
+
+![PF1](./images/project_mariana.png){style="transform: translate(30%, 0%); width: 480px"} -->
+
+---
+
+<p style="text-align: center;"><h2>
+It is <b>key</b> to study these new markets to influence policy and practice at early stages, and to achieve its potential <a name="defi1"></a></h2>
+</p>
+
+<br><br><br><br>
+
+### Past research
+* Chracterise, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
+<br><br><br>
+
+### Current research
+* Study and improve the design of decentralised finance 
+
 ---
 layout: center
 ---
 
-<p style="text-align: center;"><h1>
-Decentralised Finance <a name="defi"></a></h1>
+<p style="text-align: center;">
+<h2> Decentralised Finance and Decentralised Exchanges </h2>
 </p>
 
----
+--- 
 
 # Decentralised Finance: two parts
 <br />
 
 ### Blockchains
 
-* Infrastructure and decentralization
+* Infrastructure
 * Lifecycle of transactions
 
 <br />
@@ -92,127 +155,67 @@ Decentralised Finance <a name="defi"></a></h1>
 Trading platforms where the rules of interaction are encoded in a smart contract operating on the blockchain   <a name="defi2"></a></h3>
 </p>
 
----
-layout: center
----
-
-<p style="text-align: center;"><h1>
-Why DeFi Matters <a name="wim"></a></h1>
-</p>
-
 --- 
 
-# Blockchains
-<!--* Single state computer on a shared network-->
-![blockchain1](./images/blockchain1.png){style="transform: translate(50%, 0%); width: 480px"}
-* Distributed ledger without central authority
-* A record of consensus with cryptographic audit trail
-* **Social benefits**
-    * Reduce intermediaries, monopolies
-    * Simplify the transfer of value
-    * Transparency 
+# Table of contents
 
----
+<br><br><br>
 
-# Tokenisation
-The tokenisation of assets on blockchains is gaining momentum at an institutional and governmental level
+### Part I: smart contracts
 
-* Currencies: Central Bank Digital Currencies (CBDCs)
-* **Economic benefits**: better monetary policy oversight[^mpolicy]
+* DEXs hinder strategic behaviour of liquidity providers
+* Market design to overcome it
 
-* Financial (bonds, loans, stocks, ETFs, mortages) and non-financial assets (commodities, real estate, art, music)
-* **Economic benefits**: reduce transaction costs and processing time
+<br><br><br>
 
-<br><br><br><br><br>
+### Part II: blockchains
 
-[^mpolicy]: [CBDC and Monetary Policy](https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/)
+* Blockchain protocol hinders information dissemination and causes superfluous infrastructure costs
+* Economic model to describe DEX microstructure and improve it
 
-<!--<br />
-[^fncbdc]: A common standard for fungible  tokens with design features based on central bank (or regulator) requirements-->
+<br />
+<br />
 
----
 
-# Adoption by institutions and infrastructures
-###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-
-*  Inter-bank FX Settlement[^source1]:  Cross-border trading between financial institutions using **automated market makers**
-
-* **Cross-border payments** and settlement in CBDCs is an explicit international policy goal and a priority of the G20[^source2][][^source3]
-
-<br><br><br><br><br>
-
-[^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
-[^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
-[^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
-[^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
-
-<!---
-
-# Applications: FX settlement
-**Project Mariana:** BIS Innovation Hub, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
-Source: BIS innovation Hub
-
-* **Central banks** manage access to wCBDC on domestic and transnational network. They issue/redeem coins on their domestic networks
-* **Commercial banks** use and transfer wCBDC within domestic and transnational network
-
-![PF1](./images/project_mariana.png){style="transform: translate(30%, 0%); width: 480px"} -->
-
----
-
-# Other reasons
-
-* Help underbanked populations
-* Competition for intermediaries to drive costs down
-* Incentives for technological innovations
-* Research is multi-disciplinary
-    * At the interface of engineering, business, economics, public policy, mathematics
+<br />
+<br />
 
 ---
 layout: center
 ---
 
 <p style="text-align: center;"><h2>
-It is <b>key</b> to study these new markets to influence policy and practice at early stages <a name="defi1"></a></h2>
-</p>
-
----
-layout: center
----
-
-<p style="text-align: center;"><h1>
-Automated Market Makers <br /><br />
-AMMs<a name="AMMs"></a></h1>
-
+Part I: smart contracts <br><br><br>
+Automated Market Makers (AMM) <br /><br /></h2>
 <br>
 
 [Cartea, Á., Drissi, F., Sánchez-Betancourt, L., Siska, D., & Szpruch, L. (2024). <br /> Strategic bonding curves in automated market makers](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5018420)
 
 </p>
 
-
 ---
 layout: fact
 --- 
 
 # Our contributions
-<br><br><br>
-
 1. Identify the **axioms** of AMMs
 
-2. Describe market frictions and characterise strategic interactions
+2. Describe market frictions
 
 3. Identify **design flaws**
 
-3. **Novel design** to **level the playing field** with traditional markets
+4. **Novel design** to **level the playing field** with traditional markets
 
 ---
 
 # Why AMMs
 
 * Price to add a transaction to the blockchain: **gas fee**
+
     * "gas" refers to the required computational power
-* Gas fees scale with transaction complexity
-    * Significantly expensive to run traditional markets on a blockchain
+    * Gas fees scale with transaction complexity
+
+* Significantly expensive to run traditional markets on a blockchain
 * **Constraints**: computational simplicity
 * **Solution**: Automated market makers (AMMs)
 
@@ -326,9 +329,13 @@ Scatter plot of transaction costs  and the approximation for all transactions in
 ### Liquidity takers
 
 
-* Price impact following a buy order of volume $\Delta y$
+* **Price impact** following a buy order of volume $\Delta y$
 $$
-Z_1 - Z_0 =  -\Phi'(y-\Delta y) + \Phi'(y) \approx \Phi''(y)\,\Delta y
+Z_0 = -\Phi'(y) \longrightarrow Z_1 = -\Phi'(y-\Delta y) \approx Z_0 + \Phi''(y)\,\Delta y
+$$
+* **Price impact** following a sell order of volume $\Delta y$
+$$
+Z_0 = -\Phi'(y) \longrightarrow Z_1 = -\Phi'(y+\Delta y) \approx Z_0 - \Phi''(y)\,\Delta y
 $$
 
 ---
@@ -351,16 +358,9 @@ $
 ### Liquidity providers
 
 * Liquidity providers add liquidity without changing the marginal price $Z$[^fnmp]
-* LPs incur losses[^fn3]
-<!--* Change in wealth of LPs against not providing liquidity-->
-$$
-0 \ge \Phi(y-\Delta y)-\Phi(y)+\Delta y \, \Phi'(y-\Delta y) \approx -\frac12 \Phi''(y) \, \Delta y^2
-$$
+* They earn proportional fees
 
-<!--$$
-\text{L}_{t}= -\frac{1}{2}\int_{0}^{t}\,\Phi''\left(y_{s}\right)\,d<y,y>_{s}
-$$-->
-<br><br><br><br>
+<br><br><br><br><br><br><br>
 
 [^fnmp]: The trading function is parameterised. In Uniswap
 $
@@ -375,17 +375,16 @@ $
 ### Liquidity providers
 
 * Liquidity providers add liquidity without changing the marginal price $Z$[^fnmp]
+* They earn proportional fees
 * LPs incur losses[^fn3]
 <!--* Change in wealth of LPs against not providing liquidity-->
 $$
 0 \ge \Phi(y-\Delta y)-\Phi(y)+\Delta y \, \Phi'(y-\Delta y) \approx -\frac12 \Phi''(y) \, \Delta y^2
 $$
-* They earn proportional fees
-
 <!--$$
 \text{L}_{t}= -\frac{1}{2}\int_{0}^{t}\,\Phi''\left(y_{s}\right)\,d<y,y>_{s}
 $$-->
-<br><br>
+<br><br><br>
 
 [^fnmp]: The trading function is parameterised. In Uniswap
 $
@@ -413,19 +412,35 @@ $
 [^fn2]: [Cartea, Á., Drissi F., & Monga M. (2024) "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
 [^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
 
+
+---
+
+# Losses in Ethereum and Uniswap
+
+* LPs can reduce these losses significantly[^fn2][^fn6]
+* The core issue persists: LPs have limited strategic flexibility
+* **Solution**: design DEXs that give LPs the tools to express strategic preferences
+
+<br /><br /><br /><br /><br />
+<br /><br />
+<br>
+
+[^fn2]: [Cartea, Á., Drissi F., & Monga M. (2024) "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
+[^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
+
 ---
 layout: center
 ---
 
 <p style="text-align: center;"><h1>
-AMM Design <a name="design"></a></h1>
+Improving AMMs <a name="design"></a></h1>
 </p>
 
 ---
 
 # AMM design
 
-### Objectives
+### Objective
 * Provide strategic tools to LPs
 
 <br>
@@ -456,7 +471,7 @@ AMM Design <a name="design"></a></h1>
 
 <br><br><br><br><br><br>
 
-[^fndlp2]: we derive conditions on the imapct and quote functions to prevent roundtrip arbitrage and price manipulation 
+[^fndlp2]: We derive conditions for the imapct and quote functions to prevent roundtrip arbitrage and price manipulation 
 
 ---
 
@@ -663,17 +678,16 @@ layout: two-cols-header
 
 ![experiments1](./images/DLPexperiments.png){style="transform: translate(10%, 0%); width: 400px"}
 
+
 ---
 layout: center
 ---
 
 <p style="text-align: center;"><h1>
-Blockchain design <a name="bd"></a></h1>
-
+Part II:  Blockchain design <a name="bd"></a></h1>
 
 [Capponi, A., Cartea, Á., Drissi, F. <br /> Price Formation in Memory Pools](https://www.faycaldrissi.com/mempools-talk/1)
 </p>
-
 
 ---
 
@@ -736,20 +750,20 @@ Blockchain design <a name="bd"></a></h1>
 ## Consequences
 <br/>
 
-### Pre-trade transparency
+#### Pre-trade transparency
 
 * Agents observe pending and unconfirmed transactions
 
 <br />
 
-### Priority gas auctions
+#### Priority gas auctions
 * Competitive agents submit/revise priority gas fees to obtain better prices
 
 <br />
 
 
 
-### Price discovery
+#### Price discovery
 * Additional vehicle for price discovery in blockchains:  priority fees
 
 ---
@@ -771,7 +785,7 @@ layout: center
 ---
 
 <p style="text-align: center;"><h1>
-The model <a name="design"></a></h1>
+An economic model <a name="design"></a></h1>
 </p>
 
 ---
@@ -801,7 +815,9 @@ $$
 
 ### The trading volumes
 * They wish to buy volumes $\delta_i = \delta(v_i)$ and $\delta_j = \delta(v_j)$
-* The demand function $\delta$ is continuously differentiable and increasing.
+* The demand function $\delta$ is continuously differentiable and increasing
+* They are determined endogenously 
+
 <!--* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  
 $$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right)$$-->
 
@@ -924,49 +940,20 @@ $\qquad\qquad\qquad$ $10-16$ December $2022$
 
 ---
 
-# Equilibrium priority fees
-
+# Equilibrium properties
 * Price efficiency is hindered
-![pe0](./images/pe0.png){style="transform: translate(30%, 0%); width: 500px"}
-* The rent extracted by validators **increases** with **liquidity demand**, **liquidity supply**, **fragmentation**, and **variance**[^addition]
+![pe0](./images/pe0.png){style="transform: translate(70%, -20%); width: 450px"}
+* Priority fees **increase** with **liquidity demand**, **fragmentation**, and **variance**[^addition]
 $$
 \mathbb{E}\left[\text{PF}\right]\propto4\,\sqrt{\pi\,N\,\theta}\,\mathbb{E}\left[\varphi_{i}^{\star}+\varphi_{j}^{\star}\right]
 $$
+* Trading volumes **decrease** with **competition**
+$
+\qquad \qquad \mathbb E[\delta_i^{\star}] = \kappa \, V_{i} \Big / 2\left(3- F\left(v_{i}\right)\right)
+$
+<br><br>
 
 [^addition]: Block time is $12$ seconds $\implies$ signals with high variance
-
----
-
-# Equilibrium trading volume
-<br>
-
-* Trader $i$ solves the problem
-$$
-\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
-$$
-
----
-
-# Equilibrium trading volume
-<br>
-
-* In equilibrium, informed traders transact a portion of the pool, which is increasing in the signal
-$$
-\kappa \, \delta^\star\left(v_{i}\right)=\kappa \, \frac{V_{i}}{2\left(3-F\left(v_{i}\right)\right)}
-$$
-
-* It is increasing in signal value and variance
-
----
-
-# Equilbirum liquidity supply
-
-* In equilibrium, $\kappa$ is
-$$
-\kappa^{\star}=\sqrt{\pi\,N\,\theta\Big /\mathbb{E}\left[\left(\delta^\star_{i}+\delta^\star_{j}\right)^{2}\right]}
-$$
-
-* It is decreasing in signal variance
 
 ---
 
@@ -979,42 +966,52 @@ $$
 * There exists $\overline \tau < 1$, such that whenever $\tau > \overline\tau$, bidding in both rounds holds in equilibrium
 <br><br>
 
-* In this case, priority fees decrease
-<br>
+---
 
-$
-\qquad\qquad\quad \mathbb E[\varphi_i^{\tau,\star}]  < \mathbb E[\varphi_i^{\star}] 
-$
+# New equilibrium properties
+
+* Priority fees decrease
+$$
+E[\varphi_i^{\tau,\star}]  < \mathbb E[\varphi_i^{\star}] 
+$$
+
+<br><br>
+
 <!-- \kappa^\star \, \mathbb{E}\left[\int_{0}^{v_{i}}\delta\left(x\right)^{2}\,f\left(x\right)\,dx\right] -->
 
-![rbt2](./images/epf.png){style="transform: translate(90%, -50%); width: 500px"}
+![rbt2](./images/epf.png){style="transform: translate(40%, 0%); width: 500px"}
 
 ---
 
-# Blockchains with random block time
+# New equilibrium properties
 
 * Price efficiency improves
 
 ![rbt2](./images/rbt2.png){style="transform: translate(0%, 0%); width: 800px"}
 
 ---
-layout: image-right
-image: ./images/els.png
-backgroundSize: 105%
----
 
-# Blockchains with random block time
+# New equilibrium properties
 * Proportional volumes **increase**
 $$
 \mathbb E[\delta_i^{\tau,\star}] = \kappa \, \frac{V_{i}}{2\left(3- (2-\tau) F\left(v_{i}\right)\right)} > \mathbb E[\delta_i^{\star}]
 $$
+
+---
+
+# New equilibrium properties
+
 * Liquidity supply decreases
 $$
 \kappa^{\tau,\star}=\sqrt{\pi\,N\,\theta\Big / \mathbb{E}\left[\left(\delta_i^{\tau,\star}+\delta_j^{\tau,\star}\right)^{2}\right]} < \kappa^{\star}
 $$
-* **In practice**, $\overline v^\tau < \overline v \implies$ variance of volumes decreases $\implies$ liquidity supply increases.
+
+![rbt2](./images/els.png){style="transform: translate(40%, 0%); width: 500px"}
+
+* **In practice**, $\overline v^\tau < \overline v \implies$ variance of volumes decreases $\implies$ liquidity supply increases
 
 <!--* In practice, signal variance at round one is lower than that of round two $\implies$ -->
+
 
 ---
 layout: center
@@ -1024,7 +1021,7 @@ layout: center
 
 ---
 
-# DeFi protocols 
+# DeFi protocols
 
 | **Service**       | **DeFi**      | **TradFi** | 
 |  :---         | :---        |    :----   | 
