@@ -255,7 +255,7 @@ layout: fact
 ---
 layout: image-right
 image: ./images/bc2.png
-backgroundSize: 170%
+backgroundSize: 180%
 ---
 
 # Automated Market Makers
@@ -269,7 +269,7 @@ $$
 ---
 layout: image-right
 image: ./images/bc3.png
-backgroundSize: 170%
+backgroundSize: 180%
 ---
 
 # Automated Market Makers
