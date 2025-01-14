@@ -868,29 +868,35 @@ $$
 ### Competition for queue priority
 
 <!--= P_{i}\,\mathbb E[W_{i}\left(\text{win}\right)] + (1-P_{i})\,\mathbb E[W_{i}\left(\text{lose}\right)]-->
-* The expected wealth is 
+* The expected wealth of informed traders 
 $$
 \mathbb{E}\left[W_{i}\right] = \mathbb P_i\left[\varphi_i>\varphi_j\right]\,\left(-\varphi_{i}+2\,\delta_{i}^2/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}
 $$
 
-
 ---
-
+layout: image-right
+image: ./images/gamels.png
+backgroundSize: 180%
+---
 
 # The model
 
-### Competition for queue priority
+### The liquidity supply
 
-* The expected wealth is 
+* A risk-neutral LP sets the **pool size** $\kappa$ by balancing **losses** to informed traders with **revenue** from liquidity demand
+<!-- A risk-neutral liquidity supplier sets a pool with size $\kappa$ A risk-neutral LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand The fee rate in the pool is $\pi$ Price-sensitive liquidity demanders submit transactions with an absolute total volume $N$ which nets to zero The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand -->
+* Losses to informed traders[^fnilp]
 $$
-\mathbb{E}\left[W_{i}\right] = \mathbb P_i\left[\varphi_i>\varphi_j\right]\,\left(-\varphi_{i}+2\,\delta_{i}^2/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}
+\text{L} = - \kappa\, \mathbb E[( \delta_i +  \delta_j)^2]
+$$
+* Revenue from liquidity demand
+$$
+\text{E}=\pi\,N\,(1-\theta/\kappa)
 $$
 
-* The optimisation problem of trader $i$
-$$
-\sup_{\varphi_{i}}\left\{ \mathbb P_i\left[\varphi_i>\varphi_j\right]\,\left(-\varphi_{i}+2\,\delta_{i}^2/\kappa\right)\right\}
-$$
+<br>
 
+[^fnilp]: The LP does not have information about $V$ and assumes $v_i$ and $v_j$ are drawn from $[-\overline v, \overline v]$
 
 ---
 layout: two-cols-header
@@ -917,94 +923,8 @@ $\qquad\qquad\qquad$ $10-16$ December $2022$
 ![PF1](./images/gas_fees_mempool.jpg){style="transform: translate(40%, -10%); width: 280px"}
 
 ---
-layout: two-cols-header
----
 
 # Equilibrium priority fees
-
-::left::
-<br >
-<br >
- 
-* In equilibrium, traders submit transactions at the end of block time
-
-<br ><br ><br><br>
-
-* The equilibrium priority fee
-$$
-\varphi^\star_i=2/\kappa\,\left(\delta\left(v_{i}\right)^2-\frac{\int_{0}^{v_{i}}\delta^{'}\left(x\right)\,\delta\left(x\right)\,F\left(x\right)\,dx}{F\left(v_{i}\right)}\right)\,
-$$
-is increasing in the signal and the range $\overline v$<br>
-is decreasing in the liquidity supply
-
-::right::
-
-![PF1](./images/number_transactions.jpg){style="transform: translate(40%, -10%); width: 280px"}
-$\qquad\quad$ Ethereum memory pool transaction data <br>
-$\qquad\qquad\qquad$ $10-16$ December $2022$
-
-<br>
-
-![PF1](./images/gas_fees_mempool.jpg){style="transform: translate(40%, -10%); width: 280px"}
-
----
-
-# Equilibrium trading volume
-<br>
-
-* Trader $i$ solves the problem
-$$
-\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
-$$
-
-
-
----
-
-# Equilibrium trading volume
-<br>
-
-* Trader $i$ solves the problem
-$$
-\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
-$$
-
-* In equilibrium, informed traders transact a portion of the pool, which is increasing in the signal
-$$
-\kappa \, \delta^\star\left(v_{i}\right)=\kappa \, \frac{V_{i}}{2\left(3-F\left(v_{i}\right)\right)}
-$$
-
-
----
-layout: image-right
-image: ./images/gamels.png
-backgroundSize: 180%
----
-
-# Equilbirum liquidity supply
-
-* A risk-neutral sets the **pool size** $\kappa$ by balancing **losses** to informed traders with **revenue** from liquidity demand
-<!-- A risk-neutral liquidity supplier sets a pool with size $\kappa$ A risk-neutral LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand The fee rate in the pool is $\pi$ Price-sensitive liquidity demanders submit transactions with an absolute total volume $N$ which nets to zero The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand -->
-* Losses to informed traders[^fnilp]
-$$
-\text{L} = - \kappa\, \mathbb E[( \delta^\star(v_i) +  \delta^\star(v_j))^2]
-$$
-* Revenue from liquidity demand
-$$
-\text{E}=\pi\,N\,(1-\theta/\kappa)
-$$
-* In equilibrium, $\kappa$ is
-$$
-\kappa^{\star}=\sqrt{\pi\,N\,\theta\Big /\mathbb{E}\left[\left(\delta^\star_{i}+\delta^\star_{j}\right)^{2}\right]}
-$$
-
-<br>
-
-[^fnilp]: The LP does not have information about $V$ and assumes $v_i$ and $v_j$ are drawn from $[-\overline v, \overline v]$
-
----
-
-# Microstructure of current blockchains
 
 * Price efficiency is hindered
 ![pe0](./images/pe0.png){style="transform: translate(30%, 0%); width: 500px"}
@@ -1013,8 +933,40 @@ $$
 \mathbb{E}\left[\text{PF}\right]\propto4\,\sqrt{\pi\,N\,\theta}\,\mathbb{E}\left[\varphi_{i}^{\star}+\varphi_{j}^{\star}\right]
 $$
 
-
 [^addition]: Block time is $12$ seconds $\implies$ signals with high variance
+
+---
+
+# Equilibrium trading volume
+<br>
+
+* Trader $i$ solves the problem
+$$
+\sup_{\delta_{i}}\Bigg\{P_{i}\,\left(-\varphi_{i}^\star+2\,\delta_{i}^{2}/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}\Bigg\}\,.
+$$
+
+---
+
+# Equilibrium trading volume
+<br>
+
+* In equilibrium, informed traders transact a portion of the pool, which is increasing in the signal
+$$
+\kappa \, \delta^\star\left(v_{i}\right)=\kappa \, \frac{V_{i}}{2\left(3-F\left(v_{i}\right)\right)}
+$$
+
+* It is increasing in signal value and variance
+
+---
+
+# Equilbirum liquidity supply
+
+* In equilibrium, $\kappa$ is
+$$
+\kappa^{\star}=\sqrt{\pi\,N\,\theta\Big /\mathbb{E}\left[\left(\delta^\star_{i}+\delta^\star_{j}\right)^{2}\right]}
+$$
+
+* It is decreasing in signal variance
 
 ---
 
@@ -1031,8 +983,9 @@ $$
 <br>
 
 $
-\mathbb E[\varphi_i^{\tau,\star}] = \kappa^\star \, \mathbb{E}\left[\int_{0}^{v_{i}}\delta\left(x\right)^{2}\,f\left(x\right)\,dx\right] < \mathbb E[\varphi_i^{\star}] 
+\qquad\qquad\quad \mathbb E[\varphi_i^{\tau,\star}]  < \mathbb E[\varphi_i^{\star}] 
 $
+<!-- \kappa^\star \, \mathbb{E}\left[\int_{0}^{v_{i}}\delta\left(x\right)^{2}\,f\left(x\right)\,dx\right] -->
 
 ![rbt2](./images/epf.png){style="transform: translate(90%, -50%); width: 500px"}
 
@@ -1059,7 +1012,7 @@ $$
 $$
 \kappa^{\tau,\star}=\sqrt{\pi\,N\,\theta\Big / \mathbb{E}\left[\left(\delta_i^{\tau,\star}+\delta_j^{\tau,\star}\right)^{2}\right]} < \kappa^{\star}
 $$
-* In **practice**, $\overline v^\tau < \overline v \implies$ variance of volumes decreases $\implies$ liquidity supply increases
+* **In practice**, $\overline v^\tau < \overline v \implies$ variance of volumes decreases $\implies$ liquidity supply increases.
 
 <!--* In practice, signal variance at round one is lower than that of round two $\implies$ -->
 
