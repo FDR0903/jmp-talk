@@ -33,33 +33,42 @@ mdc: true
 # Decentralised Finance (DeFi)
 ###  Blockchains
 * Distributed ledger without central authority
-* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value 
+* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value, help for underbanked populations
+
+
+--- 
+
+# Decentralised Finance (DeFi)
+###  Blockchains
+* Distributed ledger without central authority
+* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value, help for underbanked populations
 
 <br>
-<br>
 
-### Tokenisation
+### Digital Assets (tokenisation)
 * Currencies: Central Bank Digital Currencies (CBDCs)
     * **Economic benefits**: better monetary policy oversight[^mpolicy]
-* Financial (bonds, stocks, ETFs) and non-financial assets (commodities, real estate, art, music)
-    * **Economic benefits**: reduce transaxrhction costs and processing time
+* Financial (bonds, stocks, ETFs) and non-financial assets (commodities, real estate)
+    * **Economic benefits**: reduce transaction costs and processing time
 
 <br><br>
 
 [^mpolicy]: [CBDC and Monetary Policy](https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/)
 ---
 
-# Adoption by institutions and infrastructures
+# Decentralised Finance (DeFi)
+### Adoption by institutions and infrastructures
 ###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source1][^source]
+<!--* Incentive for technological innovation-->
 
-* Cross-border payments
-    * Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][][^source3]
-    *  BIS and central banks: **inter-bank FX Settlement** using **DeFi**[^source1]
-* Underbanked populations
-* Incentive for technological innovation
-* Research is multi-disciplinary: at the interface of engineering, business, economics, public policy, and mathematics
+<br>
+
+### Research is multi-disciplinary
+* At the interface of engineering, business, economics, public policy, and mathematics
 <br><br><br>
 
+[^source]: Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][^source3]
 [^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
 [^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
 [^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
@@ -256,10 +265,6 @@ layout: fact
 ![BC1](./images/BondingCurves1.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
-layout: image-right
-image: ./images/bc2.png
-backgroundSize: 180%
----
 
 # Automated Market Makers
 ### Liquidity takers
@@ -268,6 +273,8 @@ backgroundSize: 180%
 $$
 \frac{\Delta x}{\Delta y} = \frac{\Phi(y-\Delta y) - \Phi(y)}{\Delta y}
 $$
+
+![bc2](./images/bc2.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
 layout: image-right
