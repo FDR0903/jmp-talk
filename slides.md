@@ -84,7 +84,7 @@ Source: BIS innovation Hub
 ---
 
 # Decentralised Finance (DeFi)
-### Adoption by institutions and infrastructures
+### Applications and growing relevance
 ###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
 * Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
 <!--* Incentive for technological innovation-->
