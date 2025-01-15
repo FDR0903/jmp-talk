@@ -45,11 +45,12 @@ mdc: true
 
 <br>
 
-### Digital Assets (tokenisation)
-* Currencies: Central Bank Digital Currencies (CBDCs)
+### Applications and growing relevance
+* Central Bank Digital Currencies (CBDCs)
     * **Economic benefits**: better monetary policy oversight[^mpolicy]
-* Financial (bonds, stocks, ETFs) and non-financial assets (commodities, real estate)
+* Tokenisation of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)
     * **Economic benefits**: reduce transaction costs and processing time
+
 
 <br><br>
 
@@ -59,7 +60,31 @@ mdc: true
 # Decentralised Finance (DeFi)
 ### Adoption by institutions and infrastructures
 ###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source1][^source]
+* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
+<!--* Incentive for technological innovation-->
+<br><br><br>
+<br><br>
+
+[^source]: Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][^source3]
+[^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
+[^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
+[^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
+[^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
+
+<!---
+# Applications: FX settlement
+**Project Mariana:** BIS Innovation Hub, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
+Source: BIS innovation Hub
+* **Central banks** manage access to wCBDC on domestic and transnational network. They issue/redeem coins on their domestic networks
+* **Commercial banks** use and transfer wCBDC within domestic and transnational network
+![PF1](./images/project_mariana.png){style="transform: translate(30%, 0%); width: 480px"} -->
+
+---
+
+# Decentralised Finance (DeFi)
+### Adoption by institutions and infrastructures
+###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
 <!--* Incentive for technological innovation-->
 
 <br>
@@ -74,30 +99,23 @@ mdc: true
 [^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
 [^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
 
-<!---
-
-# Applications: FX settlement
-**Project Mariana:** BIS Innovation Hub, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
-Source: BIS innovation Hub
-
-* **Central banks** manage access to wCBDC on domestic and transnational network. They issue/redeem coins on their domestic networks
-* **Commercial banks** use and transfer wCBDC within domestic and transnational network
-
-![PF1](./images/project_mariana.png){style="transform: translate(30%, 0%); width: 480px"} -->
-
+---
+layout: center
 ---
 
 <p style="text-align: center;"><h2>
 It is <b>key</b> to study these new markets to influence policy and practice at early stages, and to achieve its potential <a name="defi1"></a></h2>
 </p>
 
-<br><br><br><br>
+---
 
-### Past research
+# Research
+
+### Past
 * Chracterise, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
-<br><br><br>
+<br><br>
 
-### Current research
+### Current
 * Study and improve the design of decentralised finance 
 
 ---
@@ -105,7 +123,7 @@ layout: center
 ---
 
 <p style="text-align: center;">
-<h2> Decentralised Finance and Decentralised Exchanges </h2>
+<h2>Definition <br><br> Decentralised Finance and Decentralised Exchanges </h2>
 </p>
 
 --- 
@@ -173,13 +191,13 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 ### Part I: smart contracts
 
 * DEXs hinder strategic behaviour of liquidity providers
-* Market design to overcome it
+* Mathematical model to address this inefficiency
 
 <br><br><br>
 
 ### Part II: blockchains
 
-* Blockchain protocol hinders information dissemination and causes superfluous infrastructure costs
+* Blockchain protocols hinder information dissemination and cause superfluous infrastructure costs
 * Economic model to describe DEX microstructure and improve it
 
 <br />
@@ -206,7 +224,7 @@ Automated Market Makers (AMM) <br /><br /></h2>
 layout: fact
 --- 
 
-# Our contributions
+# Contributions
 1. Identify the **axioms** of AMMs
 
 2. Describe market frictions
@@ -277,10 +295,6 @@ $$
 ![bc2](./images/bc2.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
-layout: image-right
-image: ./images/bc3.png
-backgroundSize: 180%
----
 
 # Automated Market Makers
 ### Liquidity takers
@@ -290,6 +304,7 @@ $$
 \frac{\Delta x}{\Delta y} = \frac{\Phi(y) - \Phi(y+\Delta y)}{\Delta y}
 $$
 
+![bc3](./images/bc3.png){style="transform: translate(18%, 10%); width: 630px"}
 
 ---
 
