@@ -944,34 +944,23 @@ $$
 -->
 
 ---
-layout: two-cols-header
----
 
 # The model
 
 ### The liquidity supply
 
-::left::
 * A risk-neutral LP sets the **pool size** $\kappa$ by balancing **losses** to informed traders with **revenue** from liquidity demand
+![gamels2](./images/gamels3.png){style="transform: translate(40%, 0%); width: 500px"}
 <!-- A risk-neutral liquidity supplier sets a pool with size $\kappa$ A risk-neutral LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand The fee rate in the pool is $\pi$ Price-sensitive liquidity demanders submit transactions with an absolute total volume $N$ which nets to zero The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand -->
-* Losses to informed traders<sup>1</sup>
-$$
-\text{L} = - \kappa\, \mathbb E[( \delta_i +  \delta_j)^2]
-$$
-* Revenue from liquidity demand
-$$
-\text{E}=\pi\,N\,(1-\theta/\kappa)
-$$
+* Losses to informed traders<sup>1</sup>: 
+$
+\qquad\qquad\qquad\text{L} = - \kappa\, \mathbb E[( \delta_i +  \delta_j)^2]
+$
+* Revenue from liquidity demand:
+$
+\qquad\qquad\text{E}=\pi\,N\,(1-\theta/\kappa)
+$
 
-::right::
-
-![gamels](./images/gamels.png){style="transform: translate(20%, 0%); width: 900px"}
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <Footnotes separator>
 <Footnote :number=1>
@@ -979,6 +968,7 @@ The LP does not have information about V
 </Footnote>
 </Footnotes>
 
+<br><br><br>
 
 ---
 layout: two-cols-header
