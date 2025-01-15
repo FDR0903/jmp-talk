@@ -495,7 +495,7 @@ Improving AMMs <a name="design"></a></h1>
 
 <br>
 
-### Generalising bonding curves
+### Generalizing bonding curves
 * Defines the price of liquidity and the price dynamics **separately**
 * The price of liquidity is determined by the reserves and **other relevant information**  
 
