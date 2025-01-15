@@ -28,78 +28,117 @@ mdc: true
 [scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
 [website](https://www.faycaldrissi.com/), [github](https://github.com/FDR0903)
 
---- 
+---
 
-# Decentralised Finance (DeFi)
-###  Blockchains
+# Decentralized Finance (DeFi)
+####  Blockchain technology
 * Distributed ledger without central authority
-* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value, help for underbanked populations
-
-
---- 
-
-# Decentralised Finance (DeFi)
-###  Blockchains
-* Distributed ledger without central authority
-* **Social benefits**: transparency, less intermediaries and monopolies, easier transfer of value, help for underbanked populations
+* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
 
 <br>
 
-### Digital assets
-* Central Bank Digital Currencies (CBDCs)
-    * **Economic benefits**: better monetary policy oversight[^mpolicy][^deuro]
-* Tokenisation of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)
-    * **Economic benefits**: reduce transaction costs and processing time
 
-
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/">CBDC and Monetary Policy</a>
+</Footnote>
+<Footnote :number=2>
+<a href="https://finance.ec.europa.eu/digital-finance/digital-euro_en/">Digital Euro by the ECB</a>
+</Footnote>
+<Footnote :number=3>
+Cross-border settlement in CBDCs as priority policy of the G20<br> 
+<a href="https://www.bis.org/about/bisih/topics/cbdc/rialto.htm">Project Rialto</a>
+, <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm">Regulation of asset-backed stablecoins</a>
 <br>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink">International Monetary Fund (IMF) On Cross-Border Crypto Flows</a>
+</Footnote>
+<Footnote :number=4>
+<a href="https://www.bis.org/about/bisih/topics/cbdc/mariana.htm">Project Mariana</a>
+</Footnote>
+<Footnote :number=5>
+By Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+</Footnote>
+</Footnotes>
 
-[^mpolicy]: [CBDC and Monetary Policy](https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/)
-[^deuro]: [Digital Euro by the ECB](https://finance.ec.europa.eu/digital-finance/digital-euro_en)
 
 ---
 
-# Decentralised Finance (DeFi)
-### Applications and growing relevance
-###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
-<!--* Incentive for technological innovation-->
-<br><br><br>
-<br><br>
-
-[^source]: Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][^source3]
-[^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
-[^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
-[^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
-[^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
-
-<!---
-# Applications: FX settlement
-**Project Mariana:** BIS Innovation Hub, Bank of France, Monetary Authority of Singapore and Swiss National Bank. 
-Source: BIS innovation Hub
-* **Central banks** manage access to wCBDC on domestic and transnational network. They issue/redeem coins on their domestic networks
-* **Commercial banks** use and transfer wCBDC within domestic and transnational network
-![PF1](./images/project_mariana.png){style="transform: translate(30%, 0%); width: 480px"} -->
-
----
-
-# Decentralised Finance (DeFi)
-### Applications and growing relevance
-###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
-<!--* Incentive for technological innovation-->
+# Decentralized Finance (DeFi)
+####  Blockchain technology
+* Distributed ledger without central authority
+* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
 
 <br>
 
-### Research is multi-disciplinary
-* At the interface of engineering, business, economics, public policy, and mathematics
-<br><br><br>
 
-[^source]: Cross-border settlement in CBDCs is an explicit priority policy goal of the G20[^source2][^source3]
-[^source1]: [Project Mariana](https://www.bis.org/about/bisih/topics/cbdc/mariana.htm)
-[^source2]: [Project Rialto](https://www.bis.org/about/bisih/topics/cbdc/rialto.htm)
-[^source4]: [International Monetary Fund (IMF) On Cross-Border Crypto Flows](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink)
-[^source3]: [Other example: Stablecoins and risks: Supervision and regulation of asset-backed stablecoins](https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm)
+#### Applications of blockchains: digital assets
+* Central Bank Digital Currencies (CBDCs) <br>
+**Economic benefits**: better monetary policy oversight<sup>1, 2</sup>
+* Tokenization of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)<br> **Economic benefits**: reduce transaction costs and processing time
+
+
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/">CBDC and Monetary Policy</a>
+</Footnote>
+<Footnote :number=2>
+<a href="https://finance.ec.europa.eu/digital-finance/digital-euro_en/">Digital Euro by the ECB</a>
+</Footnote>
+<Footnote :number=3>
+Cross-border settlement in CBDCs as priority policy of the G20<br> 
+<a href="https://www.bis.org/about/bisih/topics/cbdc/rialto.htm">Project Rialto</a>
+, <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm">Regulation of asset-backed stablecoins</a>
+<br>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink">International Monetary Fund (IMF) On Cross-Border Crypto Flows</a>
+</Footnote>
+<Footnote :number=4>
+<a href="https://www.bis.org/about/bisih/topics/cbdc/mariana.htm">Project Mariana</a>
+</Footnote>
+<Footnote :number=5>
+By Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+</Footnote>
+</Footnotes>
+
+
+---
+
+# Decentralized Finance (DeFi)
+####  Blockchain technology
+* Distributed ledger without central authority
+* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
+
+<br>
+
+#### Applications of blockchains: digital assets
+* Central Bank Digital Currencies (CBDCs) <br>
+**Economic benefits**: better monetary policy oversight<sup>1, 2</sup>
+* Tokenization of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)<br> **Economic benefits**: reduce transaction costs and processing time
+
+<br>
+
+#### Applications of DeFi<sup>5</sup>:  Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**<sup>3, 4</sup>
+
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/">CBDC and Monetary Policy</a>
+</Footnote>
+<Footnote :number=2>
+<a href="https://finance.ec.europa.eu/digital-finance/digital-euro_en/">Digital Euro by the ECB</a>
+</Footnote>
+<Footnote :number=3>
+Cross-border settlement in CBDCs as priority policy of the G20<br> 
+<a href="https://www.bis.org/about/bisih/topics/cbdc/rialto.htm">Project Rialto</a>
+, <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm">Regulation of asset-backed stablecoins</a>
+<br>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink">International Monetary Fund (IMF) On Cross-Border Crypto Flows</a>
+</Footnote>
+<Footnote :number=4>
+<a href="https://www.bis.org/about/bisih/topics/cbdc/mariana.htm">Project Mariana</a>
+</Footnote>
+<Footnote :number=5>
+By Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
+</Footnote>
+</Footnotes>
 
 ---
 layout: center
@@ -114,23 +153,23 @@ It is <b>key</b> to study these new markets to influence policy and practice at 
 # Research
 
 ### Past
-* Chracterise, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
+* Chracterize, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
 <br><br>
 
 ### Current
-* Study and improve the design of decentralised finance 
+* Study and improve the design of decentralized finance 
 
 ---
 layout: center
 ---
 
 <p style="text-align: center;">
-<h2>Definition <br><br> Decentralised Finance and Decentralised Exchanges </h2>
+<h2>Definition <br><br> Decentralized Finance and Decentralized Exchanges </h2>
 </p>
 
 --- 
 
-# Decentralised Finance: two parts
+# Decentralized Finance: two parts
 <br />
 
 ### Blockchains
@@ -152,7 +191,7 @@ layout: center
 ---
 
 <p style="text-align: center;">
-<h2> Decentralised Finance </h2>
+<h2> Decentralized Finance </h2>
 
 <br />
 
@@ -166,7 +205,7 @@ layout: center
 ---
 
 <p style="text-align: center;">
-<h2> Decentralised Finance </h2>
+<h2> Decentralized Finance </h2>
 
 <br />
 
@@ -178,7 +217,7 @@ layout: center
 <br />
 
 <p style="text-align: center;">
-<h2> Decentralised exchanges </h2>
+<h2> Decentralized exchanges </h2>
 <br>
 <h3>
 Trading platforms where the rules of interaction are encoded in a smart contract operating on the blockchain   <a name="defi2"></a></h3>
@@ -192,7 +231,7 @@ Trading platforms where the rules of interaction are encoded in a smart contract
 
 ### Part I: smart contracts
 
-* DEXs hinder strategic behaviour of liquidity providers
+* DEXs hinder strategic behavior of liquidity providers
 * Mathematical model to address this inefficiency
 
 <br><br><br>
@@ -227,13 +266,12 @@ layout: fact
 --- 
 
 # Contributions
-1. Identify the **axioms** of AMMs
 
-2. Describe market frictions 
+1. Describe the **axioms** of AMMs
 
-3. Identify **design flaws**
+2. Identify  **design flaws**
 
-4. **Novel design** to **level the playing field** with traditional markets
+3. **Novel design** to **level the playing field** with traditional markets
 
 ---
 
@@ -252,8 +290,8 @@ layout: fact
 
 # Automated Market Makers
 ### Liquidity pooling
-* A liquidity pool for Security $X$ and $Y$.
-* Available *reserves* $x$ and $y$.
+* A liquidity pool for securities $X$ and $Y$
+* Available *reserves* $x$ and $y$
 
 ![pool1](./images/pool1.png){style="transform: translate(165%, 20%); width: 200px"}
 
@@ -320,17 +358,6 @@ $$
 $$
 
 ---
-
-# Automated Market Makers
-### Liquidity takers
-
-* **Marginal Price** and **slippage**
-$$
-\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}}_{\text{bid } \approx Z -  \Phi''(\Delta y)\, \Delta y/2}
-    \xrightarrow{\Delta y \longrightarrow 0}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{ask } \approx Z + \Phi''(\Delta y)\, \Delta y/2} 
-$$
-
----
 layout: two-cols-header
 ---
 
@@ -339,8 +366,8 @@ layout: two-cols-header
 
 * **Marginal Price** and **slippage**
 $$
-\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}}_{\text{bid } \approx Z -  \Phi''(\Delta y)\, \Delta y/2}
-    \xrightarrow{\Delta y \longrightarrow 0}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{ask } \approx Z + \Phi''(\Delta y)\, \Delta y/2} 
+\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}}_{\text{bid }}
+    \xrightarrow{\Delta y \longrightarrow 0}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{ask }} 
 $$
 
 ::left::
@@ -351,14 +378,13 @@ Scatter plot of transaction costs  and the approximation for all transactions in
 
 <br>
 
-[Cartea, Á., Drissi, F., & Monga, M. (2023). Decentralised finance and automated market making: Execution and speculation](https://arxiv.org/abs/2307.03499)
+[Cartea, Á., Drissi, F., & Monga, M. (2023). Decentralized finance and automated market making: Execution and speculation](https://arxiv.org/abs/2307.03499)
 
 ::right::
 
 ![cvxty](./images/convexity1.png){style="transform: translate(20%, 0%); width: 350px"}
 
-
----
+<!--
 
 # Automated Market Makers
 ### Liquidity takers
@@ -371,47 +397,31 @@ $$
 * **Price impact** following a sell order of volume $\Delta y$
 $$
 Z_0 = -\Phi'(y) \longrightarrow Z_1 = -\Phi'(y+\Delta y) \approx Z_0 - \Phi''(y)\,\Delta y
-$$
+$$-->
 
 ---
 
 # Automated Market Makers
 ### Liquidity providers
 
-* Liquidity providers add liquidity without changing the marginal price $Z$[^fnmp]
-<!--* Liquidity providers earn *transaction fees*-->
-<br><br><br><br><br><br><br><br>
-
-[^fnmp]: The trading function is parameterised. In Uniswap
-$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}
-$
+* Liquidity providers add liquidity without changing the marginal price $Z$
 
 ---
 
 # Automated Market Makers
 ### Liquidity providers
 
-* Liquidity providers add liquidity without changing the marginal price $Z$[^fnmp]
+* Liquidity providers add liquidity without changing the marginal price $Z$
 * They earn proportional fees
 
-<br><br><br><br><br><br><br>
-
-[^fnmp]: The trading function is parameterised. In Uniswap
-$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}
-$
-
-[^fn3]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
-
 ---
 
 # Automated Market Makers
 ### Liquidity providers
 
-* Liquidity providers add liquidity without changing the marginal price $Z$[^fnmp]
+* Liquidity providers add liquidity without changing the marginal price $Z$
 * They earn proportional fees
-* LPs incur losses[^fn3]
+* They incur losses<sup>1</sup>
 <!--* Change in wealth of LPs against not providing liquidity-->
 $$
 0 \ge \Phi(y-\Delta y)-\Phi(y)+\Delta y \, \Phi'(y-\Delta y) \approx -\frac12 \Phi''(y) \, \Delta y^2
@@ -421,17 +431,16 @@ $$
 $$-->
 <br><br><br>
 
-[^fnmp]: The trading function is parameterised. In Uniswap
-$
-\Phi(y) = \frac{\kappa}{y} \implies -\Phi'(y) =  \frac{x}{y}
-$
-
-[^fn3]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets.<br> Applied Mathematical Finance</a>
+</Footnote>
+</Footnotes>
 
 
 ---
 
-# Losses in Ethereum and Uniswap[^fn2][^fn6]
+# Losses in Ethereum and Uniswap<sup>1,2</sup>
 
 | | Average      | Standard Deviation | 
 |  :---  | :---        |    :----:   | 
@@ -440,28 +449,34 @@ $
 | Hold time |   $6.1$ days   |  $22.4$ days       |
 <!--| Number of transactions per LP | $11.5$ | $40.2$ | -->
 
-<br />
-<br />
-<br>
 
-[^fn2]: [Cartea, Á., Drissi F., & Monga M. (2024) "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
-[^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
 
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://epubs.siam.org/doi/full/10.1137/23M1602103">Cartea, Á., Drissi F., & Monga M. (2024) Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision.<br> SIAM Journal on Financial Mathematics</a>
+</Footnote>
+<Footnote :number=2>
+<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets.<br> Applied Mathematical Finance</a>
+</Footnote>
+</Footnotes>
 
 ---
 
 # Losses in Ethereum and Uniswap
 
-* LPs can reduce these losses significantly[^fn2][^fn6]
+* LPs can reduce these losses significantly<sup>1,2</sup>
 * The core issue persists: LPs have limited strategic flexibility
 * **Solution**: design DEXs that give LPs the tools to express strategic preferences
 
-<br /><br /><br /><br />
-<br /><br />
-<br>
 
-[^fn2]: [Cartea, Á., Drissi F., & Monga M. (2024) "Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision." SIAM Journal on Financial Mathematics.](https://epubs.siam.org/doi/full/10.1137/23M1602103)
-[^fn6]: [Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets. Applied Mathematical Finance.](https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957)
+<Footnotes separator>
+<Footnote :number=1>
+<a href="https://epubs.siam.org/doi/full/10.1137/23M1602103">Cartea, Á., Drissi F., & Monga M. (2024) Decentralized Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision.<br> SIAM Journal on Financial Mathematics</a>
+</Footnote>
+<Footnote :number=2>
+<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets.<br> Applied Mathematical Finance</a>
+</Footnote>
+</Footnotes>
 
 ---
 layout: center
@@ -494,7 +509,7 @@ Improving AMMs <a name="design"></a></h1>
 
 # AMM design
 
-### Decentralised Liquidity Pool (DLP)
+### Decentralized Liquidity Pool (DLP)
 
 * Reserves $\{x, y\}$
 
@@ -579,7 +594,7 @@ layout: center
 
 ### A model
 * Let $P$ be the (unobserved) fundamental price
-* We discretise $Z - P$ into $M$ values, or regimes.
+* We discretize $Z - P$ into $M$ values, or regimes.
 * $g \notin \mathbb F$ is a CTMC with finite state space $\mathcal S = \{1, \dots, M\}$ that describes the regimes. The transition rate matrix is $\Pi$
 <!--    * Regime $1$ corresponds to $P<<Z$
     * Regime $M$ corresponds to $Z<<P$-->
@@ -751,7 +766,7 @@ Part II:  Blockchain design <a name="bd"></a></h1>
 
 <!---
 
-#  Decentralised Exchanges
+#  Decentralized Exchanges
 
 * Liquidity supply and price of liquidity
 * Price dynamics-->
@@ -772,7 +787,7 @@ Part II:  Blockchain design <a name="bd"></a></h1>
 
 ### Gas fees (EIP-1559, Ethereum London fork)
 * **Base fee**: based on congestion. prerequisite for inclusion
-* **Priority fee**: incentivise validators to prioritise a transaction in the block
+* **Priority fee**: incentivize validators to prioritize a transaction in the block
 
 ---
 
@@ -780,7 +795,7 @@ Part II:  Blockchain design <a name="bd"></a></h1>
 
 ### Gas fees (EIP-1559, Ethereum London fork)
 * **Base fee**: based on congestion. prerequisite for inclusion
-* **Priority fee**: incentivise validators to prioritise a transaction in the block
+* **Priority fee**: incentivize validators to prioritize a transaction in the block
 
 ![mempools](./images/mempools.jpeg){style="transform: translate(25%, 0%); width: 580px"}
 
@@ -815,7 +830,7 @@ layout: fact
 <br /><br /><br />
 
 
-1. Describe the **microstructure of decentralised exchanges** under **pre-trade transparency** and **priority gas auctions**.
+1. Describe the **microstructure of decentralized exchanges** under **pre-trade transparency** and **priority gas auctions**.
 
 <br>
 
@@ -846,7 +861,7 @@ An economic model <a name="design"></a></h1>
 ### The information
 * Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
 $$
-V_i = \mathbb E[V | v_i] = V(i)
+V_i = \mathbb E[V | v_i]
 $$
 * The signals are independently drawn from an interval $[0, \overline{v}]$ according to a density $f$.
 
@@ -871,15 +886,15 @@ $$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}
 ### Competition for queue priority
 * With queue priority, the **slippage** for a volume $\delta$ is
 $$
-\frac12 \,\delta\, \Phi''(y_0) = \delta / \kappa
+\delta / \kappa
 $$
 * The price impact is
 $$
-\delta\, \Phi''(y_0) = 2\,\delta / \kappa 
+2\,\delta / \kappa 
 $$
 * **Slippage** for a **subsequent trade** with volume $\delta$
 $$
-V_0 + \underbrace{2\,\delta / \kappa}_{\text{impact}} + \underbrace{\delta/\kappa}_{\text{slippage}} = V_0 +3\,\delta/ \kappa
+\underbrace{2\,\delta / \kappa}_{\text{impact}} + \underbrace{\delta/\kappa}_{\text{slippage}}
 $$
 
 ---
@@ -891,7 +906,7 @@ $$
 
 * If trader $i$ **wins** the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
-W_{i}\left(\text{win}\right)=\underbrace{-\varphi_{i}}_{\text{priority fee}}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{price and slippage}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
+W_{i}\left(\text{win}\right)=-\underbrace{\varphi_{i}}_{\text{priority fee}}\,-\underbrace{\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{price and slippage}}+\underbrace{\delta_{i}\,V}_{\text{liquidation value}}
 =\,-\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
 $$
 <br />
@@ -905,7 +920,7 @@ $$
 
 * If trader $i$ **wins** the auction, i.e., if $\varphi_{i}>\varphi_j$, their wealth is
 $$
-W_{i}\left(\text{win}\right)=\underbrace{-\varphi_{i}}_{\text{priority fee}}\,\underbrace{-\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{price and slippage}}\underbrace{+\delta_{i}\,V}_{\text{liquidation value}}
+W_{i}\left(\text{win}\right)=-\underbrace{\varphi_{i}}_{\text{priority fee}}\,-\underbrace{\delta_{i}\,\left(V_{0}+\delta_{i}/\kappa\right)}_{\text{price and slippage}}+\underbrace{\delta_{i}\,V}_{\text{liquidation value}}
 =\,-\varphi_{i}\,-\delta_{i}^{2}/\kappa+\delta_{i}\,V
 $$
 <br />
@@ -917,32 +932,29 @@ W_{i}\left(\text{lose}\right)=-\delta_{i}\,\left(V_{0}+3\,\delta_{i}/\kappa\righ
 $$
 
 
----
-
+<!---
 
 # The model
 
 ### Competition for queue priority
-
-<!--= P_{i}\,\mathbb E[W_{i}\left(\text{win}\right)] + (1-P_{i})\,\mathbb E[W_{i}\left(\text{lose}\right)]-->
 * The expected wealth of informed traders 
 $$
 \mathbb{E}\left[W_{i}\right] = \mathbb P_i\left[\varphi_i>\varphi_j\right]\,\left(-\varphi_{i}+2\,\delta_{i}^2/\kappa\right)-3\,\delta_{i}^{2}/\kappa+\delta_{i}\,V_{i}
 $$
+-->
 
 ---
-layout: image-right
-image: ./images/gamels.png
-backgroundSize: 180%
+layout: two-cols-header
 ---
 
 # The model
 
 ### The liquidity supply
 
+::left::
 * A risk-neutral LP sets the **pool size** $\kappa$ by balancing **losses** to informed traders with **revenue** from liquidity demand
 <!-- A risk-neutral liquidity supplier sets a pool with size $\kappa$ A risk-neutral LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand The fee rate in the pool is $\pi$ Price-sensitive liquidity demanders submit transactions with an absolute total volume $N$ which nets to zero The LP balances losses to informed traders from adverse selection with fee revenue from liquidity demand -->
-* Losses to informed traders[^fnilp]
+* Losses to informed traders<sup>1</sup>
 $$
 \text{L} = - \kappa\, \mathbb E[( \delta_i +  \delta_j)^2]
 $$
@@ -951,9 +963,22 @@ $$
 \text{E}=\pi\,N\,(1-\theta/\kappa)
 $$
 
+::right::
+
+![gamels](./images/gamels.png){style="transform: translate(20%, 0%); width: 900px"}
+
+<br>
+<br>
+<br>
+<br>
 <br>
 
-[^fnilp]: The LP does not have information about $V$ and assumes $v_i$ and $v_j$ are drawn from $[-\overline v, \overline v]$
+<Footnotes separator>
+<Footnote :number=1>
+The LP does not have information about V
+</Footnote>
+</Footnotes>
+
 
 ---
 layout: two-cols-header
@@ -1058,7 +1083,7 @@ $$
 layout: center
 --- 
 
-# Future of decentralised finance
+# Future of decentralized finance
 
 ---
 
