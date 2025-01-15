@@ -33,7 +33,7 @@ mdc: true
 # Decentralized Finance (DeFi)
 ####  Blockchain technology
 * Distributed ledger without central authority
-* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
+* **Social benefits**: transparency, fewer monopolies, easy value transfer, help underbanked people
 
 <br>
 
@@ -153,7 +153,7 @@ It is <b>key</b> to study these new markets to influence policy and practice at 
 # Research
 
 ### Past
-* Chracterize, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
+* Characterize, mathematically and empirically, the costs to operate on blockchains and how to interact optimally
 <br><br>
 
 ### Current
@@ -195,7 +195,7 @@ layout: center
 
 <br />
 
-<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without  intermediaries <a name="defi1"></a></h3>
+<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without intermediaries <a name="defi1"></a></h3>
 </p>
 
 <br />
@@ -209,7 +209,7 @@ layout: center
 
 <br />
 
-<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without  intermediaries <a name="defi1"></a></h3>
+<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without intermediaries <a name="defi1"></a></h3>
 </p>
 
 <br />
@@ -496,7 +496,7 @@ Improving AMMs <a name="design"></a></h1>
 <br>
 
 ### Generalising bonding curves
-* Defines the price of liquidity and the price dynamics **seperately**
+* Defines the price of liquidity and the price dynamics **separately**
 * The price of liquidity is determined by the reserves and **other relevant information**  
 
 <br />
@@ -521,7 +521,7 @@ Improving AMMs <a name="design"></a></h1>
 
 <br><br><br><br><br><br>
 
-[^fndlp2]: We derive conditions for the imapct and quote functions to prevent roundtrip arbitrage and price manipulation 
+[^fndlp2]: We derive conditions for the impact and quote functions to prevent roundtrip arbitrage and price manipulation 
 
 ---
 
@@ -859,7 +859,7 @@ An economic model <a name="design"></a></h1>
 # The model
 
 ### The information
-* Trade have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
+* Traders have private information $v_i>0$ and $v_j>0$ about the liquidation value $V$
 $$
 V_i = \mathbb E[V | v_i]
 $$
@@ -892,7 +892,7 @@ $$
 $$
 2\,\delta / \kappa 
 $$
-* **Slippage** for a **subsequent trade** with volume $\delta$
+* Without queue priority, the **slippage** for a volume $\delta$ is
 $$
 \underbrace{2\,\delta / \kappa}_{\text{impact}} + \underbrace{\delta/\kappa}_{\text{slippage}}
 $$
