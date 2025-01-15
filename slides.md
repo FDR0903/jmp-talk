@@ -45,7 +45,7 @@ mdc: true
 
 <br>
 
-### Applications and growing relevance
+### Digital assets
 * Central Bank Digital Currencies (CBDCs)
     * **Economic benefits**: better monetary policy oversight[^mpolicy][^deuro]
 * Tokenisation of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)
@@ -60,7 +60,7 @@ mdc: true
 ---
 
 # Decentralised Finance (DeFi)
-### Adoption by institutions and infrastructures
+### Applications and growing relevance
 ###### G20, Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
 * Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**[^source][^source1]
 <!--* Incentive for technological innovation-->
