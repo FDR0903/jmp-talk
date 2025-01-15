@@ -47,14 +47,16 @@ mdc: true
 
 ### Applications and growing relevance
 * Central Bank Digital Currencies (CBDCs)
-    * **Economic benefits**: better monetary policy oversight[^mpolicy]
+    * **Economic benefits**: better monetary policy oversight[^mpolicy][^deuro]
 * Tokenisation of financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)
     * **Economic benefits**: reduce transaction costs and processing time
 
 
-<br><br>
+<br>
 
 [^mpolicy]: [CBDC and Monetary Policy](https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/)
+[^deuro]: [Digital Euro by the ECB](https://finance.ec.europa.eu/digital-finance/digital-euro_en)
+
 ---
 
 # Decentralised Finance (DeFi)
@@ -182,9 +184,9 @@ layout: center
 Trading platforms where the rules of interaction are encoded in a smart contract operating on the blockchain   <a name="defi2"></a></h3>
 </p>
 
---- 
+---
 
-# Table of contents
+# Outline
 
 <br><br><br>
 
@@ -227,7 +229,7 @@ layout: fact
 # Contributions
 1. Identify the **axioms** of AMMs
 
-2. Describe market frictions
+2. Describe market frictions 
 
 3. Identify **design flaws**
 
@@ -239,7 +241,7 @@ layout: fact
 
 * Price to add a transaction to the blockchain: **gas fee**
 
-    * "gas" refers to the required computational power
+    * "Gas" refers to the required computational power
     * Gas fees scale with transaction complexity
 
 * Significantly expensive to run traditional markets on a blockchain
@@ -305,6 +307,17 @@ $$
 $$
 
 ![bc3](./images/bc3.png){style="transform: translate(18%, 10%); width: 630px"}
+
+---
+
+# Automated Market Makers
+### Liquidity takers
+
+* **Marginal Price** and **slippage**
+$$
+\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}
+    \xrightarrow{\Delta y \longrightarrow 0}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}
+$$
 
 ---
 
@@ -443,7 +456,7 @@ $
 * The core issue persists: LPs have limited strategic flexibility
 * **Solution**: design DEXs that give LPs the tools to express strategic preferences
 
-<br /><br /><br /><br /><br />
+<br /><br /><br /><br />
 <br /><br />
 <br>
 
@@ -555,6 +568,12 @@ $$
 * *Restrictions*: employ information on the blockchain
 
 --- 
+layout: center
+---
+
+# Strategic flexibility in the DLP
+
+---
 
 # Strategic bonding curve
 
@@ -838,7 +857,7 @@ $$
 ### The trading volumes
 * They wish to buy volumes $\delta_i = \delta(v_i)$ and $\delta_j = \delta(v_j)$
 * The demand function $\delta$ is continuously differentiable and increasing
-* They are determined endogenously 
+* Volumes are determined endogenously 
 
 <!--* The volumes $\delta_i$ are drawn from $[\delta(0),\delta(\overline v)]=[\underline \delta,\overline \delta]$ according to  
 $$g(x) = f\left(\delta^{-1}\left(x\right)\right)\Big/\delta^{'}\left(\delta^{-1}\left(x\right)\right)$$-->
@@ -965,7 +984,7 @@ $\qquad\qquad\qquad$ $10-16$ December $2022$
 # Equilibrium properties
 * Price efficiency is hindered
 ![pe0](./images/pe0.png){style="transform: translate(70%, -20%); width: 450px"}
-* Priority fees **increase** with **liquidity demand**, **fragmentation**, and **variance**[^addition]
+* Priority fees **increase** with **liquidity demand**, **elasticity of demand**, and **variance**[^addition]
 $$
 \mathbb{E}\left[\text{PF}\right]\propto4\,\sqrt{\pi\,N\,\theta}\,\mathbb{E}\left[\varphi_{i}^{\star}+\varphi_{j}^{\star}\right]
 $$
