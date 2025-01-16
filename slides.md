@@ -1092,5 +1092,3 @@ layout: end
 ---
 
 [faycaldrissi.com/jmp-talk](https://www.faycaldrissi.com/jmp-talk)
-
-[faycaldrissi.com](https://www.faycaldrissi.com)
