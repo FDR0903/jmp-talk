@@ -66,7 +66,7 @@ By Bank of International Settlements, Bank of France, Monetary Authority of Sing
 # Decentralized Finance (DeFi)
 ####  Blockchain technology
 * Distributed ledger without central authority
-* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
+* **Social benefits**: transparency, fewer monopolies, easy value transfer, help underbanked people
 
 <br>
 
@@ -105,7 +105,7 @@ By Bank of International Settlements, Bank of France, Monetary Authority of Sing
 # Decentralized Finance (DeFi)
 ####  Blockchain technology
 * Distributed ledger without central authority
-* **Social benefits**: transparency, less monopolies, easy value transfer, help underbanked people
+* **Social benefits**: transparency, fewer monopolies, easy value transfer, help underbanked people
 
 <br>
 
