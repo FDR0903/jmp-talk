@@ -1,6 +1,5 @@
 ---
 layout: cover
-background: ./images/defi2.jpg
 class: text-center
 title: JMP
 theme: academic
@@ -25,8 +24,14 @@ mdc: true
 
 <br>
 
+Slides: [faycaldrissi.com/jmp-talk](https://www.faycaldrissi.com/jmp-talk)
+
+<br>
+
 [scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
 [website](https://www.faycaldrissi.com/), [github](https://github.com/FDR0903)
+
+
 
 ---
 
