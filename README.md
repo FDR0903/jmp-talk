@@ -1,4 +1,4 @@
-# On the design of decentralized markets
+# Price formation and equilibrium liquidity in blockchains - Talk
 
 ## Run locally
 To start the slide show:
