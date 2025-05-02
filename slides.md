@@ -889,8 +889,10 @@ layout: center
 ### Drissi F., Feinstein, Z., \& Williams, B.
 
 * Continuous-time macro-finance model of crypto exchange rates and blockchain monetary policy
-* Layer-2 blockchains increase exchange rate volatility and reduce decentralisation
-* Dollar economy shocks help blockchain ecosystems in the short run but hurt in the long run
+* Agents choose between DeFi, consumption, and bonds
+* Equilibrium:
+    * Dollar economy shocks help blockchain ecosystems in the short run but hurt in the long run
+    * Policy can increase adoption and help native crypto to be perceived as money
 
 ---
 
