@@ -1,5 +1,3 @@
-# Chain economics
-
 ## Run locally
 To start the slide show:
 

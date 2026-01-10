@@ -17,7 +17,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '14/12/2025' # shows in infoLine, defaults to the current date
+date: '14/01/2026' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -381,13 +381,15 @@ University of Oxford, Stevens Institute of Technology, Imperial Business School
 
 ---
 
-# Blockchains pay for security with issuance
-
-### Proof of stake
+# Motivation
+### Proof of stake Blockchains pay for security with issuance 
 
 - Lock native token on the blockchain to participate in the consensus protocol
 - <u>Economic security</u>: blockchain pays for security with **issuance** (staking rewards)
 - Blockchain incentivises good behaviour with **slashing**
+
+
+$\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 
 <br>
 <br>
@@ -413,8 +415,8 @@ University of Oxford, Stevens Institute of Technology, Imperial Business School
 
 ---
 
-# Fact #1: LSTs enable DeFi
-### Users can uses LSTs in DeFi
+# Motivation
+### Users can use LSTs in DeFi
 - Uniswap pools (stETH)
 - Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
 <br><br>
@@ -449,7 +451,7 @@ $\implies$ strategic complementarity
 
 ---
 
-# Motivation
+# Contribution
  
 
 <p style="text-align: center;"><h3> <u>Question</u> <br>
