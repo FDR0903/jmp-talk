@@ -1,8 +1,8 @@
 ---
 layout: cover
 class: text-center
-title: JMP
-theme: academic
+title: Design & Incentives in Blockchain Financial Systems
+#theme: academic
 titleTemplate: '%s'
 favicon: ./images/defiicon.png
 author: Fayçal Drissi
@@ -13,920 +13,886 @@ themeConfig:
 fonts:
   local: Montserrat, Roboto Mono, Roboto Slab # local fonts are used for legal reasons for deployment to https://slidev-theme-academic.alexeble.de and only set up for the example project, remove this line for your project to automatically have fonts imported from Google
 
+theme: frankfurt
+infoLine: true # on by default, can be turned off
+#author: 'Your name here' # shows in infoLine
+#title: 'Title' # shows in infoLine
+date: '14/12/2025' # shows in infoLine, defaults to the current date
+
 mdc: true
 ---
 
-## Decentralised Finance 
+## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
 
 <br>
 
-**Fayçal Drissi**
+# Design and Incentives in Blockchain Financial Systems
 
+## Fayçal Drissi
+
+### *University of Oxford*
 <br>
 
-Slides: [faycaldrissi.com/jmp-talk](https://www.faycaldrissi.com/jmp-talk)
-
-<br>
-
-[scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
-[website](https://www.faycaldrissi.com/), [github](https://github.com/FDR0903)
+<!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
+[my scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
+[my website](https://www.faycaldrissi.com/), [my github](https://github.com/FDR0903)-->
 
 ---
+section: Blockchains
+---
 
-# Decentralised Finance (DeFi)
-####  Blockchain technology
-* Distributed ledger without central authority
-* **Social benefits**: transparency, fewer monopolies, easy value transfer, help underbanked people
+# Decentralised financial systems
+
+### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms, governments)
+- Intermediaries reduce transaction and enforce contracts, but introduce
+  - fees, delays, opacity, 
+  - market power, exclusion, censorship risk
 
 <br>
 
+### Central question: Can we coordinate economic activity at scale with less centralized trust?
 
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/">CBDC and Monetary Policy</a>
-</Footnote>
-<Footnote :number=2>
-<a href="https://finance.ec.europa.eu/digital-finance/digital-euro_en/">Digital Euro by the ECB</a>
-</Footnote>
-<Footnote :number=3>
-Cross-border settlement in CBDCs as priority policy of the G20<br> 
-<a href="https://www.bis.org/about/bisih/topics/cbdc/rialto.htm">Project Rialto</a>
-, <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm">Regulation of asset-backed stablecoins</a>
-<br>
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink">International Monetary Fund (IMF) On Cross-Border Crypto Flows</a>
-</Footnote>
-<Footnote :number=4>
-<a href="https://www.bis.org/about/bisih/topics/cbdc/mariana.htm">Project Mariana</a>
-</Footnote>
-<Footnote :number=5>
-By Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-</Footnote>
-</Footnotes>
+- Blockchains are a technological and economic response to trust, coordination, and institutional frictions
+  - Shared, tamper-resistant ledger
+  - Maintained by algorithmic rules (consensus) and incentives, not a single authority
+  - general-purpose infrastructure for economic coordination, replaces institutional trust with 
+    - publicly verifiable rules
+    - economic incentives: participants are rewarded to follow rules
 
 
 ---
 
-# Decentralised Finance (DeFi)
-####  Blockchain technology
-* Distributed ledger without central authority
-* **Social benefits**: transparency, fewer monopolies, easy value transfer, help underbanked people <br>
- <br>
 
-#### Applications of blockchains
-* Central Bank Digital Currencies (CBDCs) & Tokenization of digital assets <br>
-**Economic benefits**: better monetary policy oversight reduced transaction costs<sup>1, 2</sup>
-* Inter-bank and cross-border Forex trading: **inter-bank FX Settlement** using **DeFi**<sup>3, 4, 5</sup>
-* Decentralised Autonomous Organizations and E-governments
-<!--financial (bonds, stocks, ETFs) & non-financial assets (commodities, real estate)<br> **Economic benefits**: reduce transaction costs and processing time-->
+# Decentralised financial systems
 
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://www.banqueducanada.ca/2020/02/note-analytique-personnel-2020-4/">CBDC and Monetary Policy</a>
-</Footnote>
-<Footnote :number=2>
-<a href="https://finance.ec.europa.eu/digital-finance/digital-euro_en/">Digital Euro by the ECB</a>
-</Footnote>
-<Footnote :number=3>
-Cross-border settlement in CBDCs as priority policy of the G20<br> 
-<a href="https://www.bis.org/about/bisih/topics/cbdc/rialto.htm">Project Rialto</a>
-, <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/pyxtrial.htm">Regulation of asset-backed stablecoins</a>
-<br>
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5080183&dgcid=ejournal_htmlemail_cryptocurrency%3Aresearch%3Aejournal_abstractlink">International Monetary Fund (IMF) On Cross-Border Crypto Flows</a>
-</Footnote>
-<Footnote :number=4>
-<a href="https://www.bis.org/about/bisih/topics/cbdc/mariana.htm">Project Mariana</a>
-</Footnote>
-<Footnote :number=5>
-By Bank of International Settlements, Bank of France, Monetary Authority of Singapore, Central Bank of Malaysia, and Swiss National Bank
-</Footnote>
-</Footnotes>
+### Decentralised finance (DeFi) as a new form of financial intermediation
+- DeFi = financial services run by smart contracts on blockchains
+  - Open access
+  - Automated execution   
+  - No centralized balance sheet
+- Intermediation becomes a **protocol**
+- Contracts enforced by code + incentives, not courts
+<br><br>
+
+### Breadth of real economic applications
+- Payments & Money: Stablecoins, Cross-border payments
+- Financial Markets: Decentralized exchanges, On-chain lending,  collateralized credit
+- Organizations & Governance: DAOs (Decentralized Autonomous Organizations)
+  - Firms or collectives governed by token-holders
+  - Rules for voting, treasury use, and upgrades are pre-specified
+- Ownership/contracting: financial and real asset tokenisation
 
 ---
+
+
+# My research
+
+- Blockchain technology for ...
+
+---
+section: Market Microstructure
 layout: center
 ---
 
-<p style="text-align: center;"><h2>
-It is <b>key</b> to study these new markets to influence policy and practice at early stages, and to achieve its potential <a name="defi1"></a></h2>
-</p>
+**Agostino Capponi, Alvaro Cartea, Fayçal Drissi (2025). Do Longer Block Times Impair Market Efficiency in Decentralized Markets?**
+
+<center> 
+Columbia University, University of Oxford
+
+**Link**:  [faycaldrissi.com/files/mempools.pdf](https://www.faycaldrissi.com/files/mempools.pdf)
+</center>
 
 ---
 
-# Research agenda
-
-### Blockchain market microstructure and design
-* Mathematical tools to describe optimal trading and liquidity provision
-* Detect and address design inefficiencies
-* Analyse equilibrium properties of price and liquidity in blockchain-based trading systems
-
-<br>
-
-### Monetary policy in decentralised economies
-
-* Macro-finance models to study inflation, adoption, and issuance policies in blockchains
-* Examine the impact of the structure of the ecosystem on asset pricing and economic outcomes
-
-<br>
-
-### Blockchain protocol and mechanism design
-
-* Develop improved architectures for automated market makers (AMMs)
-* Design market mechanisms for competition over block space allocation
+# Motivation
 
 
----
+- Significant volumes on Decentralized Exchanges (DEXs): ($\$7.383$ billion in $24$ hours) as of 7 May 2025
+  
+  $\implies$ DEX efficiency actively influences discussions on blockchain design
 
-# Outline
-### Part I: Blockchain market microstructure
-* Introduction to Blockchains and Automated Market Makers (AMMs)
-* How DEXs constrain strategic behaviour of liquidity providers
-* Market design solutions to improve efficiency
- <br><br>
-### Part II: Ongoing work
-* Monetary policy in blockchain economies (Macro-Finance)
-* Bitcoin Asset Pricing
-* Designing competition mechanisms for block inclusion
-* Market fragmentation in blockchains
+<v-click>
 
----
-layout: center
----
+- The blockchain protocol determines the lifecycle of transactions and adds new cost structures
 
-<p style="text-align: center;">
-<h2>Part I: Decentralised Market Microstructure </h2>
-</p>
+<v-click>
 
---- 
+- Transactions are sent to the network continuously, stored in a memory pool. At each Epoch, with length **block time**, a validator is chosen. The validator creates a new block with transactions from the memory pool
 
-# Decentralised Finance: two parts
-<br />
+![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 580px"}
 
-### Blockchains
+<v-click>
 
-* Infrastructure
-* Lifecycle of transactions
+![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, -102%); width: 580px"}
 
-<br />
-<br />
+<v-click>
 
-### Smart contracts
+![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, -210%); width: 580px"}
 
-* Public programs on the blockchain: define the rules of interactions
-* Immutable and permissionless
-
-<br />
-<br />
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
 ---
 
-<p style="text-align: center;">
-<h2> Decentralised Finance </h2>
+# Motivation: the blockchain protocol
 
-<br />
+### Gas fees (EIP-1559)
+* **Base fee**: based on congestion, prerequisite for inclusion
+* **Priority fee**: incentivise validators to prioritise a transaction in the block $\implies$ Agents compete for queue priority
+<v-click>
 
-<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without intermediaries <a name="defi1"></a></h3>
-</p>
+![mempools](./images/mempools.jpeg){style="transform: translate(25%, 0%); width: 580px"}
 
-<br />
-<br />
-<br />
-
----
-
-<p style="text-align: center;">
-<h2> Decentralised Finance </h2>
-
-<br />
-
-<h3>An ecosystem of smart contracts that <em>mimic</em> traditional financial services without intermediaries <a name="defi1"></a></h3>
-</p>
-
-<br />
-<br />
-<br />
-
-<p style="text-align: center;">
-<h2> Decentralised exchanges </h2>
-<br>
-<h3>
-Trading platforms where the rules of interaction are encoded in a smart contract operating on the blockchain   <a name="defi2"></a></h3>
-</p>
+</v-click>
 
 ---
 
-# Automated Market Makers
+# Contribution
 
-* A liquidity pool for securities $X$ and $Y$
-* Available *reserves* $x$ and $y$
+### A model to describe the microstructure of blockchains financial markets
+<u>**stage 0**</u>: $M< L$ traders acquire information for a fixed cost $C$
+<br><br>
+![model1](./images/model1.png){style="transform: translate(10%, 15%); width: 600px"}
+<v-click>
+<div style="margin-top:-300px;"> 
+<u><b>stage 1</b></u>: liquidity supplier sets the AMM’s reserves
+</div>
 
-![pool1](./images/pool1.png){style="transform: translate(165%, 20%); width: 200px"}
+![model2](./images/model2.png){style="transform: translate(10%, 7%); width: 600px"}
+<v-click>
 
----
+<div style="margin-top:-296px;"> 
+<u><b>stage 2</b></u>: M informed traders compete for priority
+</div>
 
-# Automated Market Makers
+![model3](./images/model3.png){style="transform: translate(7.6%, 30%); width: 600px"}
 
-### Two types of participants
+<v-click>
 
-* **Liquidity takers (LTs)** trade with the pool
+![model4](./images/model4.png){style="transform: translate(10.2%, -78%); width: 600px"}
 
-![pool2](./images/pool2.png){style="transform: translate(30%, 50%); width: 500px"}
-
----
-
-# Automated Market Makers
-### Two types of participants
-* **Liquidity providers (LPs)** *deposit* assets in the pool or *withdraw* assets from the pool
-
-![pool3](./images/pool3.png){style="transform: translate(31.5%, 51%); width: 500px"}
-
----
-
-# Automated Market Makers
-### Economic principle: bonding curves
-
-*  Iso-liquidity curve or indifference curve (points of same level of liquidity)
-$$
-\qquad
-$$
-
-![BC1](./images/BondingCurves1.png){style="transform: translate(18%, 10%); width: 630px"}
-
----
-
-# Automated Market Makers
-### Liquidity takers
-
-* To buy a quantity $\Delta y$, one pays
-$$
-\frac{\Delta x}{\Delta y} = \frac{\Phi(y-\Delta y) - \Phi(y)}{\Delta y}
-$$
-
-![bc2](./images/bc2.png){style="transform: translate(18%, 10%); width: 630px"}
-
----
-
-# Automated Market Makers
-### Liquidity takers
-
-* To sell a quantity $\Delta y$, one receives
-$$
-\frac{\Delta x}{\Delta y} = \frac{\Phi(y) - \Phi(y+\Delta y)}{\Delta y}
-$$
-
-![bc3](./images/bc3.png){style="transform: translate(18%, 10%); width: 630px"}
-
----
-
-# Automated Market Makers
-### Liquidity takers
-* Let $\{x, y\} = \{\Phi(y), y\}$ be the state of the pool.
-* **Marginal Price** and **slippage**
-$$
-\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}
-    }_{\text{Price to sell }\Delta y}  \xrightarrow{\Delta y \longrightarrow 0} \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{Price to buy }\Delta y}
-$$
+</v-click>
+</v-click>
+</v-click>
 
 
 ---
-
-# Automated Market Makers
-### Liquidity takers
-* Let $\{x, y\} = \{\Phi(y), y\}$ be the state of the pool.
-* **Marginal Price** and **slippage**
-$$
-\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}
-    }_{\text{Price to sell }\Delta y}  \xrightarrow{\Delta y \longrightarrow 0} \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{Price to buy }\Delta y}
-$$
-* **Price impact**
-$$
--\Phi'(y+\Delta y)
-    \xleftarrow{\text{after a sell}}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xrightarrow{\text{after a buy}} -\Phi'(y-\Delta y)
-$$
-
-
----
-
-# Automated Market Makers
-### Liquidity takers
-* Let $\{x, y\} = \{\Phi(y), y\}$ be the state of the pool.
-* **Marginal Price** and **slippage**
-$$
-\underbrace{\frac{\Phi(y)-\Phi(y+\Delta y)}{\Delta y}
-    }_{\text{Price to sell }\Delta y}  \xrightarrow{\Delta y \longrightarrow 0} \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xleftarrow{0\longleftarrow \Delta y} \underbrace{\frac{\Phi(y-\Delta y)-\Phi(y)}{\Delta y}}_{\text{Price to buy }\Delta y}
-$$
-* **Price impact**
-$$
--\Phi'(y+\Delta y)
-    \xleftarrow{\text{after a sell}}  \underbrace{Z=-\Phi'(y) }_{\text{marginal price}}\xrightarrow{\text{after a buy}} -\Phi'(y-\Delta y)
-$$
-* Approximations
-$$
-\begin{cases}
-\text{slippage} & \approx \frac12 \Phi''(y) \Delta y\\
-\text{impact} & \approx  \Phi''(y) \Delta y
-\end{cases}
-$$
-
----
-
-# Automated Market Makers
-### Liquidity takers
-![cvxty](./images/convexity1(1).png){style="transform: translate(30%, 0%); width: 600px"}
-<font size ="1">
-Scatter plots of the execution cost and the price impact of 2.622 million LT transactions against approximations. The transactions  are between January 2023 and December 2023 in 38 different Uniswap v3 pools.
-</font>
 
 <!--
-
-# Automated Market Makers
-### Liquidity takers
-
-
-* **Price impact** following a buy order of volume $\Delta y$
-$$
-Z_0 = -\Phi'(y) \longrightarrow Z_1 = -\Phi'(y-\Delta y) \approx Z_0 + \Phi''(y)\,\Delta y
-$$
-* **Price impact** following a sell order of volume $\Delta y$
-$$
-Z_0 = -\Phi'(y) \longrightarrow Z_1 = -\Phi'(y+\Delta y) \approx Z_0 - \Phi''(y)\,\Delta y
-$$-->
-
----
-
-# Automated Market Makers
-### Liquidity takers
-
-- Optimal liquidation strategies in DEXs<sup>1, 2</sup>
-
-$$
-\begin{cases}
-d\tilde{Z}_{t} & =dZ_{t}-c_{t}\,\nu_{t}\,dt\\
-dy_{t} & =-\nu_{t}\,dt\\
-d{x}_{t} & =\left(\tilde{Z}_{t}-\frac{1}{2}\,c_{t}\,\nu_{t}\right)\,\nu_{t}\,dt\\
-\sup_{\nu} & \mathbb E_{t,x,y,Z,S}\left[x_{T}^{\nu}+y_{T}^{\nu}\,\tilde{Z}_{T}-\alpha\,\left(y_{T}^{\nu}\right)^{2}-\phi\,\int_{t}^{T}\left(y_{s}^{\nu}\right)^{2}\,ds\right]
-\end{cases}
-$$
-
-- Approximation method for semilinear PDEs
-- Backtest on real data
-
-<Footnotes separator>
-<Footnote :number=1>
-Cartea, Álvaro, Fayçal Drissi, and Marcello Monga. "Decentralised finance and automated market making: Execution and speculation." <b>2nd round JEDC</b>
-</Footnote>
-<Footnote :number=2>
-Cartea, Álvaro, Fayçal Drissi, and Marcello Monga. "Execution and statistical arbitrage with signals in multiple automated market makers." <b>2023 IEEE</b></Footnote>
-</Footnotes>
-
-
----
-
-# Automated Market Makers
-### Liquidity providers
-* Liquidity providers deposit/withdraw liquidity <!--without changing the marginal price $Z$-->
-
-
----
-
-# Automated Market Makers
-### Liquidity providers
-* Liquidity providers deposit/withdraw liquidity
-* They earn proportional fees
-
----
-
-# Automated Market Makers
-### Liquidity providers
-* Liquidity providers deposit/withdraw liquidity
-* They earn proportional fees
-* They incur adverse-selection costs<sup>1</sup>
-<!--* Change in wealth of LPs against not providing liquidity-->
-$$
-0 \ge \underbrace{\Phi(y-\Delta y)-\Phi(y)}_{\text{cash received}}+\underbrace{\Delta y \, \Phi'(y-\Delta y)}_{\text{change in value}} \approx -\frac12 \Phi''(y) \, \Delta y^2
-$$
-<!--$$
-\text{L}_{t}= -\frac{1}{2}\int_{0}^{t}\,\Phi''\left(y_{s}\right)\,d<y,y>_{s}
-$$-->
-<br><br><br>
-
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">Cartea, Á., Drissi, F., & Monga, M. (2023). Predictable losses of liquidity provision in constant function markets and concentrated liquidity markets.<br><b> Applied Mathematical Finance</b></a>
-</Footnote>
-</Footnotes>
-
----
-
-# Losses in Ethereum and Uniswap<sup>1</sup>
-
-| | Average      | Standard Deviation | 
-|  :---  | :---        |    :----:   | 
-| Losses  | $-1.64\%$ | $7.5\%$ |
-| Revenue |  $0.155\%$   | $0.274\%$        |
-| Hold time |   $6.1$ days   |  $22.4$ days       |
-<!--| Number of transactions per LP | $11.5$ | $40.2$ | -->
-
-
-
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://epubs.siam.org/doi/full/10.1137/23M1602103">Cartea, Á., Drissi F., & Monga M. (2024) Decentralised Finance and Automated Market Making: Predictable Loss and Optimal Liquidity Provision.<br><b>SIAM Journal on Financial Mathematics</b></a>
-</Footnote>
-</Footnotes>
-
----
-
-# Losses in Ethereum and Uniswap
-
-* LPs can reduce these losses significantly<sup>1</sup>
-$$
-\sup_{\nu}\mathbb{E}\bigg[\underbrace{\left(Y_{T}+Q_{T}^{\nu}\right)\,S_{T}^{\nu}}_{\text{replication}}-\underbrace{\int_{0}^{T}\left(S_{t}^{\nu}+k\,\nu_{t}\right)\,\nu_{t}\,dt}_{\text{replication cost}}-\underbrace{\tfrac{1}{2}\phi\int_{0}^{T}\left(Q_{t}^{\nu}+Y_{t}\right)^{2}\,dt}_{\text{inventory aversion}}\bigg]
-$$
-where
-$$
-\begin{cases}
-Y_{T} & =\text{DEX position}\\
-S^{\nu} & =F+\text{impact}\\
-F_t & =F_{0}+\int_{0}^{t}A_{u}\,du+\sigma\,W_{t}\,,\\
-A & =\text{general latent trading signal}
-\end{cases}
-$$
-* Characterise solution as that of an FBSDE
-* Reduce the FBSDE to a Lotka-Volterra system
-* Backtests
-
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">Drissi, F., Jaimungal, S., Wu, X. Hedging of liquidity positions un Automated Market Makers</a>
-</Footnote>
-</Footnotes>
-
-
----
-
-# Losses in Ethereum and Uniswap
-
-* The core issue persists: LPs have limited strategic flexibility
-* **Solution**: design DEXs that give LPs the tools to express strategic preferences
-
----
-layout: center
----
-
+<br /><br /><br /><br /><br /><br />
 <p style="text-align: center;"><h1>
-Improving AMMs <a name="design"></a></h1>
+The model is solved by backward induction <a name="defi"></a></h1>
 </p>
+
+
+<br /><br /><br /><br /><br /><br />
+<p style="text-align: center;"><h1>
+Stage two<br><br>
+priority fees and trading volumes <a name="defi"></a></h1>
+</p>
+
+-->
+
+
+# <ins>Stage two</ins>: assumptions
+
+### Competition in each block: multi-prize sealed-bid auction
+
+![distribPF](./images/distribPF.png){style="transform: translate(60.2%, 0%); width: 400px"}
+
+Data: from \textit{EthPandaOps} and it includes $10^7$ transactions observed in the public memory pool of Ethereum between 20~March~2024, 00:00, and 21~March~2024, 17:08
+
+**TODO: Add image that shows that market clears sequentially**
+
+<v-click>
+
+- Informed trader $i\in\{1,\dots,M\}$ has a private and independent type: $v_i=\mathbb{E}_{i}\left[V\right]$ which represents the valuation of the asset
+- **In equilibrium of stage two:** traders set the **priority fee $\varphi_i$**, and the **trading volume $\delta_i$** 
+</v-click>
+
+---
+
+# <ins>Stage two</ins>
+
+### Informed traders compete to avoid potentially worse execution prices resulting from the adverse price impact of preceding orders in the block
+
+- Execution costs and price impact is approximately linear in the trading volume $\delta$ and inversely proportional to liquidity $\kappa$
+
+$$\footnotesize \text{execution price to buy }\delta = V_0 + \delta / \kappa $$
+$$\footnotesize \text{new price following a buy }\delta = V_0 + 2\,\delta / \kappa $$
+
+![convexity1](./images/convexity1.png){style="transform: translate(50%, 0%); width: 450px"}
+
+---
+
+# <ins>Stage two</ins>
+
+- At stage two: number of traders $M$ and liquidity supply $\kappa$ are known
+- If trader $i$ is first in the block
+$$\scriptsize
+W_{i,(M-1)} 
+    = \underbrace{-\varphi_i}_\text{priority fee}
+    - \underbrace{\delta_i \left( \frac{\delta_i}{\kappa} + \pi \right)}_{\text{cash paid to AMM}}
+    + \underbrace{\delta_i \,V}_{\text{terminal value of holdings}}
+    - \underbrace{C}_{\text{information cost}}
+$$
+
+- If trader $i$ is $j-$th in the block
+$$\scriptsize
+W_{i,(j)} = {-\varphi_i}
+       - \underbrace{\delta_i \!\left( \frac{\delta_i}{\kappa} 
+       + \frac{2}{\kappa} \Delta_{(j+1 : M-1)} 
+       + \pi \right)}_{\text{exec costs + adverse price impact}}
+       + {\delta_i V}
+       - {C}
+$$
+
+- If trader $i$ is last in the block
+$$\scriptsize
+W_{i,(0)}
+    = -\varphi_{i}
+      - \delta_{i}\!\left(
+        \frac{\delta_{i}}{\kappa}
+        + \frac{2}{\kappa}\,\Delta_{(1:M-1)}
+        + \pi
+      \right)
+      + \delta_{i} V
+      - C\,
+$$
+
+- **Expected wealth**
+$$\scriptsize
+\mathbb{E}_{i}\!\left[W_{i}\right]
+= \mathbb{E}_{i}\!\left[W_{i,0}\right]
++ \frac{2\,\delta_{i}}{\kappa}
+\sum_{j=0}^{M-1}
+\mathbb{E}_{i}\!\left[
+    \boldsymbol{1}_{\{\varphi_{(j)} < \varphi_{i} < \varphi_{(j+1)}\}}
+    \,\Delta_{(1:j)}
+\right]
+$$
+
+---
+
+# <ins>Stage two</ins>: results
+Optimisation problem: $\qquad\qquad\qquad\qquad\qquad\qquad \sup_{\varphi_i, \delta_i} \mathbb{E}_{i}\!\left[W_{i}\right]$
+
+- Participation cutoff: only types $v_i>\underline v_M$ participate, where $\footnotesize
+\underline v_M - \pi - \int_{\underline v_M}^{\overline v}\bigl(e^{(1-F(u))(M-1)} - 1\bigr)\,du = 0\,,$ and $\underline v_M(M) \ \ {\nearrow} \ \ \overline v$
+
+![tradingvolumesDist](./images/tradingvolumesDist.png){style="transform: translate(90%, 0%); width: 350px"}
+
+$\implies$ competition decreases informational content in markets
+
+<v-click>
+
+- The equilibrium trading volume: $\quad \footnotesize \delta(v_i) = \kappa\,\tilde \delta(v_i)  = \kappa/2 \left(\left(\overline v - \pi\right)e^{-(M-1)\left(1-F(v_i)\right)} - \int_{v_i}^{\overline v} e^{-(M-1)\left(F(u)-F(v_i)\right)}\,du\right)$
+
+- The equilibrium priority fee: $\qquad\quad \footnotesize \varphi\left(\delta_{i}\right)=\varphi\left(v_{i}\right)=2\,\kappa\left(M-1\right)\int_{\underline{v}_M}^{v_{i}}\tilde{\delta}\left(x\right)^{2}\,f\left(x\right)\,dx\,.$
+
+</v-click>
+
+--- 
+
+# <ins>Stage two</ins>: results
+
+-  $\delta(v_i)$ and $\varphi(v_i)$ are increasing in the private valuation $v_i$: Higher values of private signals correspond to larger trading volumes; they are also associated with higher priority fees and better queue positions. 
+
+
+![tradingvolumes](./images/tradingvolumes.png){style="transform: translate(90%, 0%); width: 400px"}
+
+Average absolute trading volume of transactions across multiple Uniswap v3 pools as a function of their queue position within the block
+
+
+- $\delta(v_i)$ and $\varphi(v_i)$ are decreasing in the number of informed traders $M$ with limit 
+$$\footnotesize \lim_{M\to\infty}\delta(v_i)=\lim_{M\to\infty}\varphi(v_i)=0.$$
+
+
+$\implies$ competition decreases individual trading volumes and priority fees However, aggregate trading volumes increase in $M$
+$$\footnotesize
+\sum_{i=1}^M\,\mathbb E[\tilde \delta(v_i) \mid v_i \ge \underline v_M] = M \, \int_{\underline v_M}^{\overline{v}} \tilde \delta(x) \,dF(x) 
+$$
+
+
+--- 
+
+# <ins>Stages one and zero</ins>
+### Stage one: equilibrium liquidity supply
+- Liquidity suppliers balance revenue from uninformed elastic demand:
+  $$\footnotesize
+  \kappa=\sqrt{\frac{\text{revenue}}{M\,S_M}}, \qquad S_M=\int_{\underline v_M}^{\overline v} \tilde\delta(u)^2\,dF(u): \text{ variance of trading volumes} 
+  $$
+  1. $\footnotesize S_M$ increases with $\footnotesize M$ $\implies$ $\footnotesize \kappa(M)$ decreases with $\footnotesize M$
+  2. Market shutdown condition:  $\qquad\qquad\qquad\qquad\footnotesize M\,S_M \le \frac{\text{revenue}}{\text{elasticity}}$
+
+$\implies$ there exists $\overline M$ s.t. for all $M>\overline M$, markets shutdown.
+
+$\implies$ competition is bad for price efficiency **AND** liquidity: in contrast to traditional markets (Holden and Subrahmanyam (1992))
+
+### Stage zero: information acquisition
+The number of informed traders is constrained by the profitability of informed trading and the cost $C$
+$$\footnotesize
+C=\underbrace{\sqrt{\frac{\pi\,N\,\theta}{M\,S_{M}}}\,\int_{\underline{v}_{M}}^{\overline{v}}\left(-2\,\left(M-1\right)\left(S_{M}+\Sigma_{M}\left(v\right)\right)+\tilde{\delta}\left(v\right)\,\left(v-\pi-\tilde{\delta}\left(v\right)\right)\right)dF\left(v\right)}_{H(M) = \text{trading profits net of execution costs and priority fees}}\,,
+$$
+$\footnotesize M$ increases with uninformed demand. $\footnotesize M$ decreases with the  information cost $\footnotesize C$.
+
+---
+
+# Tradeoff: security vs market efficiency 
+Block time increases security, but also increases variance of types. 
+$$ \scriptsize\text{when types are uniform: }
+\begin{cases}\scriptsize
+\text{participation cutoff } v_M &=
+\scriptsize \overline v -  \frac{\overline v}{M-1}\log\left(\frac{\pi+M\,\left(\overline v-\pi\right)}{\overline v}\right) \underset{M\rightarrow\infty}{\longrightarrow} \overline v 
+\\ \scriptsize
+\text{liquidity } \kappa  &= 
+\scriptsize \sqrt{2\,\frac{(M-1)^3 N}{(M-1) M (\pi -\overline v) ((M-1) \pi -(M-3) \overline v)-2\, M \,\overline v^2 \,\log \left(\frac{\overline v}{M (\overline v- \pi)+\pi }\right)}} 
+\\ \scriptsize
+\text{volumes } \tilde\delta(v_i)&=
+\scriptsize \frac{1}{2(M-1)}\left(\left(M \,\left(\overline{v}-\pi\right)+\pi\right)\,e^{-\frac{(M-1) (\overline{v}-v_i)}{\overline{v}}}
+-\overline{v}\right)\\ 
+\scriptsize
+\text{priority fee } \varphi(v_i)&=
+\scriptsize \frac{\left(\overline v-\pi\right) \,\left(\overline v\,\left(M-3\right)-\pi\,\left(M-1\right) \right))}{M-1}
+-
+\frac{2\, \overline v^2}{(M-1)^2}\log \left(\frac{\overline v}{M (\overline v-\pi)+\pi }\right) \\ \scriptsize
+\text{number of transactions/active traders: }M\,(1-F\left(\underline v_M\right)) &= 
+\scriptsize
+ \frac{M}{M-1}\log\left(M-\pi\frac{M-1}{\overline v}\right) 
+\end{cases}
+$$
+
+![equilibriumUniform](./images/equilibriumUniform.png){style="transform: translate(90%, -8%); width: 350px"}
+
+
+---
+section: Macroeconomics
+layout: center
+---
+
+**Fayçal Drissi, Zach Feinstein, Basil Williams (2026). Macroeconomics of liquid staking**
+<center> 
+University of Oxford, Imperial Business School, Stevens Institute of Technology
+
+**Link**:  [faycaldrissi.com/staking_talk](https://www.faycaldrissi.com/staking_talk/)
+</center>
+
+---
+
+# Blockchains pay for security with issuance
+
+### Proof of stake
+
+- Lock native token on the blockchain to participate in the consensus protocol
+- <u>Economic security</u>: blockchain pays for security with **issuance** (staking rewards)
+- Blockchain incentivises good behaviour with **slashing**
+
+<br>
 <br>
 
-Cartea, Drissi, Sánchez-Betancourt, Siska, Szpruch (2024)
+<v-click>
 
-Strategic bonding curves in automated market makers
+### Liquid staking
 
-<!--
+- <u>**Deposit assets**</u>: users lock tokens (ETH, SOL) in a liquid staking protocol
+- <u>**Receive the derivative token**</u>: protocol issues a token (stETH) that represents the staked assets
+- <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
+- <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
-# Why AMMs
+</v-click>
 
-* Price to add a transaction to the blockchain: **gas fee**
-    * Gas fees scale with transaction complexity
-    * Significantly expensive to run traditional markets on a blockchain
-* **Constraints**: computational simplicity
-* **Solution**: Automated market makers (AMMs)-->
+<!--<v-click>
+
+### Benefits: 
+  - No opportunity costs: assets remain accessible for DeFi use
+  - Better economic security
+
+</v-click>-->
 
 ---
 
-# AMM design
-
-### Objective
-* Provide strategic tools to LPs
+# Fact #1: LSTs enable DeFi
+### Users can uses LSTs in DeFi
+- Uniswap pools (stETH)
+- Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
 <br><br>
 
-### Constraints
-* Use  **available information** on the blockchain
-* **Simple mechanics** to update prices and reserves
+<v-click>
 
-<Footnotes separator>
-<Footnote :number=1>
-<a href="https://www.tandfonline.com/doi/full/10.1080/1350486X.2023.2277957">
-</a>
-</Footnote>
-</Footnotes>
+### Market cap of LSTs in increasing
+
+![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
+![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
+
+</v-click>
 
 ---
 
-# AMM design
+# Fact #2: liquid staking dominates solo staking
 
-### Decentralised Liquidity Pool (DLP)
+- Liquid staking is easy
+<v-click>
 
-* Reserves $\{x, y\}$
+- Liquid staking reduces reward risk
+$\implies$ strategic complementarity
 
-* Marginal Price $Z$
+<v-click>
 
-* LTs impact the price according to impact functions $\{\eta^b, \eta^a\}$
+- Liquid staking represents the majoritary of staking
 
-* The slippage is determined by quote functions $\{\delta^b, \delta^a\}$<sup>1</sup>
+![stakinghistory](./images/solostakers.png){style="transform: translate(0%, 0%); width: 900px"}
 
-<br><br><br><br><br><br>
-
-<Footnotes separator>
-<Footnote :number=1>
-We derive conditions for the impact and quote functions to prevent roundtrip arbitrage and price manipulation 
-</Footnote>
-</Footnotes>
+</v-click>
+</v-click>
 
 ---
 
-# AMM design
+# Motivation
+ 
 
-### Liquidity takers 
+<p style="text-align: center;"><h3> <u>Question</u> <br>
 
-* $\left(N_t^b\right)_{t\in[0,T]}$ and $\left(N_t^a\right)_{t\in[0,T]}$: counting processes for the number of sell and buy orders of minimum trading volume $\zeta$
+What are the effects of liquid staking on the macroeconomics of blockchains ?
+</h3>
+</p>
 
-* The dynamics of the DLP reserves
-$$
-d y_{t}=\,\zeta\, d N_{t}^{b}-\zeta\, d N_{t}^{a}
-$$
-$$
-d x_{t}=\,-\zeta\,\left( Z_{t^-}-\delta_{t}^{b} \right)\,d N_{t}^{b}
-+
-\zeta\,\Big(Z_{t^-}+\delta_{t}^{a}\Big)\, d N_{t}^{a}
-$$
+<v-click>
 
-* The dynamics of the marginal price
-$$
-d Z_{t}=-\eta^b(y_{t^-})\,d N_{t}^{b} + \eta^a(y_{t^-})\,d N_{t}^{a}
-$$
+<br>
+<br>
+<br>
 
-<!--### Liquidity providers
-* They set the functions $\{\eta^b,\eta^a,\delta^b,\delta^a\}$ periodically-->
+<p style="text-align: center;"><h3> <u>Some answers</u> <br>
 
---- 
+The tension between staking and DeFi (productivity) is necessary for issuance & slashing to influence user incentives
 
-# AMM design
+LSTs eliminate the tension between staking and DeFi
+<br>
 
-### AMM $\subset$ DLP
+Natural forces will migrate DeFi from native ETH to LSTs
+<br>
 
-* Let $\Phi$ be the trading function of an AMM
-* Let the impact functions of the DLP be
-$$
-\eta^a(y) = \Phi'(y)  - \Phi'(y-\zeta)\,\quad\text{and}\quad  \eta^b(y) = -\Phi'(y) + \Phi'(y +\zeta)
-$$
-* Let the quote functions of the DLP be
-$$\delta^a_t = \frac{\Phi(y_{t^-} - \zeta) - \Phi(y_{t^-})}{\zeta} + \Phi'(y_{t^-}) + \pi \, \zeta
-$$
+Issuing (or slashing) ETH would no longer affect user incentives
 
-$$
-\delta^b_t = \frac{\Phi(y_{t^-} + \zeta) - \Phi(y_{t^-})}{\zeta} - \Phi'(y_{t^-}) + \pi \, \zeta
-$$
-* Then DLP $\equiv$ AMM !
+</h3>
+</p>
 
---- 
 
-# AMM design
-
-### Strategic tools of LPs
-* LPs can set these functions according to strategic preferences
-* **Restrictions**: employ information on the blockchain
-* **Objective**: filter the fundamental price from the order flow in the blockchain and adapt the price of liquidity
+</v-click>
 
 ---
 
-# Strategic bonding curve
+# Blockchain economy without liquid staking tokens
 
-### A model
-* Let $P$ be the (unobserved) fundamental price
-* We discretize $Z - P$ into $M$ values, or regimes.
-* $g \notin \mathbb F$ is a CTMC with finite state space $\mathcal S = \{1, \dots, M\}$ that describes the regimes. 
-* The transition rate matrix is $\Pi$
-<!--    * Regime $1$ corresponds to $P<<Z$
-    * Regime $M$ corresponds to $Z<<P$-->
+* Small open economy with continuum of homogeneous users (mass one).
+* Consumption good normalized to $1$ USD.
+
+<v-click>
+
+* Blockchain issuance is exogenous 
+$$dI_t^e/I_t^e$$
+
+<v-click>
+
+* Blockchain users  maximise expected log utility of consumption 
+$$E_0\int_0^{\infty} e^{-\beta\,t}\,\log(c_t)\,dt$$
+
+<v-click>
+
+
+- Users allocate wealth across:
+  1. Consumption (USD)
+  2. DeFi  (with native ETH)
+  3. Staking
+
+
+</v-click>
+</v-click>
+</v-click>
+
 
 ---
 
-# Strategic bonding curve
-### A model
-* LTs are sensitive to the **fundamental price**. The vectors 
-$$\boldsymbol{c}^b = \{c^{b,1},\dots,c^{b,M}\} \quad \text{and} \quad \boldsymbol{c}^a = \{c^{a,1},\dots,c^{a,M}\}$$ 
-describe the **baseline  intensity** of the trading flow at the bid/ask in each regime $j\in\{1,\dots,M\}$
-* LTs are sensitive to the **slippage**. If $g_t = j$
+# Issuance / slashing in USD
+
+* Price of ETH $P=\$1$. 
+* Supply of ETH $Q=2\, \footnotesize\text{ETH}$ 
+* Stakers hold $1$ ETH, DeFi users hold $1$ ETH
+
+$\implies$ market cap of ETH = $Q\times P = \$\,2.$
+<v-click>
+
+* Protocol issues $1$ ETH to stakers $\implies$ new supply $Q = 3 \, \footnotesize\text{ETH}$ 
+<v-click>
+
+* Market Cap in USD does not change $\implies$ price adjusts to $P = \$\,2/3$
+<v-click>
+
+$\implies$  stakers hold 2 ETH worth $\$\,4/3$,  DeFi users 1 ETH worth $\$\,2/3$
+
+<v-click>
+
+**$\implies$ Issuance redistributes USD wealth from ETH holders to stakers, it does not create/destroys USD**
 $$
-\lambda^{b,j}_t(\delta^b_t)=  c^{b,j}\,e^{-\kappa\,\delta_{t}^{b}} 
+\boxed{\text{ETH Issuance policy } dI^e_t/I^e_t \equiv \text{USD tax policy } dI^\$_t/I^\$_t \text{ on DeFi users}}
 $$
-$$
-\lambda^{a,j}_t(\delta^a_t)= c^{a,j}\,e^{-\kappa\,\delta_{t}^{a}}
-$$
+
+<br>
+
+<v-click>
+
+### Slashing
+* Slashing burns ETH of stakers and transfers value to non‑stakers via price adjustment
+
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
 ---
 
-# Strategic bonding curve
-### Filtering from the trading flow
-* The DLP does not  observe the regime $g$.
-* We can assign a probability $\Psi^{j}_{t}$ to be in regime $j$ at time $t$ given $\mathcal{F}_t$ 
-$$
- \Psi^{j}_{t} = \mathbb{E}\left[ \mathrm{1}_{g_t = j} \,\mid\,\mathcal{F}_t\right]
-$$
+# Blockchain economy without liquid staking tokens
 
---- 
+- $S_t\,$:  USD value of aggregate staked ETH
+- $D_t$:  USD value of aggregate productive ETH
 
-# Strategic bonding curve
-### Filtering from the trading flow
-* The  filter $\Psi^{j}_{t}$ satisfies 
+<br>
 
+### Dollar return to DeFi: $\small \qquad \qquad \qquad \qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
+
+<v-click>
+
+### $\footnotesize \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\swarrow\qquad\qquad\qquad \nearrow$
+
+### Dollar return to staking: $\small \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
+
+<v-click>
+
+- Users determine their allocation $\theta_D$
 $$
-\Psi^{j}_{t} = \frac{\Gamma^j_t}{\sum_{i=1}^M\Gamma^i_t} \,,
-$$
-where the process $\Gamma^j$, for $j\in\{1,\dots,M\}$, follows the dynamics
-$$
-\frac{d \Gamma^j_t }{\Gamma^j_t} = \left( \lambda^{a,j}_{t^-}\left(\delta_t^a\right) - 1\right)\left(d N^{a}_t -d t\right) +  \left( \lambda^{b,j}_{t^-}\left(\delta_t^b\right) - 1\right)\left(d N^{b}_t -d t\right) + \frac{\sum_{i=1}^{M}\Gamma_{t^{-}}^{i}}{\Gamma_{t^{-}}^{j}} \,\pi_{ji}\,d t
-$$
+dx_t = \theta_{D,t} \times \text{DeFi} + (1-\theta_{D,t}) \times \text{staking } - \text{consumption} 
+$$ 
+
+</v-click>
+</v-click>
+
+<br>
+
+
+
 
 ---
 
-# Strategic bonding curve
+# Blockchain macroeconomics
 
+### Equilibrium and clearing conditions
+- Prices clear when ETH demand from users matches ETH supply
+$
+\qquad \qquad \qquad P_t \, Q_t = S_t + D_t = x_t
+$
+<v-click>
 
-### Adaptive control problem
-* We compute the optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
+- Only DeFi (productivity) and consumption create/destroy USD in the economy
+$
+\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt
+$
+<v-click>
 
----
+- ETH supply changes due to issuance/slashing
+$
+\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}
+$
+<v-click>
 
-# Strategic bonding curve
+- Staked / productive ETH determined by user decisions $\qquad\qquad\qquad\qquad\quad\ \ D_t = \theta_D\,P_t\,Q_t \qquad S_t = (1-\theta_D)\,P_t\,Q_t$
+<v-click>
 
-### Adaptive control problem
-* We compute the optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
-* We consider Poisson processes $N^b$ and $N^a$ with projected stochastic intensities $\hat{\lambda}^{b}$ and $\hat{\lambda}^{a}$
-$$
-\begin{cases}
-\hat{\lambda}_{t}^{b} =  e^{-\kappa\,\delta_{t}^{b}}\, \mathrm{c}^{b}\cdot\mathrm{\Psi}_{t} \\
-\hat{\lambda}_{t}^{a} =  e^{-\kappa\,\delta_{t}^{a}}\, \mathrm{c}^{a}\cdot\mathrm{\Psi}_{t}
+<br>
+
+### Solution
+
+$$\footnotesize
+\text{allocation } = \theta_D(\gamma,{\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
+\text{drift}  & = \mu_P(\gamma,{\color{red} \mu_{\iota}^{\$}},{\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}})\\
+\\\text{productivity shocks}  & = \sigma_P(\gamma, {\color{red} \mu_{\iota}^{\$}},{\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \\
+\\\text{slashing shocks} & =\gamma_P(\gamma, {\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}})
 \end{cases}
 $$
 
----
-
-
-# Strategic bonding curve
-
-### Adaptive control problem
-* We compute the optimal quote functions $\{\delta^b, \delta^a\}$ for fixed impact functions $\{\eta^b,\eta^a\}$
-* We consider Poisson processes $N^b$ and $N^a$ with projected stochastic intensities $\hat{\lambda}^{b}$ and $\hat{\lambda}^{a}$
-$$
+<!--<v-click>
+- <u>**Policy objective**</u>: ETH prices
+$$\footnotesize
 \begin{cases}
-\hat{\lambda}_{t}^{b} =  e^{-\kappa\,\delta_{t}^{b}}\, \mathrm{c}^{b}\cdot\mathrm{\Psi}_{t} \\
-\hat{\lambda}_{t}^{a} =  e^{-\kappa\,\delta_{t}^{a}}\, \mathrm{c}^{a}\cdot\mathrm{\Psi}_{t}
+\text{Drift} & =\underbrace{\theta_{D}\,\mu^{\$}}_{\text{productivity}}-\underbrace{\left(1-\theta_{D}\right)\mu_{\iota}^{e}}_{\text{inflation}}-\underbrace{\beta}_\text{consumption}+\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}\left(\left(1-\theta_{D}\right)\sigma_{\iota}^{e}-\theta_{D}\,\sigma^{\$}\right)}_{\text{covariance issuance/defi}}\\
+\\\text{Productivity shocks}  & =\underbrace{\theta_{D}\,\sigma^{\$}}_{\text{DeFi risk}}-\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}}_{\text{issuance}}\\
+\\\text{slashing shocks} & =\underbrace{\gamma\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{slashing/deflation}}}-\underbrace{\gamma_{\iota}^{e}\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{issuance}}}
 \end{cases}
 $$
-* The performance criterion[^pcm] (well-posed)
-$$
-\mathbb{E}_{t,x,y,z,\mathrm{\Psi}}\left[x_{T}+y_T\,Z_T\right]
-$$
 
-<br><br>
+</v-click> -->
 
-[^pcm]: The set of admissible bonding curves is
-$
-\mathcal A_t~=~\Big\{ (\delta^b_s, \delta^a_s)_{s \in [t,T]},\ \mathbb R^2\text{-valued},\ \mathbb F\text{-adapted, square-integrable, bounded from below}\Big\}
-$
+<v-click>
 
----
+### Policy
 
-# Strategic bonding curve
-### The solution
-* The optimal bonding curve (in feedback form)
-$$
-\delta_{t}^{\star,b}=\frac{1}{\kappa}-\frac{\theta\left(t,y+\zeta,\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{b}}{\psi\cdot\mathrm{c}^{b}}\right)-\theta\left(t,y,\tilde{\mathrm{\psi}}\right)}{\zeta}+\frac{1}{\zeta}\left(\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{b}}{\psi\cdot\mathrm{c}^{b}}\cdot\nabla_{\tilde{\mathrm{\psi}}}\theta-{\tilde{\mathrm{\psi}}}\cdot\nabla_{\tilde{\mathrm{\psi}}}v+\left(y+\zeta\right)\eta^{b}(y)\right)
-$$
-$$
-\delta_{t}^{\star,a}=\frac{1}{\kappa}-\frac{\theta\left(t,y-\zeta,\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{a}}{\psi\cdot\mathrm{c}^{a}}\right)-\theta\left(t,y,\tilde{\mathrm{\psi}}\right)}{\zeta}+\frac{1}{\zeta}\left(\frac{\tilde{\mathrm{\psi}}\odot\tilde{\mathrm{c}}^{a}}{\psi\cdot\mathrm{c}^{a}}\cdot\nabla_{\tilde{\mathrm{\psi}}}\theta-{\tilde{\mathrm{\psi}}}\cdot\nabla_{\tilde{\mathrm{\psi}}}v-\left(y-\zeta\right)\eta^{a}(y)\right)\,.
-$$
+* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives 
+* <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
 
----
-
-# Strategic bonding curve
-### Experiments
-* Two regimes: $c^b = 5\times c^a$ and $c^a = 5 \times c^b$ 
-
-![bc11](./images/oracle_bonding_curve_1-1.png){style="transform: translate(55%, 10%); width: 400px"}
-
-<!--::right::
-![bc12](./images/oracle_bonding_curve_2-1.png){style="transform: translate(0%, 10%); width: 400px"}-->
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
 ---
 layout: two-cols-header
 ---
 
-# Strategic bonding curve
-### Experiments
-* Scenario I : $100\%$ arbitrageurs
-* Scenario II: $50\%$ arbitrageurs, $50\%$ noise traders
+# Blockchain economy with only liquid staking tokens
 
 ::left::
-| | Average$^1$      | Standard Deviation | 
-|  :---  | :---        |    :----:   | 
-| DLP (Sc. I) | $-0.04\%$ | $0.719\%$ | 
-| DLP (Sc. II)   | $0.717%$ | $2.584\%$ |
-| Buy and Hold |  $0.01\%$   | $0.741\%$        |
-| Uniswap$^2$ |   $-1.485\%$    |  $7.812\%$ |
 
-1. $30$-minutes performance of LPs 
-2. Using $42,022$ LP operations between 5 May 2021 and 30 April 2022*
+<br>
+<br>
+<br>
+<br>
+
+### Users allocate wealth across:
+  * Consumption (USD)
+  * DeFi <u>**with LSTs**</u>
+  * Staking with LSTs
+
+<br>
+
+
 
 ::right::
 
-![experiments1](./images/DLPexperiments.png){style="transform: translate(10%, 0%); width: 400px"}
+<v-click>
+
+### Dollar returns -- <u>only ETH</u> in DeFi
+
+- DeFi: $\qquad \text{productivity rate}-\text{issuance tax}+\text{deflation}$
+
+$$\footnotesize 
+\qquad\qquad\qquad\qquad\qquad\swarrow\qquad\qquad\qquad \nearrow 
+$$
+
+- Staking: $\qquad\qquad\qquad\quad  \text{issuance}\quad- \quad\text{slashing}$
+
+<br>
+<br>
+<br>
+<br>
+
+<v-click>
+
+### Dollar returns -- <u>only LSTs</u> in DeFi
+- Staking: $\qquad\qquad\quad\qquad\qquad\quad$ <u>**zero**</u>
+<br>
+<br>
+
+- DeFi: $\qquad\qquad\quad\qquad\qquad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
+
+
+</v-click>
+</v-click>
+
+---
+
+# Consequences
+- **ETH issuance** as reward to staking no longer affects the incentives to staking/DeFi.
+
+<br>
+
+- **Slashing** no longer affects USD wealth $\implies$ no longer affects staker incentives.
+
+<br>
+
+<v-click>
+
+- **Centralisation**: total stake at the hand of liquid staking protocols
+
+<br>
+
+<v-click>
+
+- **Centralisation**:
+  * Issuance is a temporary transfer of wealh from stakers in the pool that wins the block, to other stakers
+  * Aggregating in one liquid staking pool minimizes wealth variance $\implies$ one surviving pool is the dominant strategy when (symmetric) liquid staking pools compete.
+
+
+</v-click>
+</v-click>
 
 
 ---
+
+# Ethereum today
+
+* Users can be productive with both LSTs and ETH
+<br>
+<br>
+
+<v-click>
+
+* Users allocate wealth across:
+  * Consumption (USD)
+  * DeFi (with LSTs)
+  * DeFi (with ETH)
+  * Staking (with LSTs)
+
+<v-click>
+<br>
+
+* <u>**Productivity rates**</u> of both tokens are positively correlated
+
+
+<v-click>
+
+<br>
+
+- For simplicity: <u>**no slashing**</u>
+
+</v-click>
+
+</v-click>
+
+</v-click>
+
+---
+
+# Dollar returns
+
+- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}+\text{issuance}$
+
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
+$$
+- DeFi with native tokens $\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH productivity rate}}-\text{issuance tax}$
+$$
+\qquad\qquad\qquad\qquad\qquad\swarrow
+$$
+- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
+
+- Correlation: accessibility to DeFi with LSTs
+$$
+\langle {\color{blue}W},{\color{red}Z}\rangle = \rho > 0
+$$
+
+
+
+---
+layout: two-cols-header
+---
+
+# Issuance/correlation favour LSTs
+
+::left::
+
+###  $\qquad$ Issuance
+![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+::right::
+
+<v-click>
+
+###  $\qquad$ Correlation
+![correl](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+</v-click>
+
+---
+
+# Strategic complementarity
+
+- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\quad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{endog liq cost stETH}}+\text{issuance}$
+
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
+$$
+- DeFi with native tokens $\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(D_t\right)dt}_{\text{endog liq cost ETH}}-\text{issuance tax}$
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\swarrow
+$$
+- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
+
+---
+layout: two-cols-header
+---
+
+# Liquidity costs  $c\left(x\right) = a - b\,x$
+
+::left::
+
+###  $\qquad$ Without strategic complementarity
+![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+::right::
+
+###  $\qquad$ With strategic complementarity
+![correl](./code/issuance_cost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+---
+layout: two-cols-header
+---
+
+# Liquidity costs  $c\left(x\right) = a - b\,x$
+
+::left::
+
+###  $\qquad$ Without strategic complementarity
+![issuance](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+::right::
+
+###  $\qquad$ With strategic complementarity
+![correl](./code/correl_cost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+
+---
+
+# Conclusion
+
+
+- Natural forces will lead to $100\%$ liquid staking $\implies$ issuance is not effective
+
+<v-clicks>
+
+- Is it good or bad ? 
+  - <u>**bad**</u>: slashing has no effect, no social planning, centralisation
+  - <u>**good**</u>: economic security, productivity
+
+- Demand for native ETH can be controlled with gas fees <br> $\implies$ decreases productivity / adoption
+
+- <u>**Future work**</u>: decentralised staking / distributed validator technology (DVT) <br> $\implies$ competition between blockchain and liquid staking protocols
+</v-clicks>
+
+---
+section: Asset Pricing
 layout: center
 ---
 
-<p style="text-align: center;"><h1>
-Blockchain protocols and market microstructure <a name="bd"></a></h1>
-<br><br><br>
+**Fayçal Drissi, Kose John, Fahad Saleh (2026). Bitcoin as a Hedge Asset**
 
-Capponi A., Cartea A., Drissi, F. (2025)
+<center> 
+University of Oxford, NYU Stern, University of Florida
 
-Price Formation and Equilibrium Liquidity in Blockchains
-
-</p>
-
-
+**Link**:  [faycaldrissi.com/files/mempools.pdf](https://www.faycaldrissi.com/files/mempools.pdf)
+</center>
 
 ---
 
-# Blockchain protocol
-The blockchain protocol determines the lifecycle of transactions and adds new cost structures
-
----
-
-# Blockchain protocol
-The blockchain protocol determines the lifecycle of transactions and adds new cost structures
-
-* Transactions sent continuously and stored in memory pools (**pre-trade transparency** and **PGAs**) 
-<br><br><br>
-
-![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 680px"}
-
----
-
-# Blockchain protocol
-The blockchain protocol determines the lifecycle of transactions and adds new cost structures
-
-* Transactions sent continuously and stored in memory pools (**pre-trade transparency** and **PGAs**) 
-* At the end of an Epoch, with length **block time**, a validator is chosen
-<br><br>
-
-![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, 3%); width: 680px"}
-
-<!---
-
-#  Decentralised Exchanges
-
-* Liquidity supply and price of liquidity
-* Price dynamics-->
-
----
-
-# Blockchain protocol
-The blockchain protocol determines the lifecycle of transactions and adds new cost structures
-
-* Transactions sent continuously and stored in memory pools (**pre-trade transparency** and **PGAs**) 
-* At the end of an Epoch, with length **block time**, a validator is chosen
-* The validator creates a new block with transactions from the memory pool
-
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, 0%); width: 680px"}
-
----
-
-# Blockchain protocol
-
-* **Priority fee**: incentivise validators to prioritise a transaction in the block
-
-![mempools](./images/mempools.jpeg){style="transform: translate(25%, 0%); width: 580px"}
-
----
-
-# Contribution
-
-- We present a three stage model to describe the economic consequences of priority fees and block time on **liquidity**, **price discovery**, and **market frictions**
-
----
-
-# Contribution
-- We model strategic interactions between takers and suppliers of liquidity as a three-stage game
-    - **stage 0**: multiple traders decide whether to acquire information
-    <br><br>
-    Informed traders enter only if expected gains exceed a fixed cost
-![model1](./images/model1.png){style="transform: translate(10%, 0%); width: 700px"}
-
----
-
-# Contribution
-- We model strategic interactions between takers and suppliers of liquidity as a three-stage game
-    - **stage 0**: multiple traders decide whether to acquire information
-    - **stage 1**: liquidity suppliers set the AMM’s reserves<br>
-    The optimally balance adverse selection losses against profits from uninformed demand
-![model1](./images/model2.png){style="transform: translate(10%, 0%); width: 700px"}
-
----
-
-# Contribution
-- We model strategic interactions between takers and suppliers of liquidity as a three-stage game
-    - **stage 0**: multiple traders decide whether to acquire information
-    - **stage 1**: liquidity suppliers set the AMM’s reserves
-    - **stage 2**: informed traders compete with priority fees (English auction ending with FPSB auction)
-![model1](./images/model3.png){style="transform: translate(10%, -10%); width: 700px"}
-
----
-
-# Contribution
-- We model strategic interactions between takers and suppliers of liquidity as a three-stage game
-    - **stage 0**: multiple traders decide whether to acquire information
-    - **stage 1**: liquidity suppliers set the AMM’s reserves
-    - **stage 2**: informed traders compete with priority fees
-![model1](./images/model4.png){style="transform: translate(10%, 0%); width: 700px"}
 
 
----
-
-# Results
-
-- **Block time**, combined with **priority fees**, enhances DEX efficiency:
-    - **Price efficiency**: more informed traders enter as block time increases
-    - **Market liquidity**: competition stabilises informed volume, reduces adverse selection, and improves liquidity
-- Slow information dissemination
-    - Informed traders reveal signals only right before block creation
-- When informed traders are limited (due to high barriers or low adoption):
-    - Beyond a threshold block time, liquidity suppliers withdraw and markets shut down
-
----
-layout: center
----
-
-# Future of decentralised finance
-
----
-
-# DeFi protocols
-
-| **Service**       | **DeFi**      | **TradFi** | 
-|  :---         | :---        |    :----   | 
-| Trading |  DEXes (Uniswap, Curve)|  Brokers & exchanges | 
-| Credit | Lenders post assets in liquidity pools, and borrowers borrow against collateral (Compound, Aave) |  Commercial banks| 
-| Payments |  Transfer of value onchain via DeFi protocols (Flexa, Sablier Finance) |  Cash, Credit/debit cards, accounts | 
-| Insurance |  Customers buy tokens in exchange for cover against digital or real-life risks (Armor, Nexus Mutual) |  Insurance firms | 
-| Investment and Derivatives | Funds are allocated to pools based on preset risk tolerance. Vehicles include crypto-indices, derivatives, options, and perpetual futures (Yearn Finance, dY dX) | Investment funds | 
-
----
-layout: center
----
-
-<p style="text-align: center;">
-<h2>Part II: Ongoing work </h2>
-</p>
-
----
-
-### Decentralised Monetary Policy
-### Drissi F., Feinstein, Z., \& Williams, B.
-
-* Continuous-time macro-finance model of crypto exchange rates and blockchain monetary policy
-* Agents choose between DeFi, consumption, and bonds
-* Equilibrium:
-    * Dollar economy shocks help blockchain ecosystems in the short run but hurt in the long run
-    * Policy can increase adoption and help native crypto to be perceived as money
-
----
-
-### An Economic Model of Bitcoin as a Hedge
-### Drissi F., John, K., Saleh, F. 
-
-* Explains why Bitcoin is perceived as a hedge against traditional markets
-* Asset pricing model: government adjusts monetary policy to crypto, agents shift wealth based on heterogeneous beliefs
-* In equilibrium:
-    * Misbeliefs self-fulfil, driving decorrelation during crises
-    * Bitcoin transaction demand creates correlation in normal times
-
----
-
-### Block Space Competition Design
-### Cartea A., Drissi, F., Lillo, F., Palmari G.
-
-* Study the design of priority gas auctions in blockchains
-* Propose contests (not auctions) as a new mechanism for block priority competition
-    * In contests, higher bids raise winning chances but do not guarantee priority
-* When participation is endogenous, contests increase trading volume and liquidity, while preserving validator revenue
-
----
-
-### Public and Private Order Flow in Blockchains
-### Cartea A., Drissi, F., Garcia-Arenas, G. 
-
-* Study how order flow splits between public and private endpoints in blockchains
-* Public endpoints expose transactions to MEV extraction by bots
-* Private endpoints offer privacy but delay or uncertainty in block inclusion
-* Characterising equilibrium segmentation is key to understanding blockchain microstructure
 
 ---
 layout: end
 ---
 
-[faycaldrissi.com/jmp-talk](https://www.faycaldrissi.com/jmp-talk)
+Thank you !
+
+These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)

@@ -1,4 +1,4 @@
-# Price formation and equilibrium liquidity in blockchains - Talk
+# Chain economics
 
 ## Run locally
 To start the slide show:
