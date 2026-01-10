@@ -22,7 +22,7 @@ date: '14/12/2025' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
-## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/jmp-talk/)
 
 <br>
 
@@ -364,7 +364,7 @@ $$ \scriptsize\text{when types are uniform: }
 \end{cases}
 $$
 
-![equilibriumUniform](./images/equilibriumUniform.png){style="transform: translate(90%, -8%); width: 350px"}
+![equilibriumUniform](./images/equilibriumUniform.png){style="transform: translate(90%, -8%); width: 350px"} 
 
 
 ---
@@ -374,7 +374,7 @@ layout: center
 
 **Fayçal Drissi, Zach Feinstein, Basil Williams (2026). Macroeconomics of liquid staking**
 <center> 
-University of Oxford, Imperial Business School, Stevens Institute of Technology
+University of Oxford, Stevens Institute of Technology, Imperial Business School
 
 **Link**:  [faycaldrissi.com/staking_talk](https://www.faycaldrissi.com/staking_talk/)
 </center>
