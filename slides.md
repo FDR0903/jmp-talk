@@ -562,6 +562,7 @@ layout: center
 
 **Fayçal Drissi, Zach Feinstein, Basil Williams (2026). Macroeconomics of liquid staking**
 <center> 
+
 University of Oxford, Stevens Institute of Technology, Imperial Business School
 
 **Link**:  [faycaldrissi.com/staking_talk](https://www.faycaldrissi.com/staking_talk/)
