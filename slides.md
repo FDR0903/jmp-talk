@@ -43,51 +43,72 @@ section: Blockchains
 
 # Decentralised financial systems
 
-### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms, governments)
-- Intermediaries reduce transaction and enforce contracts, but introduce
-  - fees, delays, opacity, 
-  - market power, exclusion, censorship risk
 
+### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms, governments)
+<v-click>
+
+- Intermediaries reduce transaction costs and enforce contracts, but introduce frictions
+  - fees, delays, opacity
+  - market power, monopoly, exclusion, censorship
+<br><br>
+<v-click>
+
+### Central question: can we coordinate economic activity at scale with less centralized trust?
+<v-click>
 <br>
 
-### Central question: Can we coordinate economic activity at scale with less centralized trust?
+1. Blockchains are the **technological response** to centralisation **frictions**
+2. Blockchains are the **technological** equivalent of **regulation**
+<br><br>
+<v-click>
 
-- Blockchains are a technological and economic response to trust, coordination, and institutional frictions
-  - Shared, tamper-resistant ledger
-  - Maintained by algorithmic rules (consensus) and incentives, not a single authority
-  - general-purpose infrastructure for economic coordination, replaces institutional trust with 
-    - publicly verifiable rules
-    - economic incentives: participants are rewarded to follow rules
+- **Definition**: general-purpose infrastructure for economic/human coordination. It replaces institutional trust with 
+  1. a shared, tamper-resistant ledger
+  2. algorithmic and publicly verifiable rules (consensus) and incentives to conduct transactions, not a single authority
+  3. economic incentives: participants rewarded to follow rules
 
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
 ---
 
 
 # Decentralised financial systems
 
-### Decentralised finance (DeFi) as a new form of financial intermediation
-- DeFi = financial services run by smart contracts on blockchains
-  - Open access
-  - Automated execution   
-  - No centralized balance sheet
-- Intermediation becomes a **protocol**
-- Contracts enforced by code + incentives, not courts
+### Decentralised finance (DeFi) is a new form of financial intermediation
+- DeFi = financial services run by **smart contracts** on blockchains
+  - Permisionless
+  - Immutable
+  - Automated   
+- Contracts enforced by code, not courts. Intermediation becomes a **protocol**.
 <br><br>
 
 ### Breadth of real economic applications
-- Payments & Money: Stablecoins, Cross-border payments
-- Financial Markets: Decentralized exchanges, On-chain lending,  collateralized credit
-- Organizations & Governance: DAOs (Decentralized Autonomous Organizations)
+- **Payments & Money**: Stablecoins, Cross-border payments
+- **Financial Markets**: Decentralized exchanges, On-chain lending,  collateralized credit
+- **Organizations & Governance**: DAOs (Decentralized Autonomous Organizations)
   - Firms or collectives governed by token-holders
   - Rules for voting, treasury use, and upgrades are pre-specified
-- Ownership/contracting: financial and real asset tokenisation
+- **Ownership/contracting**: financial and real asset tokenisation
 
 ---
 
-
 # My research
 
-- Blockchain technology for ...
+- Study the viability and risks of these ecosystems
+- Study the  implications of organising financial and monetary systems with such protocols
+
+<v-click>
+
+- Multiple fields in one
+  - Economics, Financial Economics, Management Science
+  - Computer Science
+  - Data Science, Machine Learning
+  - Mathematics and Optimisation
+
+</v-click>
 
 ---
 section: Market Microstructure
@@ -103,31 +124,60 @@ Columbia University, University of Oxford
 </center>
 
 ---
+layout: two-cols-header
+---
 
 # Motivation
 
+::left::
 
-- Significant volumes on Decentralized Exchanges (DEXs): ($\$7.383$ billion in $24$ hours) as of 7 May 2025
+- Significant volumes on Decentralized Exchanges (DEXs) <br> $\$10.16$ billion each day as of 11 January 2026
   
-  $\implies$ DEX efficiency actively influences discussions on blockchain design
+$\implies$ DEX efficiency actively influences discussions on blockchain design
+
+<br><br>
 
 <v-click>
 
-- The blockchain protocol determines the lifecycle of transactions and adds new cost structures
+- The blockchain protocol **determines the lifecycle of transactions**
+  1. Transactions are sent to the network continuously, stored in a memory pool
+  2. At each Epoch (length = **block time**), a validator is chosen, and consesus work is conducted 
+  3. The validator creates a new block with transactions from the memory pool
+
+</v-click>
+
+
+
+::right::
 
 <v-click>
 
-- Transactions are sent to the network continuously, stored in a memory pool. At each Epoch, with length **block time**, a validator is chosen. The validator creates a new block with transactions from the memory pool
-
-![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 0%); width: 580px"}
+![blockchain1](./images/blockchaincreation1.png){style="transform: translate(20%, 70%); width: 580px"}
 
 <v-click>
 
-![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, -102%); width: 580px"}
+![blockchain1](./images/blockchaincreation2.png){style="transform: translate(20%, -33.8%); width: 580px"}
 
 <v-click>
 
-![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, -210%); width: 580px"}
+
+![blockchain1](./images/blockchaincreation3.png){style="transform: translate(20%, -143%); width: 580px"}
+
+<v-click>
+
+![mempools22](./images/mempools.png){style="transform: translate(10%, -230%); width: 400px"}
+
+
+<div style="margin-top:-896px;"> 
+
+### Users pay fees to the validator
+* **Base fee**: based on congestion, prerequisite for inclusion
+* **Priority fee**: incentivise validators to prioritise a transaction in the block 
+<br>
+$\implies$ The market clears sequentially, and agents compete for queue priority
+
+</div>
+
 
 </v-click>
 </v-click>
@@ -135,44 +185,40 @@ Columbia University, University of Oxford
 </v-click>
 
 ---
-
-# Motivation: the blockchain protocol
-
-### Gas fees (EIP-1559)
-* **Base fee**: based on congestion, prerequisite for inclusion
-* **Priority fee**: incentivise validators to prioritise a transaction in the block $\implies$ Agents compete for queue priority
-<v-click>
-
-![mempools](./images/mempools.jpeg){style="transform: translate(25%, 0%); width: 580px"}
-
-</v-click>
-
+layout: two-cols-header
 ---
 
 # Contribution
 
 ### A model to describe the microstructure of blockchains financial markets
-<u>**stage 0**</u>: $M< L$ traders acquire information for a fixed cost $C$
+- Price efficiency, Liquidity, Costs
+
+<v-click>
+
+::left::
+
+<u>**stage 0**</u>: $M$ traders acquire information for a fixed cost $C$
 <br><br>
-![model1](./images/model1.png){style="transform: translate(10%, 15%); width: 600px"}
+![model1](./images/model1.png){style="transform: translate(10%, 0%); width: 600px"}
 <v-click>
 <div style="margin-top:-300px;"> 
 <u><b>stage 1</b></u>: liquidity supplier sets the AMM’s reserves
 </div>
 
-![model2](./images/model2.png){style="transform: translate(10%, 7%); width: 600px"}
+![model2](./images/model2.png){style="transform: translate(10%, -5%); width: 600px"}
 <v-click>
 
 <div style="margin-top:-296px;"> 
 <u><b>stage 2</b></u>: M informed traders compete for priority
 </div>
 
-![model3](./images/model3.png){style="transform: translate(7.6%, 30%); width: 600px"}
+![model3](./images/model3.png){style="transform: translate(7.6%, 18%); width: 600px"}
 
 <v-click>
 
-![model4](./images/model4.png){style="transform: translate(10.2%, -78%); width: 600px"}
+![model4](./images/model4.png){style="transform: translate(10.2%, -90%); width: 600px"}
 
+</v-click>
 </v-click>
 </v-click>
 </v-click>
@@ -888,6 +934,191 @@ University of Oxford, NYU Stern, University of Florida
 
 ---
 
+# Motivation
+
+### Tension in asset pricing
+
+- Empirical asset pricing literature: Bitcoin perceived a hedge asset: 
+  - Baur et al. (2018) indicate that Bitcoin returns are not related to conventional assets like stocks or bonds, and thus can be a potential asset for portfolio diversification.
+
+
+  - Sharma, U., & Karmakar, M. (2023). Are gold, USD, and Bitcoin hedge or safe haven against stock? The implication for risk management. Review of Financial Economics,
+  - Is Bitcoin a hedge or safe haven for currencies? An intraday analysis
+
+- Practitioners: perceive bitcoin as a correlated asset
+  - bitcoin is pro-cyclical (Baur et al., Citation2018)
+  - compares Bitcoin with precious metals like Gold
+
+
+---
+
+# Contribution
+
+### A model to formalise the widely held view that bitcoin can serve as a hedge against traditional financial market risks
+<center>
+```mermaid
+flowchart LR
+    style Economy fill:#f4f7fb,stroke:#2b5379,stroke-width:2px
+    subgraph Economy ["🌍 Economy"]
+      direction TB
+      SP["📈 <b>S&amp;P 500</b> <math mode="display">S<sub>t</sub></math> <br/><i>Traditional market risk</i>"]
+      BTC["₿ <b>Bitcoin</b> <math mode="display">P<sub>t</sub></math> <br/> <i>Native blockchain asset</i>"]
+    end
+
+    %% place demands to the right of BTC
+    Pro["🔗 <b>Procyclical Demand <math mode="display">E<sub>t</sub></math></b><br/>(Risk-on investors)"]
+    Hedge["🛡️ <b>Hedge Demand <math mode="display">H<sub>t</sub></math></b><br/>(Belief-based investors)"]
+
+    %% Both demands attach only to BTC
+    Pro --> BTC
+    Hedge --> BTC
+
+    %% special arrow showing correlation/link between Procyclical demand and S&P
+    %% use dashed arrow with label "positive correlation" and arrowhead toward SP
+    Pro -. positive correlation.-> SP
+```
+</center>
+
+---
+layout: two-cols-header
+---
+
+# The model
+
+- Three sources of schocks/randomness
+
+<center>
+```mermaid
+flowchart TD
+    %% Economy core
+    Econ["🌍 Economy"]
+
+    %% Shock sources
+    SPprice["📉<br/>S&amp;P Price shocks <math mode="display">W<sub>S,t</sub></math>"]
+    SPexp["📊<br/>S&amp;P Returns shocks <math mode="display">W<sub>μ,t</sub></math>"]
+    ProShock["🔗 Procyclical<br/>Demand Shocks <math mode="display">W<sub>P,t</sub></math>"]
+
+    %% Structure
+    SPprice --> Econ
+    SPexp --> Econ
+    ProShock --> Econ
+```
+</center>
+
+
+::left::
+
+- Dynamics of traditional market risk (S\&P):
+$$
+dS_{t}/S_{t}=\left(r+\mu_{S,t}\right)\,dt+\sigma_{S}\,dW_{S,t}\,,
+$$
+
+- The drift follows the OU dynamics
+$$
+{d\mu_{S,t}=-\lambda_{\mu}\,\mu_{S,t}\,dt+\gamma_{\mu}\,dW_{\mu,t}+\sigma_{\mu}\,dW_{S,t}\,.}
+$$
+
+
+::right::
+
+- Bitcoin's supply evolves as
+$$
+dM_t = g\,M_t\,dt
+$$
+
+- Bitcoin's prices evolve as 
+$$
+{dP_{t}}/{P_{t}}=\left(r+{\color{red}\mu_{P,t}}\right)\,dt+{\color{red}\gamma_{P,t}}\,dW_{\mu,t}+{\color{red}\xi_{P,t}}\,dW_{P,t}+{\color{red}\sigma_{P,t}}\,dW_{S,t}\,,
+$$
+
+
+---
+layout: two-cols-header
+---
+
+# The model: hedge demand
+
+::left::
+
+<v-clicks>
+
+### Hedge demand
+- A continuum of agents allocate their wealth $x_t$ between S&P, bitcoin, risk-free investment, and consumption
+$$
+\theta_{t}=\frac{\lambda_{P}}{\sigma_{P,t}\mu_{S,t}-\sigma_{S,t}\mu_{P,t}}\sigma_{S,t}-\frac{1}{\xi_{P,t}}, \quad \varphi_{t}^i=-\frac{\lambda_{S}}{\mu_{S,t}}-\frac{\sigma_{P,t}}{\sigma_{S,t}}\theta_{t}-\frac{1}{\sigma_{S,t}}
+$$
+
+- Clearing condition: 
+$$
+\theta_t \, x_t + E_t = M_t \, P_t
+$$
+
+
+- Pro-cyclical demand: 
+$$
+\frac{de_{t}}{1-e_{t}}=\mu_{e}\,dt+\gamma_{e}\,dW_{\mu,t}+\xi_{e}\,dW_{P,t}+\sigma_{e}\,dW_{S,t}
+$$
+
+
+- Agents assume $\mu_P$, $\sigma_P$, $\xi_P$, $\gamma_P$ functions of the state variable $\mu_{S,t}$
+$$
+\theta_t = \theta(\mu_{S,t}) \qquad \text{and} \qquad \text{hedge condition } \theta'(\mu_{S,t}) < 0
+$$
+
+</v-clicks>
+
+::right::
+
+<v-clicks>
+
+### Equilibrium
+
+- bitcoin loadings
+$$\footnotesize
+\begin{cases}
+\gamma_{P}\left(\mu_{S,t}\right) & =\frac{\gamma_{e}}{1-\theta(\mu_{S,t})}+\frac{\theta'\left(\mu_{S,t}\right)}{\theta(\mu_{S,t})\left(1-\theta(\mu_{S,t})\right)}\gamma_{\mu}\,,
+\\
+\xi_{P}\left(\mu_{S,t}\right) & =\frac{\xi_{e}}{1-\theta(\mu_{S,t})}+\frac{\theta'\left(\mu_{S,t}\right)}{\theta(\mu_{S,t})\left(1-\theta(\mu_{S,t})\right)}\xi_{\mu}\,,
+\\
+\sigma_{P}\left(\mu_{S,t}\right) & =\sigma_{e}+\frac{\mu_{S,t}}{\sigma_{S}}+\frac{\theta'\left(\mu_{S,t}\right)}{\theta(\mu_{S,t})}\sigma_{\mu}\,\\
+\mu_{P}\left(\mu_{S,t}\right) & = \frac{\theta(\mu_{S,t})}{(1-\theta(\mu_{S,t}))^{2}}\left(\left(\gamma_{e}+\frac{\theta'(\mu_{S,t})}{\theta(\mu_{S,t})}\gamma_{\mu}\right)^{2}+\left(\xi_{e}+\frac{\theta'(\mu_{S,t})}{\theta(\mu_{S,t})}\xi_{\mu}\right)^{2}\right)\\
+& +\frac{\mu_{S,t}}{\sigma_{S}}\left(\sigma_{e}+\frac{\mu_{S,t}}{\sigma_{S}}+\frac{\theta'(\mu_{S,t})}{\theta(\mu_{S,t})}\,\sigma_{\mu}\right)
+\end{cases}
+$$
+
+- A differential equation for $\theta$ 
+$$
+0=A\,\theta''\left(\mu_{S,t}\right)+\left(B-\lambda_{\mu}\,\mu_{S,t}\right)\theta'\left(\mu_{S,t}\right)+C\,\theta(\mu_{S,t})
+$$  
+
+where 
+$
+\qquad\qquad\begin{cases}
+    A = \frac{1}{2}\,\left(\gamma_{\mu}^{2}+\xi_{\mu}^{2}+\sigma_{\mu}^{2}\right)\\
+    B = \gamma_{e}\,\gamma_{\mu}+\xi_{e}\,\xi_{\mu}+\sigma_{e}\,\sigma_{\mu}\\
+    C = \mu_{e}+\sigma_{e}^{2}+\gamma_{e}^{2}+\xi_{e}^{2}-\beta-g\,.
+\end{cases}  
+$
+
+
+</v-clicks>
+
+---
+
+# Bitcoin: hedge asset and pro-cyclical asset
+
+$$
+\footnotesize
+\theta\left(\mu_{S}\right)=H\left(\frac{C}{\lambda_{S}},\frac{\lambda_{S}\,\mu_{S}-B}{\sqrt{2\,A\,\lambda_{S}}}\right)+F_{1}\left(-\frac{C}{2\,\lambda_{S}},\frac{1}{2},\frac{\left(\lambda_{S}\,\mu_{S}-B\right)^{2}}{2\,A\,\lambda_{S}}\right), H \text{: Hermite polynomial}, \ \ F_1\text{: Kummer confluent hypergeometric function}
+$$
+
+
+- Condition for behaviour as a hedge asset: 
+$
+\qquad \qquad  \qquad \mu_{S,t}/\sigma_{S}<-\sigma_{e}-\sigma_{\mu}\,\partial_{\mu}\log\theta(\mu_{S,t})
+$
+
+![correlbitcoin](./images/correlbitcoin.png){style="transform: translate(60%, 0%); width: 420px"}
 
 
 
