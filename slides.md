@@ -22,7 +22,7 @@ date: '14/01/2026' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
-## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/jmp-talk/)
+## These slides:  [faycaldrissi.com/jmp-talk/](https://www.faycaldrissi.com/jmp-talk/)
 
 <br>
 
@@ -1144,8 +1144,6 @@ layout: center
 
 <center> 
 University of Oxford, NYU Stern, University of Florida
-
-**Link**:  [faycaldrissi.com/files/mempools.pdf](https://www.faycaldrissi.com/files/mempools.pdf)
 </center>
 
 ---
@@ -1340,4 +1338,4 @@ layout: end
 
 Thank you !
 
-These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+These slides:  [faycaldrissi.com/jmp-talk/](https://www.faycaldrissi.com/jmp-talk/)
