@@ -1152,18 +1152,14 @@ University of Oxford, NYU Stern, University of Florida
 
 # Motivation
 
-### Tension in asset pricing
+### Debate in Asset Pricing literature
 
-- Empirical asset pricing literature: Bitcoin perceived a hedge asset: 
-  - Baur et al. (2018) indicate that Bitcoin returns are not related to conventional assets like stocks or bonds, and thus can be a potential asset for portfolio diversification.
+- Empirical asset pricing: Bitcoin perceived a hedge asset: 
+  - Baur et al. (2018) and Sharma, U., & Karmakar, M. (2023): indicate that Bitcoin returns are not related to conventional assets like stocks or bonds, and thus can be a potential asset for portfolio diversification.
 
-
-  - Sharma, U., & Karmakar, M. (2023). Are gold, USD, and Bitcoin hedge or safe haven against stock? The implication for risk management. Review of Financial Economics,
-  - Is Bitcoin a hedge or safe haven for currencies? An intraday analysis
-
-- Practitioners: perceive bitcoin as a correlated asset
-  - bitcoin is pro-cyclical (Baur et al., Citation2018)
-  - compares Bitcoin with precious metals like Gold
+- Practitioners and some researchers: perceive bitcoin as a correlated asset
+  - bitcoin is pro-cyclical
+  - bitcoin compared with precious metals like Gold
 
 
 ---
