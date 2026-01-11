@@ -174,7 +174,7 @@ $\implies$ DEX efficiency actively influences discussions on blockchain design
 * **Base fee**: based on congestion, prerequisite for inclusion
 * **Priority fee**: incentivise validators to prioritise a transaction in the block 
 <br>
-$\implies$ The market clears sequentially, and agents compete for queue priority
+$\implies$ market **clears sequentially**, and agents **compete for queue priority**
 
 </div>
 
@@ -184,45 +184,97 @@ $\implies$ The market clears sequentially, and agents compete for queue priority
 </v-click>
 </v-click>
 
----
-layout: two-cols-header
 ---
 
 # Contribution
 
-### A model to describe the microstructure of blockchains financial markets
+### A multi-stage model to describe the microstructure of blockchain financial markets
 - Price efficiency, Liquidity, Costs
 
 <v-click>
 
-::left::
+<br>
+<br>
+<br>
 
 <u>**stage 0**</u>: $M$ traders acquire information for a fixed cost $C$
 <br><br>
-![model1](./images/model1.png){style="transform: translate(10%, 0%); width: 600px"}
+![model1](./images/model1.png){style="transform: translate(80%,-40%); width: 600px"}
+
 <v-click>
+
 <div style="margin-top:-300px;"> 
 <u><b>stage 1</b></u>: liquidity supplier sets the AMM’s reserves
 </div>
 
-![model2](./images/model2.png){style="transform: translate(10%, -5%); width: 600px"}
+![model2](./images/model2.png){style="transform: translate(79.8%, -48%); width: 600px"}
 <v-click>
 
 <div style="margin-top:-296px;"> 
 <u><b>stage 2</b></u>: M informed traders compete for priority
 </div>
 
-![model3](./images/model3.png){style="transform: translate(7.6%, 18%); width: 600px"}
+![model3](./images/model3.png){style="transform: translate(77.5%, -42%); width: 600px"}
 
 <v-click>
 
-![model4](./images/model4.png){style="transform: translate(10.2%, -90%); width: 600px"}
+
+![model4](./images/model4.png){style="transform: translate(80.2%, -143%); width: 600px"}
+
+<div style="margin-top:-456px;"> 
+Markets clear sequentially by order of priority fee
+</div>
 
 </v-click>
 </v-click>
 </v-click>
 </v-click>
 
+
+---
+
+# Why compete ?
+
+- **Assumption**: execution costs and price impact is linear in the trading volume $\delta$ and inversely proportional to liquidity $\kappa$
+
+$$\footnotesize \text{execution price to buy }\delta = V_0 + \delta / \kappa \qquad \footnotesize \text{new price following a buy }\delta = V_0 + 2\,\delta / \kappa $$
+
+<v-click>
+
+<div style="
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transform: translate(30%, 0%);
+  width: 550px;
+">
+
+  <img src="./images/convexity1.png" style="width: 450px;" />
+
+  <div style="
+    padding: 10px 3px;
+    background: #f7f7f9;
+    border-left: 2px solid #4c72b0;
+    font-size: 0.52em;
+    color: #444;
+  ">
+  <strong>Empirical evidence.</strong>
+  Scatter plots of execution costs and price impacts for
+  <strong>2.622&nbsp;million</strong> transactions, compared to the linear 
+  approximations. Transactions span
+  <em>1&nbsp;Jan&nbsp;2023</em> to <em>31&nbsp;Dec&nbsp;2023</em> across 
+  <strong>38</strong> Uniswap&nbsp;v3 pools.<br/>
+    Values scaled to
+    <span style="white-space: nowrap;">[0, 1]</span> (buys) and
+    <span style="white-space: nowrap;">[−1, 0]</span> (sells).
+  </div>
+</div>
+<v-click>
+
+$\implies$ traders compete to avoid worse execution prices because of adverse price impact of preceding orders
+
+</v-click>
+</v-click>
 
 ---
 
@@ -242,40 +294,44 @@ priority fees and trading volumes <a name="defi"></a></h1>
 -->
 
 
-# <ins>Stage two</ins>: assumptions
+# What type of competition ?
 
-### Competition in each block: multi-prize sealed-bid auction
+### Late bidding is the dominant strategy for informed traders
 
-![distribPF](./images/distribPF.png){style="transform: translate(60.2%, 0%); width: 400px"}
+<div style="transform: translate(60.2%, 0%); width: 400px">
 
-Data: from \textit{EthPandaOps} and it includes $10^7$ transactions observed in the public memory pool of Ethereum between 20~March~2024, 00:00, and 21~March~2024, 17:08
+<img src="./images/distribPF.png" />
 
-**TODO: Add image that shows that market clears sequentially**
+<div style="
+  margin-top: 6px;
+  padding: 8px 10px;
+  background: #f7f7f9;
+  border-left: 3px solid #4c72b0;
+  font-size: 0.72em;
+  color: #444;
+">
+<strong>Data source.</strong>
+Priority fee distribution from the Ethereum public mempool.
+<em>EthPandaOps</em>, 100 million transactions, 20 Mar 2024 – 21 Mar 2024.
+</div>
+</div>
+
+<br>
 
 <v-click>
 
-- Informed trader $i\in\{1,\dots,M\}$ has a private and independent type: $v_i=\mathbb{E}_{i}\left[V\right]$ which represents the valuation of the asset
+### Competition as a sealed-bid multi-prize auction
+- Informed trader $i\in\{1,\dots,M\}$ has a private and independent type $v_i=\mathbb{E}_{i}\left[V\right]$ which represents their valuation of the asset
 - **In equilibrium of stage two:** traders set the **priority fee $\varphi_i$**, and the **trading volume $\delta_i$** 
 </v-click>
 
 ---
 
-# <ins>Stage two</ins>
-
-### Informed traders compete to avoid potentially worse execution prices resulting from the adverse price impact of preceding orders in the block
-
-- Execution costs and price impact is approximately linear in the trading volume $\delta$ and inversely proportional to liquidity $\kappa$
-
-$$\footnotesize \text{execution price to buy }\delta = V_0 + \delta / \kappa $$
-$$\footnotesize \text{new price following a buy }\delta = V_0 + 2\,\delta / \kappa $$
-
-![convexity1](./images/convexity1.png){style="transform: translate(50%, 0%); width: 450px"}
-
----
-
-# <ins>Stage two</ins>
+# Competition
 
 - At stage two: number of traders $M$ and liquidity supply $\kappa$ are known
+<v-clicks>
+
 - If trader $i$ is first in the block
 $$\scriptsize
 W_{i,(M-1)} 
@@ -308,10 +364,10 @@ W_{i,(0)}
       - C\,
 $$
 
-- **Expected wealth**
+- **Expected wealth** and optimisation problem
 $$\scriptsize
-\mathbb{E}_{i}\!\left[W_{i}\right]
-= \mathbb{E}_{i}\!\left[W_{i,0}\right]
+\sup_{\varphi_i, \delta_i}\mathbb{E}_{i}\!\left[W_{i}\right]
+= \sup_{\varphi_i, \delta_i}\mathbb{E}_{i}\!\left[W_{i,0}\right]
 + \frac{2\,\delta_{i}}{\kappa}
 \sum_{j=0}^{M-1}
 \mathbb{E}_{i}\!\left[
@@ -320,75 +376,153 @@ $$\scriptsize
 \right]
 $$
 
+</v-clicks>
+
+---
+layout: two-cols-header
 ---
 
-# <ins>Stage two</ins>: results
-Optimisation problem: $\qquad\qquad\qquad\qquad\qquad\qquad \sup_{\varphi_i, \delta_i} \mathbb{E}_{i}\!\left[W_{i}\right]$
 
-- Participation cutoff: only types $v_i>\underline v_M$ participate, where $\footnotesize
-\underline v_M - \pi - \int_{\underline v_M}^{\overline v}\bigl(e^{(1-F(u))(M-1)} - 1\bigr)\,du = 0\,,$ and $\underline v_M(M) \ \ {\nearrow} \ \ \overline v$
+# Equilibrium 
 
-![tradingvolumesDist](./images/tradingvolumesDist.png){style="transform: translate(90%, 0%); width: 350px"}
+::left::
 
-$\implies$ competition decreases informational content in markets
+### Participation cutoff
+  - Only valuations $v_i>\underline v_M$ participate<br> where  $\footnotesize \underline v_M(M) \ \ {\nearrow} \ \ \overline v$
+
+  ![tradingvolumesDist](./images/tradingvolumesDist.png){style="transform: translate(0%, 0%); width: 380px"}
 
 <v-click>
 
-- The equilibrium trading volume: $\quad \footnotesize \delta(v_i) = \kappa\,\tilde \delta(v_i)  = \kappa/2 \left(\left(\overline v - \pi\right)e^{-(M-1)\left(1-F(v_i)\right)} - \int_{v_i}^{\overline v} e^{-(M-1)\left(F(u)-F(v_i)\right)}\,du\right)$
+$\implies$ competition decreases informational content
 
-- The equilibrium priority fee: $\qquad\quad \footnotesize \varphi\left(\delta_{i}\right)=\varphi\left(v_{i}\right)=2\,\kappa\left(M-1\right)\int_{\underline{v}_M}^{v_{i}}\tilde{\delta}\left(x\right)^{2}\,f\left(x\right)\,dx\,.$
+<v-click>
+
+$\implies$ competition increases average volumes
+<br> <small>Aligns with empirical evidence: between 1 July 2021 and 31 December 2023, the average size of ETHUSDC trades in Ethereum was $\footnotesize \$70{,}000$, compared with $\footnotesize \$1{,}200$ on Binance</small> 
 
 </v-click>
+</v-click>
 
---- 
+::right::
 
-# <ins>Stage two</ins>: results
+<v-click>
 
--  $\delta(v_i)$ and $\varphi(v_i)$ are increasing in the private valuation $v_i$: Higher values of private signals correspond to larger trading volumes; they are also associated with higher priority fees and better queue positions. 
-
-
-![tradingvolumes](./images/tradingvolumes.png){style="transform: translate(90%, 0%); width: 400px"}
-
-Average absolute trading volume of transactions across multiple Uniswap v3 pools as a function of their queue position within the block
-
-
-- $\delta(v_i)$ and $\varphi(v_i)$ are decreasing in the number of informed traders $M$ with limit 
-$$\footnotesize \lim_{M\to\infty}\delta(v_i)=\lim_{M\to\infty}\varphi(v_i)=0.$$
-
-
-$\implies$ competition decreases individual trading volumes and priority fees However, aggregate trading volumes increase in $M$
-$$\footnotesize
-\sum_{i=1}^M\,\mathbb E[\tilde \delta(v_i) \mid v_i \ge \underline v_M] = M \, \int_{\underline v_M}^{\overline{v}} \tilde \delta(x) \,dF(x) 
+### Equilibrium trading volumes and priority fees
+- The equilibrium priority fee and trading volume (if $v_i>\underline v_M$) are increasing in $v_i$: 
+$$\scriptsize
+\begin{cases}
+\delta(v_i) = &\kappa\,\tilde \delta(v_i)  = \kappa/2 ((\overline v - \pi)e^{-(M-1)(1-F(v_i))} - \int_{v_i}^{\overline v} e^{-(M-1)(F(u)-F(v_i))}\,du) \\ 
+\varphi(v_{i})=&2\,\kappa(M-1)\int_{\underline{v}_M}^{v_{i}}\tilde{\delta}(x)^{2}\,f(x)\,dx
+\end{cases}
 $$
 
+<v-click>
+
+<br>
+
+$\footnotesize\implies$  high valuations $\equiv$ larger volumes and better queue positions
+
+<div style="
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transform: translate(0%, 0%);
+  width: 550px;
+">
+
+  <img src="./images/tradingvolumes.png" style="width: 400px;" />
+
+  <div style="
+    padding: 10px 12px;
+    background: #f7f7f9;
+    border-left: 3px solid #4c72b0;
+    font-size: 0.72em;
+    color: #444;
+  ">
+    <small><small><strong>Trading volume and queue position.</strong>
+    Average trading volume as a function of
+    queue position.
+    <span style="white-space: nowrap;">0</span> is the first position
+    and <span style="white-space: nowrap;">1</span> the last.
+    Transactions span 
+    <em>1&nbsp;Jan&nbsp;2023 – 31&nbsp;Dec&nbsp;2023</em>
+    across <strong>15</strong> Uniswap&nbsp;v3 pools.</small></small>
+  </div>
+</div>
+
+
+</v-click>
+</v-click>
+
+
+
 
 --- 
+layout: two-cols-header
+---
 
-# <ins>Stages one and zero</ins>
+# Equilibrium liquidity and amount of information in the market
+
+::left::
+
 ### Stage one: equilibrium liquidity supply
-- Liquidity suppliers balance revenue from uninformed elastic demand:
+Liquidity suppliers balance revenue from uninformed elastic demand with adverse selection costs
   $$\footnotesize
-  \kappa=\sqrt{\frac{\text{revenue}}{M\,S_M}}, \qquad S_M=\int_{\underline v_M}^{\overline v} \tilde\delta(u)^2\,dF(u): \text{ variance of trading volumes} 
+  \kappa^\star=\sqrt{\frac{\text{revenue}}{M\,S_M}}
   $$
-  1. $\footnotesize S_M$ increases with $\footnotesize M$ $\implies$ $\footnotesize \kappa(M)$ decreases with $\footnotesize M$
-  2. Market shutdown condition:  $\qquad\qquad\qquad\qquad\footnotesize M\,S_M \le \frac{\text{revenue}}{\text{elasticity}}$
+  where  $\footnotesize\ \ S_M=\int_{\underline v_M}^{\overline v} \tilde\delta(u)^2\,dF(u) \text{: variance of trading volumes}$
 
-$\implies$ there exists $\overline M$ s.t. for all $M>\overline M$, markets shutdown.
+<v-click>
+
+- $\footnotesize S_M$ increases with $\footnotesize M$ $\implies$ $\footnotesize \kappa(M)$ decreases with $\footnotesize M$
+
+<v-click>
+
+- Market shutdown condition:  $\qquad\qquad\qquad\qquad\footnotesize M\,S_M \le \frac{\text{revenue}}{\text{elasticity}}$
+
+<v-click>
+
+$\implies$ $\exists\overline M$ s.t. $\forall M>\overline M$, markets shut down
+
+<v-click>
 
 $\implies$ competition is bad for price efficiency **AND** liquidity: in contrast to traditional markets (Holden and Subrahmanyam (1992))
 
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+
+::right::
+
+<v-click>
+
 ### Stage zero: information acquisition
-The number of informed traders is constrained by the profitability of informed trading and the cost $C$
+- The number of informed traders is constrained by the profitability of informed trading and the cost $C$
 $$\footnotesize
 C=\underbrace{\sqrt{\frac{\pi\,N\,\theta}{M\,S_{M}}}\,\int_{\underline{v}_{M}}^{\overline{v}}\left(-2\,\left(M-1\right)\left(S_{M}+\Sigma_{M}\left(v\right)\right)+\tilde{\delta}\left(v\right)\,\left(v-\pi-\tilde{\delta}\left(v\right)\right)\right)dF\left(v\right)}_{H(M) = \text{trading profits net of execution costs and priority fees}}\,,
 $$
-$\footnotesize M$ increases with uninformed demand. $\footnotesize M$ decreases with the  information cost $\footnotesize C$.
+- $\footnotesize M$ increases with uninformed demand. $\footnotesize M$ decreases with the  information cost $\footnotesize C$.
+
+</v-click>
+
 
 ---
+layout: two-cols-header
+---
 
-# Tradeoff: security vs market efficiency 
-Block time increases security, but also increases variance of types. 
-$$ \scriptsize\text{when types are uniform: }
+# Blockchain fundamental tradeoff: security vs market efficiency 
+
+::left::
+
+- Block time increases blockchain security, but also increases variance of valuations
+
+<v-click>
+
+- When types are uniform:
+
+$$ \scriptsize
 \begin{cases}\scriptsize
 \text{participation cutoff } v_M &=
 \scriptsize \overline v -  \frac{\overline v}{M-1}\log\left(\frac{\pi+M\,\left(\overline v-\pi\right)}{\overline v}\right) \underset{M\rightarrow\infty}{\longrightarrow} \overline v 
@@ -404,14 +538,22 @@ $$ \scriptsize\text{when types are uniform: }
 \scriptsize \frac{\left(\overline v-\pi\right) \,\left(\overline v\,\left(M-3\right)-\pi\,\left(M-1\right) \right))}{M-1}
 -
 \frac{2\, \overline v^2}{(M-1)^2}\log \left(\frac{\overline v}{M (\overline v-\pi)+\pi }\right) \\ \scriptsize
-\text{number of transactions/active traders: }M\,(1-F\left(\underline v_M\right)) &= 
+\text{number of active traders} &=M\,(1-F\left(\underline v_M\right))= 
 \scriptsize
  \frac{M}{M-1}\log\left(M-\pi\frac{M-1}{\overline v}\right) 
 \end{cases}
 $$
 
-![equilibriumUniform](./images/equilibriumUniform.png){style="transform: translate(90%, -8%); width: 350px"} 
+</v-click>
 
+
+::right::
+
+<v-click>
+
+![equilibriumUniform](./images/equilibriumUniform.png){style="transform: translate(10%, 0%); width: 4000px"} 
+
+</v-click>
 
 ---
 section: Macroeconomics
@@ -444,8 +586,8 @@ $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 
 ### Liquid staking
 
-- <u>**Deposit assets**</u>: users lock tokens (ETH, SOL) in a liquid staking protocol
-- <u>**Receive the derivative token**</u>: protocol issues a token (stETH) that represents the staked assets
+- <u>**Deposit assets**</u>: users lock native tokens (ETH, SOL) in a liquid staking protocol
+- <u>**Receive the derivative token**</u>: protocol issues a token (**liquid saking token** or **LST**) that represents the staked assets
 - <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
 - <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
@@ -460,11 +602,16 @@ $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 </v-click>-->
 
 ---
+layout: two-cols-header
+---
 
 # Motivation
+
+::left::
+
 ### Users can use LSTs in DeFi
-- Uniswap pools (stETH)
-- Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
+- in decentralised exchanges: stETH
+- as collateral to borrow assets: Aave Interest Bearing stETH
 <br><br>
 
 <v-click>
@@ -472,37 +619,34 @@ $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 ### Market cap of LSTs in increasing
 
 ![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
-![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
 
 </v-click>
 
----
+::right::
 
-# Fact #2: liquid staking dominates solo staking
+<v-click>
+
+### Liquid staking represents the majoritary of staking
 
 - Liquid staking is easy
-<v-click>
 
 - Liquid staking reduces reward risk
 $\implies$ strategic complementarity
 
-<v-click>
-
-- Liquid staking represents the majoritary of staking
+<br>
 
 ![stakinghistory](./images/solostakers.png){style="transform: translate(0%, 0%); width: 900px"}
 
 </v-click>
-</v-click>
+
 
 ---
 
 # Contribution
- 
 
-<p style="text-align: center;"><h3> <u>Question</u> <br>
+<p style="text-align: center;"><h3> <u>Macro-finance model</u> <br>
 
-What are the effects of liquid staking on the macroeconomics of blockchains ?
+Characterise the effects of liquid staking on the macroeconomics of blockchains
 </h3>
 </p>
 
@@ -522,7 +666,7 @@ LSTs eliminate the tension between staking and DeFi
 Natural forces will migrate DeFi from native ETH to LSTs
 <br>
 
-Issuing (or slashing) ETH would no longer affect user incentives
+Issuing (or slashing) ETH would no longer affect user incentives $\implies$ security risk
 
 </h3>
 </p>
@@ -634,7 +778,7 @@ $$
 
 ---
 
-# Blockchain macroeconomics
+# Productivity / Security tension
 
 ### Equilibrium and clearing conditions
 - Prices clear when ETH demand from users matches ETH supply
@@ -643,24 +787,24 @@ $
 $
 <v-click>
 
-- Only DeFi (productivity) and consumption create/destroy USD in the economy
-$
-\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt
-$
+- Only DeFi (productivity) and consumption create/destroy USD in the economy $\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt$
+
 <v-click>
 
-- ETH supply changes due to issuance/slashing
-$
-\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}
-$
+- ETH supply changes due to issuance/slashing $\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}$
+
 <v-click>
 
 - Staked / productive ETH determined by user decisions $\qquad\qquad\qquad\qquad\quad\ \ D_t = \theta_D\,P_t\,Q_t \qquad S_t = (1-\theta_D)\,P_t\,Q_t$
+
 <v-click>
 
 <br>
 
-### Solution
+### Equilibrium
+
+
+<v-click>
 
 $$\footnotesize
 \text{allocation } = \theta_D(\gamma,{\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
@@ -669,6 +813,41 @@ $$\footnotesize
 \\\text{slashing shocks} & =\gamma_P(\gamma, {\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}})
 \end{cases}
 $$
+
+<v-click>
+
+### Policy
+
+* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives 
+* <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
+
+
+<v-click>
+
+![sol](./images/sol.png){style="transform: translate(10%, -150%); width: 700px"}
+
+
+<div style="margin-top:0px;"> 
+
+$$\footnotesize
+\text{allocation } = {\scriptsize \begin{cases}
+\theta & =\min\left\{ \max\left\{ 0,F\left(\theta\right)\right\} ,1\right\} \\
+F\left(\theta\right) & =\frac{1}{2\,\Delta\gamma\,\Delta\sigma{}^{2}}\left(\tilde{\delta}+\sqrt{\tilde{\delta}^{2}+4\,\Delta\gamma\,\Delta\sigma{}^{2}\left(\Delta\mu\left(1+\gamma_{2}\right)+\lambda\,\Delta\gamma+\sigma_{2}\Delta\sigma\left(1+\gamma_{2}\right)\right)}\right)\\
+\tilde{\delta}\left(\theta\right) & =\Delta\gamma\left(\theta\right)\,\Delta\mu\left(\theta\right)-\Delta\sigma\left(\theta\right)^{2}\left(1-\gamma_{2}\right)+\sigma_{2}\,\Delta\gamma\left(\theta\right)\,\Delta\sigma\left(\theta\right)\\
+\Delta\gamma\left(\theta\right) & =\gamma-\frac{\gamma_{P}}{\theta}\\
+\Delta\mu\left(\theta\right) & =\mu^{\$}-c_{D}-\frac{\mu_{\iota}^{\$}}{\theta}\\
+\Delta\sigma\left(\theta\right) & =\sigma^{\$}-\frac{\sigma_{\iota}^{\$}}{\theta}
+\end{cases}} \qquad  \text{ETH prices = } {\scriptsize\begin{cases}
+\mu_{P} & =\underbrace{\theta_{D}\left(\mu^{\$}-c_{D}\right)}_{\text{productivity}}-\underbrace{\left(1-\theta_{D}\right)\mu_{\iota}^{e}}_{\text{inflation}} \\ 
+& +\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}\left(\left(1-\theta_{D}\right)\sigma_{\iota}^{e}-\theta_{D}\,\sigma^{\$}\right)}_{\text{covariance issuance/defi}}\\
+\\\sigma_{P} & =\underbrace{\theta_{D}\,\sigma^{\$}}_{\text{DeFi risk}}-\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}}_{\text{issuance: (inflation/deflation)}}\\
+\\\gamma_{P} & =-\underbrace{\frac{\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{slashing: (inflation/deflation)}}}
+\end{cases}}
+$$
+
+</div>
+
+
 
 <!--<v-click>
 - <u>**Policy objective**</u>: ETH prices
@@ -682,18 +861,15 @@ $$
 
 </v-click> -->
 
-<v-click>
-
-### Policy
-
-* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives 
-* <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
 
 </v-click>
 </v-click>
 </v-click>
 </v-click>
 </v-click>
+</v-click>
+</v-click>
+
 
 ---
 layout: two-cols-header
@@ -778,8 +954,12 @@ $$
 
 
 ---
+layout: two-cols-header
+---
 
 # Ethereum today
+
+::left::
 
 * Users can be productive with both LSTs and ETH
 <br>
@@ -791,7 +971,7 @@ $$
   * Consumption (USD)
   * DeFi (with LSTs)
   * DeFi (with ETH)
-  * Staking (with LSTs)
+  * Staking (with LSTs or solo staking)
 
 <v-click>
 <br>
@@ -811,26 +991,32 @@ $$
 
 </v-click>
 
----
+::right::
 
-# Dollar returns
+<v-click>
 
-- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}+\text{issuance}$
+### Dollar returns
+
+- DeFi with LSTs $\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}+\text{issuance}$
 
 $$
 \qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
 $$
-- DeFi with native tokens $\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH productivity rate}}-\text{issuance tax}$
+- DeFi with native ETH $\quad\ \ \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH productivity rate}}-\text{issuance tax}$
 $$
 \qquad\qquad\qquad\qquad\qquad\swarrow
 $$
-- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
+- Staking  $\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
+
+<v-click>
 
 - Correlation: accessibility to DeFi with LSTs
 $$
 \langle {\color{blue}W},{\color{red}Z}\rangle = \rho > 0
 $$
 
+</v-click>
+</v-click>
 
 
 ---
@@ -839,66 +1025,98 @@ layout: two-cols-header
 
 # Issuance/correlation favour LSTs
 
+
 ::left::
 
-###  $\qquad$ Issuance
-![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+### Dollar returns
+
+- DeFi with LSTs $\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}+\text{issuance}$
+
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
+$$
+- DeFi with native ETH $\quad\ \ \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH productivity rate}}-\text{issuance tax}$
+$$
+\qquad\qquad\qquad\qquad\qquad\swarrow
+$$
+- Staking  $\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
+
+::right::
+
+#### $\qquad$ Effect of issuance
+![issuance](./code/issuance_nocost.png){style="transform: translate(30%, 0%); width: 240px"}
+<v-click>
+
+#### $\qquad$ Effect of correlation
+![correl](./code/correl_nocost.png){style="transform: translate(30%, -10%); width: 240px"}
+</v-click>
+
+---
+layout: two-cols-header
+---
+
+# Strategic complementarity
+
+::left::
+
+### Dollar returns
+
+DeFi-LSTs:  $\quad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{endog liq cost}}+\text{issuance}$
+
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
+$$
+DeFi-ETH: $\quad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH product. rate}}-\underbrace{c\left(D_t\right)dt}_{\text{endog liq cost}}-\text{issuance tax}$
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\swarrow
+$$
+Staking with LSTs $\qquad\qquad\qquad\qquad \text{issuance}$
 
 ::right::
 
 <v-click>
 
-###  $\qquad$ Correlation
-![correl](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+####   Without strategic complementarity
+![issuance](./code/issuance_nocost.png){style="transform: translate(30%, 0%); width: 250px"}
+
+<div style="margin-top:-20px;"> 
+
+####  With strategic complementarity
+
+</div>
+
+![correl](./code/issuance_cost.png){style="transform: translate(30%, 0%); width: 250px"}
+
+<v-click>
+
+
+<div style="
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  transform: translate(25%, -217%);
+">
+
+  <img src="./code/correl_nocost.png" style="width: 240px;" />
+
+</div>
+
+<div style="
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  transform: translate(25%, -210%);
+">
+
+  <img src="./code/correl_cost.png" style="width: 240px;" />
+
+</div>
+
+
 
 </v-click>
+</v-click>
 
----
-
-# Strategic complementarity
-
-- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\quad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{endog liq cost stETH}}+\text{issuance}$
-
-$$
-\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
-$$
-- DeFi with native tokens $\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(D_t\right)dt}_{\text{endog liq cost ETH}}-\text{issuance tax}$
-$$
-\qquad\qquad\qquad\qquad\qquad\qquad\qquad\swarrow
-$$
-- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
-
----
-layout: two-cols-header
----
-
-# Liquidity costs  $c\left(x\right) = a - b\,x$
-
-::left::
-
-###  $\qquad$ Without strategic complementarity
-![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
-
-::right::
-
-###  $\qquad$ With strategic complementarity
-![correl](./code/issuance_cost.png){style="transform: translate(0%, 0%); width: 450px"}
-
----
-layout: two-cols-header
----
-
-# Liquidity costs  $c\left(x\right) = a - b\,x$
-
-::left::
-
-###  $\qquad$ Without strategic complementarity
-![issuance](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
-
-::right::
-
-###  $\qquad$ With strategic complementarity
-![correl](./code/correl_cost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 
 ---
@@ -914,9 +1132,7 @@ layout: two-cols-header
   - <u>**bad**</u>: slashing has no effect, no social planning, centralisation
   - <u>**good**</u>: economic security, productivity
 
-- Demand for native ETH can be controlled with gas fees <br> $\implies$ decreases productivity / adoption
 
-- <u>**Future work**</u>: decentralised staking / distributed validator technology (DVT) <br> $\implies$ competition between blockchain and liquid staking protocols
 </v-clicks>
 
 ---
