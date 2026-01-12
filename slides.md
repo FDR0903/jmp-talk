@@ -802,7 +802,7 @@ $
 $
 <v-click>
 
-- Only DeFi (productivity) and consumption create/destroy USD in the economy $\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt$
+- Only DeFi (productivity) and consumption change ETH market cap $\qquad\qquad\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt$
 
 <v-click>
 
@@ -834,7 +834,7 @@ $$
 ### Policy
 
 * <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives 
-* <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
+* <u>**Policy objectives**</u> can be attained
 
 
 <v-click>
@@ -894,40 +894,17 @@ layout: two-cols-header
 
 ::left::
 
-<br>
-<br>
-<br>
-<br>
 
 ### Users allocate wealth across:
   * Consumption (USD)
   * DeFi <u>**with LSTs**</u>
-  * Staking with LSTs
+  * Staking
 
 <br>
-
-
-
-::right::
 
 <v-click>
 
-### Dollar returns -- <u>only ETH</u> in DeFi
-
-- DeFi: $\qquad \text{productivity rate}-\text{issuance tax}+\text{deflation}$
-
-$$\footnotesize 
-\qquad\qquad\qquad\qquad\qquad\swarrow\qquad\qquad\qquad \nearrow 
-$$
-
-- Staking: $\qquad\qquad\qquad\quad  \text{issuance}\quad- \quad\text{slashing}$
-
 <br>
-<br>
-<br>
-<br>
-
-<v-click>
 
 ### Dollar returns -- <u>only LSTs</u> in DeFi
 - Staking: $\qquad\qquad\quad\qquad\qquad\quad$ <u>**zero**</u>
@@ -936,13 +913,15 @@ $$
 
 - DeFi: $\qquad\qquad\quad\qquad\qquad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
 
-
-</v-click>
 </v-click>
 
----
 
-# Consequences
+
+::right::
+
+<v-click>
+
+### Consequences
 - **ETH issuance** as reward to staking no longer affects the incentives to staking/DeFi.
 
 <br>
@@ -953,19 +932,18 @@ $$
 
 <v-click>
 
-- **Centralisation**: total stake at the hand of liquid staking protocols
-
-<br>
-
-<v-click>
-
 - **Centralisation**:
+  * total stake at the hand of liquid staking protocols
   * Issuance is a temporary transfer of wealh from stakers in the pool that wins the block, to other stakers
   * Aggregating in one liquid staking pool minimizes wealth variance $\implies$ one surviving pool is the dominant strategy when (symmetric) liquid staking pools compete.
 
+</v-click>
 
 </v-click>
-</v-click>
+
+---
+
+
 
 
 ---
@@ -986,7 +964,7 @@ layout: two-cols-header
   * Consumption (USD)
   * DeFi (with LSTs)
   * DeFi (with ETH)
-  * Staking (with LSTs or solo staking)
+  * Staking
 
 <v-click>
 <br>
@@ -1277,7 +1255,7 @@ $$
 
 ::right::
 
-<v-clicks>
+<v-click>
 
 ### Equilibrium
 
@@ -1308,7 +1286,7 @@ $$
 
 - **Hedge belief assumption**: $\footnotesize  \theta'(\mu_{S,t}) < 0$
 
-</v-clicks>
+</v-click>
 
 ---
 
