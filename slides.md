@@ -78,30 +78,49 @@ section: Blockchains
 # Decentralised financial systems
 
 ### Decentralised finance (DeFi) is a new form of financial intermediation
+- Contracts enforced by code, not courts. Intermediation becomes a **protocol**.
 - DeFi = financial services run by **smart contracts** on blockchains
   - Permisionless
   - Immutable
   - Automated   
-- Contracts enforced by code, not courts. Intermediation becomes a **protocol**.
-<br><br>
+<br>
+
+<v-click>
 
 ### Breadth of real economic applications
 - **Payments & Money**: Stablecoins, Cross-border payments
+<v-click>
+
 - **Financial Markets**: Decentralized exchanges, On-chain lending,  collateralized credit
+<v-click>
+
 - **Organizations & Governance**: DAOs (Decentralized Autonomous Organizations)
   - Firms or collectives governed by token-holders
-  - Rules for voting, treasury use, and upgrades are pre-specified
+  - Rules for voting, treasury use, upgrades are pre-specified
+<v-click>
+
 - **Ownership/contracting**: financial and real asset tokenisation
+
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+
 
 ---
 
 # My research
 
+### Objective
+
 - Study the viability and risks of these ecosystems
 - Study the  implications of organising financial and monetary systems with such protocols
 
+<br><br>
+
 <v-click>
 
+### Tools
 - Multiple fields in one
   - Economics, Financial Economics, Management Science
   - Computer Science
@@ -131,7 +150,7 @@ layout: two-cols-header
 
 ::left::
 
-- Significant volumes on Decentralized Exchanges (DEXs) <br> $\$10.16$ billion each day as of 11 January 2026
+### Significant volumes on Decentralized Exchanges (DEXs):  $\$10.16$ billion each day as of 11 January 2026
   
 $\implies$ DEX efficiency actively influences discussions on blockchain design
 
@@ -139,7 +158,7 @@ $\implies$ DEX efficiency actively influences discussions on blockchain design
 
 <v-click>
 
-- The blockchain protocol **determines the lifecycle of transactions**
+### The blockchain protocol **determines the lifecycle of transactions**
   1. Transactions are sent to the network continuously, stored in a memory pool
   2. At each Epoch (length = **block time**), a validator is chosen, and consesus work is conducted 
   3. The validator creates a new block with transactions from the memory pool
@@ -276,23 +295,61 @@ $\implies$ traders compete to avoid worse execution prices because of adverse pr
 </v-click>
 </v-click>
 
+
 ---
 
-<!--
-<br /><br /><br /><br /><br /><br />
-<p style="text-align: center;"><h1>
-The model is solved by backward induction <a name="defi"></a></h1>
-</p>
+# What type of competition ?
 
 
-<br /><br /><br /><br /><br /><br />
-<p style="text-align: center;"><h1>
-Stage two<br><br>
-priority fees and trading volumes <a name="defi"></a></h1>
-</p>
+- Stage two: number of traders $M$ and liquidity supply $\kappa$ are known. Informed trader $i\in\{1,\dots,M\}$ has a private type $v_i=\mathbb{E}_{i}\left[V\right]$
+<v-clicks>
 
--->
+- If trader $i$ is first in the block
+$$\scriptsize
+W_{i,(M-1)} 
+    = \underbrace{-\varphi_i}_\text{priority fee}
+    - \underbrace{\delta_i \left( V_0 + \frac{\delta_i}{\kappa} + \pi \right)}_{\text{cash paid to AMM}}
+    + \underbrace{\delta_i \,V}_{\text{terminal value of holdings}}
+    - \underbrace{C}_{\text{information cost}}
+$$
 
+- If trader $i$ is $j-$th in the block
+$$\scriptsize
+W_{i,(j)} = {-\varphi_i}
+       - \underbrace{\delta_i \!\left(V_0+ \frac{\delta_i}{\kappa} + \pi
+       + \frac{2}{\kappa} \Delta_{(j+1 : M-1)} 
+       \right)}_{\text{exec costs + adverse price impact}}
+       + {\delta_i V}
+       - {C}
+$$
+
+- If trader $i$ is last in the block
+$$\scriptsize
+W_{i,(0)}
+    = -\varphi_{i}
+      - \delta_{i}\!\left(V_0+
+        \frac{\delta_{i}}{\kappa} + \pi 
+        + \frac{2}{\kappa}\,\Delta_{(1:M-1)}
+      \right)
+      + \delta_{i} V
+      - C\,
+$$
+
+- **Expected wealth** 
+$$\scriptsize
+\mathbb{E}_{i}\!\left[W_{i}\right]
+= \mathbb{E}_{i}\!\left[W_{i,0}\right]
++ \frac{2\,\delta_{i}}{\kappa}
+\sum_{j=0}^{M-1}
+\mathbb{E}_{i}\!\left[
+    \boldsymbol{1}_{\{\varphi_{(j)} < \varphi_{i} < \varphi_{(j+1)}\}}
+    \,\Delta_{(1:j)}
+\right]
+$$
+
+</v-clicks>
+
+---
 
 # What type of competition ?
 
@@ -320,51 +377,7 @@ Priority fee distribution from the Ethereum public mempool.
 
 <v-click>
 
-### Competition as a sealed-bid multi-prize auction
-- Informed trader $i\in\{1,\dots,M\}$ has a private and independent type $v_i=\mathbb{E}_{i}\left[V\right]$ which represents their valuation of the asset
-- **In equilibrium of stage two:** traders set the **priority fee $\varphi_i$**, and the **trading volume $\delta_i$** 
-</v-click>
-
----
-
-# Competition
-
-- At stage two: number of traders $M$ and liquidity supply $\kappa$ are known
-<v-clicks>
-
-- If trader $i$ is first in the block
-$$\scriptsize
-W_{i,(M-1)} 
-    = \underbrace{-\varphi_i}_\text{priority fee}
-    - \underbrace{\delta_i \left( \frac{\delta_i}{\kappa} + \pi \right)}_{\text{cash paid to AMM}}
-    + \underbrace{\delta_i \,V}_{\text{terminal value of holdings}}
-    - \underbrace{C}_{\text{information cost}}
-$$
-
-- If trader $i$ is $j-$th in the block
-$$\scriptsize
-W_{i,(j)} = {-\varphi_i}
-       - \underbrace{\delta_i \!\left( \frac{\delta_i}{\kappa} 
-       + \frac{2}{\kappa} \Delta_{(j+1 : M-1)} 
-       + \pi \right)}_{\text{exec costs + adverse price impact}}
-       + {\delta_i V}
-       - {C}
-$$
-
-- If trader $i$ is last in the block
-$$\scriptsize
-W_{i,(0)}
-    = -\varphi_{i}
-      - \delta_{i}\!\left(
-        \frac{\delta_{i}}{\kappa}
-        + \frac{2}{\kappa}\,\Delta_{(1:M-1)}
-        + \pi
-      \right)
-      + \delta_{i} V
-      - C\,
-$$
-
-- **Expected wealth** and optimisation problem
+### $\implies$ Competition as a sealed-bid multi-prize auction
 $$\scriptsize
 \sup_{\varphi_i, \delta_i}\mathbb{E}_{i}\!\left[W_{i}\right]
 = \sup_{\varphi_i, \delta_i}\mathbb{E}_{i}\!\left[W_{i,0}\right]
@@ -376,7 +389,11 @@ $$\scriptsize
 \right]
 $$
 
-</v-clicks>
+- **In equilibrium of stage two:** traders set the **priority fee $\varphi_i$**, and the **trading volume $\delta_i$** 
+
+</v-click>
+
+
 
 ---
 layout: two-cols-header
@@ -481,15 +498,12 @@ Liquidity suppliers balance revenue from uninformed elastic demand with adverse 
 
 - Market shutdown condition:  $\qquad\qquad\qquad\qquad\footnotesize M\,S_M \le \frac{\text{revenue}}{\text{elasticity}}$
 
-<v-click>
-
 $\implies$ $\exists\overline M$ s.t. $\forall M>\overline M$, markets shut down
 
 <v-click>
 
 $\implies$ competition is bad for price efficiency **AND** liquidity: in contrast to traditional markets (Holden and Subrahmanyam (1992))
 
-</v-click>
 </v-click>
 </v-click>
 </v-click>
@@ -1119,23 +1133,6 @@ Staking with LSTs $\qquad\qquad\qquad\qquad \text{issuance}$
 </v-click>
 
 
-
----
-
-# Conclusion
-
-
-- Natural forces will lead to $100\%$ liquid staking $\implies$ issuance is not effective
-
-<v-clicks>
-
-- Is it good or bad ? 
-  - <u>**bad**</u>: slashing has no effect, no social planning, centralisation
-  - <u>**good**</u>: economic security, productivity
-
-
-</v-clicks>
-
 ---
 section: Asset Pricing
 layout: center
@@ -1177,7 +1174,7 @@ flowchart LR
     end
 
     %% place demands to the right of BTC
-    Pro["🔗 <b>Procyclical Demand <math mode="display">E<sub>t</sub></math></b><br/>(Risk-on investors)"]
+    Pro["🔗 <b>Procyclical Demand <math mode="display">E<sub>t</sub></math></b><br/>(Risk-on / Risk-off investors)"]
     Hedge["🛡️ <b>Hedge Demand <math mode="display">H<sub>t</sub></math></b><br/>(Belief-based investors)"]
 
     %% Both demands attach only to BTC
@@ -1186,7 +1183,7 @@ flowchart LR
 
     %% special arrow showing correlation/link between Procyclical demand and S&P
     %% use dashed arrow with label "positive correlation" and arrowhead toward SP
-    Pro -. positive correlation.-> SP
+    Pro --> SP
 ```
 </center>
 
@@ -1247,34 +1244,34 @@ $$
 layout: two-cols-header
 ---
 
-# The model: hedge demand
+# The model
 
 ::left::
 
-<v-clicks>
+
 
 ### Hedge demand
 - A continuum of agents allocate their wealth $x_t$ between S&P, bitcoin, risk-free investment, and consumption
-$$
+$$\footnotesize
 \theta_{t}=\frac{\lambda_{P}}{\sigma_{P,t}\mu_{S,t}-\sigma_{S,t}\mu_{P,t}}\sigma_{S,t}-\frac{1}{\xi_{P,t}}, \quad \varphi_{t}^i=-\frac{\lambda_{S}}{\mu_{S,t}}-\frac{\sigma_{P,t}}{\sigma_{S,t}}\theta_{t}-\frac{1}{\sigma_{S,t}}
 $$
 
+<v-clicks>
+
 - Clearing condition: 
-$$
-\theta_t \, x_t + E_t = M_t \, P_t
+$$\footnotesize
+\underbrace{H_t}_{\text{hedge demand}=\theta_t \, x_t} + \underbrace{E_t}_{\text{procyclical demand}=e_t\,M_t \, P_t}  = M_t \, P_t
 $$
 
 
 - Pro-cyclical demand: 
-$$
+$$\footnotesize
 \frac{de_{t}}{1-e_{t}}=\mu_{e}\,dt+\gamma_{e}\,dW_{\mu,t}+\xi_{e}\,dW_{P,t}+\sigma_{e}\,dW_{S,t}
 $$
 
 
-- Agents assume $\mu_P$, $\sigma_P$, $\xi_P$, $\gamma_P$ functions of the state variable $\mu_{S,t}$
-$$
-\theta_t = \theta(\mu_{S,t}) \qquad \text{and} \qquad \text{hedge condition } \theta'(\mu_{S,t}) < 0
-$$
+- In equilibrium, $\mu_P$, $\sigma_P$, $\xi_P$, $\gamma_P$ functions of the state variable $\mu_{S,t}$
+
 
 </v-clicks>
 
@@ -1298,19 +1295,18 @@ $$\footnotesize
 $$
 
 - A differential equation for $\theta$ 
-$$
-0=A\,\theta''\left(\mu_{S,t}\right)+\left(B-\lambda_{\mu}\,\mu_{S,t}\right)\theta'\left(\mu_{S,t}\right)+C\,\theta(\mu_{S,t})
-$$  
-
-where 
-$
-\qquad\qquad\begin{cases}
-    A = \frac{1}{2}\,\left(\gamma_{\mu}^{2}+\xi_{\mu}^{2}+\sigma_{\mu}^{2}\right)\\
+$$\footnotesize 
+  \begin{split}
+    0=A\,\theta''\left(\mu_{S,t}\right)+\left(B-\lambda_{\mu}\,\mu_{S,t}\right)\theta'\left(\mu_{S,t}\right)+C\,\theta(\mu_{S,t}) \\
+    \begin{cases}
+    A = \frac{1}{2}\,\left(\gamma_{\mu}^{2}+\xi_{\mu}^{2}+\sigma_{\mu}^{2}\right)\quad 
     B = \gamma_{e}\,\gamma_{\mu}+\xi_{e}\,\xi_{\mu}+\sigma_{e}\,\sigma_{\mu}\\
     C = \mu_{e}+\sigma_{e}^{2}+\gamma_{e}^{2}+\xi_{e}^{2}-\beta-g\,.
-\end{cases}  
-$
+\end{cases}
+\end{split}
+$$
 
+- **Hedge belief assumption**: $\footnotesize  \theta'(\mu_{S,t}) < 0$
 
 </v-clicks>
 
