@@ -84,6 +84,8 @@ section: Blockchains
 
 <v-click>
 
+<br>
+
 ### Breadth of real economic applications
 - **Payments & Money**: Stablecoins, Cross-border payments
 <v-click>
