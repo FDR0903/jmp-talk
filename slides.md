@@ -44,8 +44,7 @@ section: Blockchains
 # Decentralised financial systems
 
 
-### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms, governments)
-<v-click>
+### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms)
 
 - Intermediaries reduce transaction costs and enforce contracts, but introduce frictions
   - fees, delays, opacity
@@ -55,19 +54,18 @@ section: Blockchains
 
 ### Central question: can we coordinate economic activity at scale with less centralized trust?
 <v-click>
-<br>
 
-1. Blockchains are the **technological response** to centralisation **frictions**
-2. Blockchains are the **technological** equivalent of **regulation**
+- Blockchains are the **technological response** to centralisation **frictions**
+- Blockchains are the **technological** equivalent of **regulation**
 <br><br>
 <v-click>
 
-- **Definition**: general-purpose infrastructure for economic/human coordination. It replaces institutional trust with 
-  1. a shared, tamper-resistant ledger
-  2. algorithmic and publicly verifiable rules (consensus) and incentives to conduct transactions, not a single authority
-  3. economic incentives: participants rewarded to follow rules
+### Definition
+- Blockchains are a general-purpose infrastructure for economic/human coordination
+  1. shared, tamper-resistant ledger
+  2. algorithmic and publicly verifiable rules (consensus)
+  3. economic incentives to follow rules
 
-</v-click>
 </v-click>
 </v-click>
 </v-click>
@@ -82,8 +80,7 @@ section: Blockchains
 - DeFi = financial services run by **smart contracts** on blockchains
   - Permisionless
   - Immutable
-  - Automated   
-<br>
+  - Automated
 
 <v-click>
 
@@ -91,7 +88,7 @@ section: Blockchains
 - **Payments & Money**: Stablecoins, Cross-border payments
 <v-click>
 
-- **Financial Markets**: Decentralized exchanges, On-chain lending,  collateralized credit
+- **Financial Markets**: Decentralized exchanges, lending/borrowing,  collateralized credit
 <v-click>
 
 - **Organizations & Governance**: DAOs (Decentralized Autonomous Organizations)
@@ -120,8 +117,7 @@ section: Blockchains
 
 <v-click>
 
-### Tools
-- Multiple fields in one
+### Interdisciplinary research agenda
   - Economics, Financial Economics, Management Science
   - Computer Science
   - Data Science, Machine Learning
@@ -150,9 +146,9 @@ layout: two-cols-header
 
 ::left::
 
-### Significant volumes on Decentralized Exchanges (DEXs):  $\$10.16$ billion each day as of 11 January 2026
+### Significant volumes on Decentralized Exchanges (DEXs):  $\$10.16$ billion daily (11 January 2026)
   
-$\implies$ DEX efficiency actively influences discussions on blockchain design
+$\implies$ DEX efficiency actively influences blockchain design
 
 <br><br>
 
@@ -193,7 +189,7 @@ $\implies$ DEX efficiency actively influences discussions on blockchain design
 * **Base fee**: based on congestion, prerequisite for inclusion
 * **Priority fee**: incentivise validators to prioritise a transaction in the block 
 <br>
-$\implies$ market **clears sequentially**, and agents **compete for queue priority**
+$\implies$ market **clears sequentially according to priority fees**
 
 </div>
 
@@ -207,47 +203,14 @@ $\implies$ market **clears sequentially**, and agents **compete for queue priori
 
 # Contribution
 
-### A multi-stage model to describe the microstructure of blockchain financial markets
-- Price efficiency, Liquidity, Costs
-
-<v-click>
-
-<br>
-<br>
-<br>
-
-<u>**stage 0**</u>: $M$ traders acquire information for a fixed cost $C$
+### Are blockchain markets a viable alternative to traditional markets ?
 <br><br>
-![model1](./images/model1.png){style="transform: translate(80%,-40%); width: 600px"}
 
-<v-click>
+### A model to describe the microstructure of blockchain financial markets
+- Price efficiency
+- Liquidity
+- Costs
 
-<div style="margin-top:-300px;"> 
-<u><b>stage 1</b></u>: liquidity supplier sets the AMM’s reserves
-</div>
-
-![model2](./images/model2.png){style="transform: translate(79.8%, -48%); width: 600px"}
-<v-click>
-
-<div style="margin-top:-296px;"> 
-<u><b>stage 2</b></u>: M informed traders compete for priority
-</div>
-
-![model3](./images/model3.png){style="transform: translate(77.5%, -42%); width: 600px"}
-
-<v-click>
-
-
-![model4](./images/model4.png){style="transform: translate(80.2%, -143%); width: 600px"}
-
-<div style="margin-top:-456px;"> 
-Markets clear sequentially by order of priority fee
-</div>
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
 
 
 ---
@@ -256,7 +219,7 @@ Markets clear sequentially by order of priority fee
 
 - **Assumption**: execution costs and price impact is linear in the trading volume $\delta$ and inversely proportional to liquidity $\kappa$
 
-$$\footnotesize \text{execution price to buy }\delta = V_0 + \delta / \kappa \qquad \footnotesize \text{new price following a buy }\delta = V_0 + 2\,\delta / \kappa $$
+$$\footnotesize \text{execution price to buy }\delta = V_0 + \pi + \delta / \kappa \qquad \footnotesize \text{new price following a buy }\delta = V_0 + 2\,\delta / \kappa $$
 
 <v-click>
 
@@ -282,10 +245,7 @@ $$\footnotesize \text{execution price to buy }\delta = V_0 + \delta / \kappa \qq
   <strong>2.622&nbsp;million</strong> transactions, compared to the linear 
   approximations. Transactions span
   <em>1&nbsp;Jan&nbsp;2023</em> to <em>31&nbsp;Dec&nbsp;2023</em> across 
-  <strong>38</strong> Uniswap&nbsp;v3 pools.<br/>
-    Values scaled to
-    <span style="white-space: nowrap;">[0, 1]</span> (buys) and
-    <span style="white-space: nowrap;">[−1, 0]</span> (sells).
+  <strong>38</strong> Uniswap&nbsp;v3 pools.
   </div>
 </div>
 <v-click>
@@ -302,16 +262,19 @@ $\implies$ traders compete to avoid worse execution prices because of adverse pr
 
 
 - Stage two: number of traders $M$ and liquidity supply $\kappa$ are known. Informed trader $i\in\{1,\dots,M\}$ has a private type $v_i=\mathbb{E}_{i}\left[V\right]$
-<v-clicks>
+
+<v-click>
 
 - If trader $i$ is first in the block
 $$\scriptsize
 W_{i,(M-1)} 
     = \underbrace{-\varphi_i}_\text{priority fee}
-    - \underbrace{\delta_i \left( V_0 + \frac{\delta_i}{\kappa} + \pi \right)}_{\text{cash paid to AMM}}
+    - \underbrace{\delta_i \left( V_0 + \frac{\delta_i}{\kappa} + \pi \right)}_{\text{exec costs}}
     + \underbrace{\delta_i \,V}_{\text{terminal value of holdings}}
     - \underbrace{C}_{\text{information cost}}
 $$
+
+<v-click>
 
 - If trader $i$ is $j-$th in the block
 $$\scriptsize
@@ -322,6 +285,8 @@ W_{i,(j)} = {-\varphi_i}
        + {\delta_i V}
        - {C}
 $$
+
+<v-click>
 
 - If trader $i$ is last in the block
 $$\scriptsize
@@ -335,6 +300,8 @@ W_{i,(0)}
       - C\,
 $$
 
+<v-click>
+
 - **Expected wealth** 
 $$\scriptsize
 \mathbb{E}_{i}\!\left[W_{i}\right]
@@ -347,7 +314,10 @@ $$\scriptsize
 \right]
 $$
 
-</v-clicks>
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
 ---
 
@@ -479,45 +449,43 @@ $\footnotesize\implies$  high valuations $\equiv$ larger volumes and better queu
 layout: two-cols-header
 ---
 
-# Equilibrium liquidity and amount of information in the market
+# Liquidity and efficiency
+
+### A multi-stage model:
+- stage 0: $M$ traders acquire information for a fixed cost $C$
+- stage 1: liquidity supplier sets liquidity <math>&kappa;</math>
+- stage 2: M informed traders compete for priority + market clears sequentially by order of priority fee
+
 
 ::left::
+
+<br>
+
+<v-click>
 
 ### Stage one: equilibrium liquidity supply
 Liquidity suppliers balance revenue from uninformed elastic demand with adverse selection costs
   $$\footnotesize
-  \kappa^\star=\sqrt{\frac{\text{revenue}}{M\,S_M}}
-  $$
-  where  $\footnotesize\ \ S_M=\int_{\underline v_M}^{\overline v} \tilde\delta(u)^2\,dF(u) \text{: variance of trading volumes}$
+  \kappa^\star=\sqrt{\text{revenue}/M\,\int_{\underline v_M}^{\overline v} \tilde\delta(u)^2\,dF(u)}
+  \underset{M\rightarrow\infty}{\searrow0}$$
+- $\footnotesize \exists\overline M$ s.t. $\footnotesize  \forall M>\overline M$, markets shut down
+<br>
+- competition is bad for price efficiency **AND** liquidity: in contrast to traditional markets (Holden and Subrahmanyam (1992))
 
-<v-click>
 
-- $\footnotesize S_M$ increases with $\footnotesize M$ $\implies$ $\footnotesize \kappa(M)$ decreases with $\footnotesize M$
-
-<v-click>
-
-- Market shutdown condition:  $\qquad\qquad\qquad\qquad\footnotesize M\,S_M \le \frac{\text{revenue}}{\text{elasticity}}$
-
-$\implies$ $\exists\overline M$ s.t. $\forall M>\overline M$, markets shut down
-
-<v-click>
-
-$\implies$ competition is bad for price efficiency **AND** liquidity: in contrast to traditional markets (Holden and Subrahmanyam (1992))
-
-</v-click>
-</v-click>
 </v-click>
 
 ::right::
 
 <v-click>
+<br>
+
 
 ### Stage zero: information acquisition
 - The number of informed traders is constrained by the profitability of informed trading and the cost $C$
 $$\footnotesize
 C=\underbrace{\sqrt{\frac{\pi\,N\,\theta}{M\,S_{M}}}\,\int_{\underline{v}_{M}}^{\overline{v}}\left(-2\,\left(M-1\right)\left(S_{M}+\Sigma_{M}\left(v\right)\right)+\tilde{\delta}\left(v\right)\,\left(v-\pi-\tilde{\delta}\left(v\right)\right)\right)dF\left(v\right)}_{H(M) = \text{trading profits net of execution costs and priority fees}}\,,
 $$
-- $\footnotesize M$ increases with uninformed demand. $\footnotesize M$ decreases with the  information cost $\footnotesize C$.
 
 </v-click>
 
@@ -526,15 +494,18 @@ $$
 layout: two-cols-header
 ---
 
-# Blockchain fundamental tradeoff: security vs market efficiency 
+# Main result
+
+### Blockchain fundamental tradeoff
+- Block time increases blockchain security
+- Also increases variance of private valuations
 
 ::left::
 
-- Block time increases blockchain security, but also increases variance of valuations
 
 <v-click>
 
-- When types are uniform:
+When types are uniform:
 
 $$ \scriptsize
 \begin{cases}\scriptsize
@@ -590,11 +561,9 @@ University of Oxford, Stevens Institute of Technology, Imperial Business School
 - Lock native token on the blockchain to participate in the consensus protocol
 - <u>Economic security</u>: blockchain pays for security with **issuance** (staking rewards)
 - Blockchain incentivises good behaviour with **slashing**
-
-
+<br>
 $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 
-<br>
 <br>
 
 <v-click>
@@ -602,10 +571,20 @@ $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
 ### Liquid staking
 
 - <u>**Deposit assets**</u>: users lock native tokens (ETH, SOL) in a liquid staking protocol
-- <u>**Receive the derivative token**</u>: protocol issues a token (**liquid saking token** or **LST**) that represents the staked assets
+- <u>**Receive a derivative token**</u>: protocol issues a token (**liquid saking token** or **LST**)
 - <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
 - <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
+<br>
+
+<v-click>
+
+### Users can use LSTs in DeFi
+- In decentralised exchanges: stETH. As collateral to borrow assets: Aave Interest Bearing stETH
+
+![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(145%, -130%); width: 380px"}
+
+</v-click>
 </v-click>
 
 <!--<v-click>
@@ -615,45 +594,6 @@ $\implies$ Issuance and Slashing policy is central to blockchain ecosystems
   - Better economic security
 
 </v-click>-->
-
----
-layout: two-cols-header
----
-
-# Motivation
-
-::left::
-
-### Users can use LSTs in DeFi
-- in decentralised exchanges: stETH
-- as collateral to borrow assets: Aave Interest Bearing stETH
-<br><br>
-
-<v-click>
-
-### Market cap of LSTs in increasing
-
-![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
-
-</v-click>
-
-::right::
-
-<v-click>
-
-### Liquid staking represents the majoritary of staking
-
-- Liquid staking is easy
-
-- Liquid staking reduces reward risk
-$\implies$ strategic complementarity
-
-<br>
-
-![stakinghistory](./images/solostakers.png){style="transform: translate(0%, 0%); width: 900px"}
-
-</v-click>
-
 
 ---
 
@@ -673,7 +613,7 @@ Characterise the effects of liquid staking on the macroeconomics of blockchains
 
 <p style="text-align: center;"><h3> <u>Some answers</u> <br>
 
-The tension between staking and DeFi (productivity) is necessary for issuance & slashing to influence user incentives
+The tension between staking and productivity is necessary for issuance & slashing to influence user incentives
 
 LSTs eliminate the tension between staking and DeFi
 <br>
@@ -798,28 +738,27 @@ $$
 ### Equilibrium and clearing conditions
 - Prices clear when ETH demand from users matches ETH supply
 $
-\qquad \qquad \qquad P_t \, Q_t = S_t + D_t = x_t
+\qquad \qquad \qquad P_t \, Q_t = S_t + D_t
 $
-<v-click>
-
-- Only DeFi (productivity) and consumption change ETH market cap $\qquad\qquad\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt$
-
-<v-click>
-
-- ETH supply changes due to issuance/slashing $\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}$
-
 <v-click>
 
 - Staked / productive ETH determined by user decisions $\qquad\qquad\qquad\qquad\quad\ \ D_t = \theta_D\,P_t\,Q_t \qquad S_t = (1-\theta_D)\,P_t\,Q_t$
 
 <v-click>
 
-<br>
-
-### Equilibrium
+- Only productivity and consumption change ETH market cap $\qquad\qquad\ \ \qquad\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt$
 
 
 <v-click>
+
+- ETH supply changes due to issuance/slashing $\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}$
+
+
+<v-click>
+
+<br>
+
+### Equilibrium
 
 $$\footnotesize
 \text{allocation } = \theta_D(\gamma,{\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
@@ -876,8 +815,6 @@ $$
 
 </v-click> -->
 
-
-</v-click>
 </v-click>
 </v-click>
 </v-click>
@@ -922,11 +859,11 @@ layout: two-cols-header
 <v-click>
 
 ### Consequences
-- **ETH issuance** as reward to staking no longer affects the incentives to staking/DeFi.
+- **ETH issuance** no longer affects incentives
 
 <br>
 
-- **Slashing** no longer affects USD wealth $\implies$ no longer affects staker incentives.
+- **Slashing** no longer affects incentives
 
 <br>
 
@@ -934,15 +871,11 @@ layout: two-cols-header
 
 - **Centralisation**:
   * total stake at the hand of liquid staking protocols
-  * Issuance is a temporary transfer of wealh from stakers in the pool that wins the block, to other stakers
-  * Aggregating in one liquid staking pool minimizes wealth variance $\implies$ one surviving pool is the dominant strategy when (symmetric) liquid staking pools compete.
+  * Issuance is a temporary transfer of wealh: aggregating in one liquid staking pool minimizes wealth variance
 
 </v-click>
 
 </v-click>
-
----
-
 
 
 
@@ -1105,8 +1038,6 @@ Staking with LSTs $\qquad\qquad\qquad\qquad \text{issuance}$
 
 </div>
 
-
-
 </v-click>
 </v-click>
 
@@ -1128,19 +1059,24 @@ University of Oxford, NYU Stern, University of Florida
 
 ### Debate in Asset Pricing literature
 
-- Empirical asset pricing: Bitcoin perceived a hedge asset: 
-  - Baur et al. (2018) and Sharma, U., & Karmakar, M. (2023): indicate that Bitcoin returns are not related to conventional assets like stocks or bonds, and thus can be a potential asset for portfolio diversification.
+- Part of the literature emphasises Bitcoin's potential to hedge asset classes like stocks and currencies
+  
+  Chkili, Rejeb, and Arfaoui (2021); Bhuiyan et al. (2021); Urquhart and Zhang (2019); Selmi, Mensi, and Hammoudeh (2018); Xu and Kinkyo (2023); etc.
 
-- Practitioners and some researchers: perceive bitcoin as a correlated asset
-  - bitcoin is pro-cyclical
-  - bitcoin compared with precious metals like Gold
+- The other part says it is not
 
+  Bouri, Gupta, Tiwari, and Roubaud (2017); Conlon and McGee (2020); Goodell and Goutte (2021); Ji, Zhang, and Zhao (2020); Klein, Hien, and Walther (2018); Naeem, Karim, and Abrar (2023); Smales, (2019); etc.
+
+- Significant importance for market participants, policymakers, and regulators
 
 ---
 
 # Contribution
 
-### A model to formalise the widely held view that bitcoin can serve as a hedge against traditional financial market risks
+### A model to formalise both widely held views that 
+1. bitcoin can serve as a hedge against traditional financial market risks
+2.  bitcoin can be correlated to traditional asset classes
+
 <center>
 ```mermaid
 flowchart LR
@@ -1194,6 +1130,7 @@ flowchart TD
 
 ::left::
 
+
 - Dynamics of traditional market risk (S\&P):
 $$
 dS_{t}/S_{t}=\left(r+\mu_{S,t}\right)\,dt+\sigma_{S}\,dW_{S,t}\,,
@@ -1207,16 +1144,19 @@ $$
 
 ::right::
 
-- Bitcoin's supply evolves as
-$$
-dM_t = g\,M_t\,dt
-$$
+<v-click>
 
 - Bitcoin's prices evolve as 
 $$
 {dP_{t}}/{P_{t}}=\left(r+{\color{red}\mu_{P,t}}\right)\,dt+{\color{red}\gamma_{P,t}}\,dW_{\mu,t}+{\color{red}\xi_{P,t}}\,dW_{P,t}+{\color{red}\sigma_{P,t}}\,dW_{S,t}\,,
 $$
 
+- Bitcoin's supply evolves as
+$$
+dM_t = g\,M_t\,dt
+$$
+
+</v-click>
 
 ---
 layout: two-cols-header
@@ -1227,31 +1167,33 @@ layout: two-cols-header
 ::left::
 
 
-
-### Hedge demand
-- A continuum of agents allocate their wealth $x_t$ between S&P, bitcoin, risk-free investment, and consumption
+- **Hedge demand**: a continuum of agents allocate their wealth $x_t$ between S&P, bitcoin, risk-free investment, and consumption
 $$\footnotesize
-\theta_{t}=\frac{\lambda_{P}}{\sigma_{P,t}\mu_{S,t}-\sigma_{S,t}\mu_{P,t}}\sigma_{S,t}-\frac{1}{\xi_{P,t}}, \quad \varphi_{t}^i=-\frac{\lambda_{S}}{\mu_{S,t}}-\frac{\sigma_{P,t}}{\sigma_{S,t}}\theta_{t}-\frac{1}{\sigma_{S,t}}
+{\theta_{t}}=\frac{\lambda_{P}}{\sigma_{P,t}\mu_{S,t}-\sigma_{S,t}\mu_{P,t}}\sigma_{S,t}-\frac{1}{\xi_{P,t}}, \quad \varphi_{t}^i=-\frac{\lambda_{S}}{\mu_{S,t}}-\frac{\sigma_{P,t}}{\sigma_{S,t}}\theta_{t}-\frac{1}{\sigma_{S,t}}
 $$
 
-<v-clicks>
+<v-click>
 
 - Clearing condition: 
 $$\footnotesize
 \underbrace{H_t}_{\text{hedge demand}=\theta_t \, x_t} + \underbrace{E_t}_{\text{procyclical demand}=e_t\,M_t \, P_t}  = M_t \, P_t
 $$
 
+<v-click>
 
 - Pro-cyclical demand: 
 $$\footnotesize
 \frac{de_{t}}{1-e_{t}}=\mu_{e}\,dt+\gamma_{e}\,dW_{\mu,t}+\xi_{e}\,dW_{P,t}+\sigma_{e}\,dW_{S,t}
 $$
 
+<v-click>
 
-- In equilibrium, $\mu_P$, $\sigma_P$, $\xi_P$, $\gamma_P$ functions of the state variable $\mu_{S,t}$
+- Solve for an equilibrium in which $\mu_P$, $\sigma_P$, $\xi_P$, $\gamma_P$ are functions of the state variable $\mu_{S,t}$
 
 
-</v-clicks>
+</v-click>
+</v-click>
+</v-click>
 
 ::right::
 
@@ -1304,7 +1246,6 @@ $
 $
 
 ![correlbitcoin](./images/correlbitcoin.png){style="transform: translate(60%, 0%); width: 420px"}
-
 
 
 ---
